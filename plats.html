@@ -18,7 +18,7 @@
 
         <div class="container-fluid">
             <div class="row  pr-0 pl-0 mr-0 ml-0">
-                <img class="image-fluid col-2 " src="asset/the_district_brand/facebook_cover_photo_1.png"
+                <img class="image-fluid pl-0 col-5 col-md-2 " src="asset/the_district_brand/facebook_cover_photo_1.png"
                     alt="logo-the-District">
                 <div class="col">
                     <nav class="navbar navbar-expand-sm  bg-transparent navbar-light d-flex justify-content-end ">
@@ -49,82 +49,138 @@
                             </ul>
                         </div>
 
-                    </nav>
+                    </nav> 
                 </div>
             </div>
 
-            <div class="item-content position-relative">
-                <img class="img-fluid w-100  mt-2" src="asset/cat.fond/bandeau.png"
+            <div class="item-content position-relative d-none d-md-block">
+                <img class="img-fluid w-100 h-25  mt-2" src="asset/cat.fond/bandeau.png"
                     alt="bandeau de décoration couleur bordeau">
-                <div class="search-bar position-absolute">
-                    <form class="form-inline">
-                        <div class="input-group">
-                            <input class="form-control" type="text" placeholder="Rechercher...">
-                            <div class="input-group-prepend ">
-                                <span class="input-group-text rounded border-0 bg-light "><i
-                                        class="bi bi-search "></i></span>
-                            </div>
-                        </div>
-                    </form>
+
+                <div class="search-bar position-absolute  mt-1">
+                    <nav class="navbar navbar-light bg-transparent ">
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="rechercher...">
+                            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">go!</button>
+                        </form>
+                    </nav>
                 </div>
             </div>
+         
+            <div class="item-content position-relative d-md-none">
+                <img class="img-fluid w-100 mt-2" id="bandeau" style=" margin-bottom: -80px;" src="asset/cat.fond/fond-bordeau.png" alt="bandeau de décoration couleur bordeaux">
+                <div class="position-absolute d-flex justify-content-between w-100" style="top: 0; left: 0;">
+                    <img class="img-fluid w-25" alt="verre de vin" src="asset/cat.fond/vin.png">
+                    <img class="img-fluid w-25" alt="cuisinier" src="asset/cat.fond/petitCuisinier.png">
+                </div>
+            </div>
+            
       
-                <div class="container col-12">
+                <div class="container col-12 d-none d-md-block ">
                     <div class="row">
-                        <div class="col-2">
+                        <div class="col-3">
+                           
+                        </div>
+                        <div class="col-4 ">
+                            <div class="card" style="width: 18rem; background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
+                                <img class="card-img-top" src="asset/food/cheesburger.jpg" alt="burger360">
+                                <div class="card-body">
+                                    <h5 class="card-title">Le 360</h5>
+                                    <p class="card-text">2 steaks 180g, cheddar, sauce au choix et crudités <br> Menu: 11€</p>
+                                    <a href="commande.html" class="btn btn-dark">Commander</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card" style="width: 18rem; background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
+                                <img class="card-img-top" src="asset/food/Food-Name-6340.jpg" alt="cheese">
+                                <div class="card-body">
+                                    <h5 class="card-title">Le Cheese</h5>
+                                    <p class="card-text">steak 45g, cheddar et crudités <br> Menu: 5€</p>
+                                    <a href="commande.html" class="btn btn-dark">commander</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
                             <div class="card border-0 bg-transparent">
                                 <div class="card-body">
                                     <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5 ">
-                            <div class="card" style="width: 18rem; background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
-                                <img class="card-img-top" src="asset/food/cheesburger.jpg" alt="burger360">
-                                <div class="card-body">
-                                    <h5 class="card-title">Le 360</h5>
-                                    <p class="card-text">2 steaks 180g, cheddar, sauce au choix et crudités</p>
-                                    <a href="commande.html" class="btn btn-dark">Commander</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-5">
-                            <div class="card" style="width: 18rem; background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
-                                <img class="card-img-top" src="asset/food/Food-Name-6340.jpg" alt="cheese">
-                                <div class="card-body">
-                                    <h5 class="card-title">Le Cheese</h5>
-                                    <p class="card-text">steak 45g, cheddar et crudités</p>
-                                    <a href="commande.html" class="btn btn-dark">commander</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-2">
-                        </div>
-                        <div class="col-5">
+                        <div class="col-4">
                             <div class="card" style="width: 18rem; background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
                                 <img class="card-img-top" src="asset/food/hamburger.jpg" alt="cheesburger">
                                 <div class="card-body">
                                     <h5 class="card-title">Le 180</h5>
-                                    <p class="card-text">1 steak 180g, cheddar, sauce au choix et crudités</p>
+                                    <p class="card-text">1 steak 180g, cheddar, sauce au choix et crudités <br> Menu: 10€</p>
                                     <a href="commande.html" class="btn btn-dark">Commander</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5">
+                        <div class="col-4">
                             <div class="card" style="width: 18rem; background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
                                 <img class="card-img-top" src="asset/food/Food-Name-433.jpeg" alt="giant">
                                 <div class="card-body">
                                     <h5 class="card-title">Le Giant</h5>
-                                    <p class="card-text">2 steaks 90g, sauce giant et crudités</p>
+                                    <p class="card-text">2 steaks 90g, sauce giant et crudités <br> Menu: 9€</p>
                                     <a href="commande.html" class="btn btn-dark">commander</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+                <div class="w-100 mr-2 d-md-none ">
+                    <div class="card w-100"
+                        style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
+                        <img class="card-img-top" src="asset/food/cheesburger.jpg" alt="burger360">
+                        <div class="card-body">
+                            <h5 class="card-title">Le 360</h5>
+                            <p class="card-text">2 steaks 180g, cheddar, sauce au choix et crudités <br> Menu: 11€
+                            </p>
+                            <a href="commande.html" class="btn btn-dark">Commander</a>
+                        </div>
+                    </div>
+
+
+                    <div class="card w-100"
+                        style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
+                        <img class="card-img-top" src="asset/food/Food-Name-6340.jpg" alt="cheese">
+                        <div class="card-body">
+                            <h5 class="card-title">Le Cheese</h5>
+                            <p class="card-text">steak 45g, cheddar et crudités <br> Menu: 5€</p>
+                            <a href="commande.html" class="btn btn-dark">commander</a>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="card w-100"
+                        style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
+                        <img class="card-img-top" src="asset/food/hamburger.jpg" alt="cheesburger">
+                        <div class="card-body">
+                            <h5 class="card-title">Le 180</h5>
+                            <p class="card-text">1 steak 180g, cheddar, sauce au choix et crudités <br> Menu: 10€
+                            </p>
+                            <a href="commande.html" class="btn btn-dark">Commander</a>
+                        </div>
+                    </div>
+
+                    <div class="card w-100"
+                        style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
+                        <img class="card-img-top" src="asset/food/Food-Name-433.jpeg" alt="giant">
+                        <div class="card-body">
+                            <h5 class="card-title">Le Giant</h5>
+                            <p class="card-text">2 steaks 90g, sauce giant et crudités<br> Menu: 9€ </p>
+                            <a href="commande.html" class="btn btn-dark">commander</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
                 <div class="container-fluid col-12 ">
                     <div class="d-flex justify-content-between ">
         
@@ -133,108 +189,10 @@
                     </div>
                   </div>
 
-                <!-- <div class="w-25">
-                        <div class="card border-0 bg-transparent  ">
-                            <div class="card-body">
-                                <p class="card-text font-weight-bold font-italic">Les Burgers</p>
-                                <img src="asset/category/burger_cat.jpg" class="card-img-top img-fluid" alt="burger">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-25">
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-body">
-                                <p class="card-text font-weight-bold font-italic">Les Wraps</p>
-                                <img src="asset/category/wrap_cat.jpg" class="card-img-top img-fluid" alt="wrap">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-25">
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-body">
-                                <p class="card-text font-weight-bold font-italic">Les Salades</p>
-                                <img src="asset/category/salade_cat.jpg" class="card-img-top img-fluid" alt="salade">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container w-100">
-                    <div class="row ">
-                        <div class="col-3">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-25">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Les Sandwichs</p>
-                                    <img src="asset/category/sandwich_cat.jpg" class="card-img-top img-fluid"
-                                        alt="sandwich">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-25">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Les Pizzas</p>
-                                    <img src="asset/category/pizza_cat.jpg" class="card-img-top img-fluid" alt="pizza">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-25">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Les Pasta</p>
-                                    <img src="asset/category/pasta_cat.jpg" class="card-img-top img-fluid" alt="pâtes">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container w-100">
-                    <div class="row ">
-                        <div class="col-3">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-25">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Le 360</p>
-                                    <img src="asset/food/cheesburger.jpg" class="card-img-top img-fluid" alt="burger ">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-25">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Le 180</p>
-                                    <img src="asset/food/hamburger.jpg" class="card-img-top img-fluid" alt="burger">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-25">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Le Cheese</p>
-                                    <img src="asset/food/Food-Name-433.jpeg" class="card-img-top img-fluid"
-                                        alt="cheese">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="container col-12">
+            
+            <div class="container-fluid col-12 col-md-3">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-1">
+                    <div class="col-4">
                         <div class="card border-0 bg-transparent">
                             <div class="card-body">
                                 <img src="asset/the_district_brand/insta.png" class="card-img-top img-fluid"
@@ -242,27 +200,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-1">
+                    <div class="col-4">
                         <div class="card border-0 bg-transparent">
                             <div class="card-body">
-                                <img src="asset/the_district_brand/twitter.png" class="card-img-top img-fluid"
+                                <img  src="asset/the_district_brand/twitter.png" class="t card-img-top img-fluid"
                                     alt="twitter">
                             </div>
                         </div>
                     </div>
-                    <div class="col-1">
+                    <div class="col-4">
                         <div class="card border-0 bg-transparent">
                             <div class="card-body">
-                                <img src="asset/the_district_brand/facebook-770688_1280.png"
-                                    class="card-img-top img-fluid" alt="facebook">
+                                <img  src="asset/the_district_brand/facebook-770688_1280.png"
+                                    class="t card-img-top img-fluid" alt="facebook">
                             </div>
                         </div>
                     </div>
-                   
-                </div>
-                
 
-            </div>-->
+                </div>
+
+
             </div>
         </div>
 
