@@ -18,7 +18,7 @@
 
         <div class="container-fluid  ">
             <div class="row  pr-0 pl-0 mr-0 ml-0">
-                <img class="image-fluid col-2 " src="asset/the_district_brand/facebook_cover_photo_1.png"
+                <img class="image-fluid pl-0 col-5 col-md-2 " src="asset/the_district_brand/facebook_cover_photo_1.png"
                     alt="logo-the-District">
                 <div class="col">
                     <nav class="navbar navbar-expand-sm  bg-transparent navbar-light d-flex justify-content-end ">
@@ -53,24 +53,30 @@
                 </div>
             </div>
 
-            <div class="item-content position-relative">
-                <img class="img-fluid w-100  mt-2" src="asset/cat.fond/bandeau.png"
+            <div class="item-content position-relative d-none d-md-block">
+                <img class="img-fluid w-100 h-25  mt-2" src="asset/cat.fond/bandeau.png"
                     alt="bandeau de décoration couleur bordeau">
-                <div class="search-bar position-absolute">
-                    <form class="form-inline">
-                        <div class="input-group">
-                            <input class="form-control" type="text" placeholder="Rechercher...">
-                            <div class="input-group-prepend ">
-                                <span class="input-group-text rounded border-0 bg-light "><i
-                                        class="bi bi-search "></i></span>
-                            </div>
-                        </div>
-                    </form>
+
+                <div class="search-bar position-absolute  mt-1">
+                    <nav class="navbar navbar-light bg-transparent ">
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="rechercher...">
+                            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">go!</button>
+                        </form>
+                    </nav>
                 </div>
             </div>
+         
+            <div class="item-content position-relative d-md-none">
+                <img class="img-fluid w-100 mt-2" id="bandeau" src="asset/cat.fond/fond-bordeau.png" style=" margin-bottom: -80px;" alt="bandeau de décoration couleur bordeaux">
+                <div class="position-absolute d-flex justify-content-between w-100" style="top: 0; left: 0;">
+                    <img class="img-fluid w-25" alt="verre de vin" src="asset/cat.fond/vin.png">
+                    <img class="img-fluid w-25" alt="cuisinier" src="asset/cat.fond/petitCuisinier.png">
+                </div>
+            </div>
+            
 
-
-            <div class="container-fluid w-100">
+            <div class="container-fluid d-none d-md-block w-100">
                 <div class="row ">
                     <div class="w-25">
                         <div class="card border-0 bg-transparent">
@@ -116,7 +122,8 @@
                         <div class="w-25">
                             <div class="card border-0 bg-transparent">
                                 <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Les Sandwichs</p>
+                                    <p class="card-text font-weijustify-content-betweenght-bold font-italic">Les
+                                        Sandwichs</p>
                                     <img src="asset/category/sandwich_cat.jpg" class="card-img-top img-fluid"
                                         alt="sandwich">
                                 </div>
@@ -140,15 +147,71 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid col-12 ">
-                    <div class="d-flex justify-content-between ">
-        
-                      <button type="submit" class="btn btn-dark font-weight-bold font-italic text-right">Précédent</button>
-                      <button type="submit" class="btn btn-dark font-weight-bold font-italic text-right">Suivant</button>
+            </div>
+
+
+            <div class="container-fluid d-md-none w-100">
+
+                <div class="w-100">
+                    <div class="card border-0 bg-transparent  ">
+                        <div class="card-body">
+                            <p class="card-text font-weight-bold font-italic">Les Burgers</p>
+                            <img src="asset/category/burger_cat.jpg" class="card-img-top img-fluid" alt="burger">
+                        </div>
                     </div>
-                  </div>
+                </div>
+                <div class="w-100">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <p class="card-text font-weight-bold font-italic">Les Wraps</p>
+                            <img src="asset/category/wrap_cat.jpg" class="card-img-top img-fluid" alt="wrap">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <p class="card-text font-weight-bold font-italic">Les Salades</p>
+                            <img src="asset/category/salade_cat.jpg" class="card-img-top img-fluid" alt="salade">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="w-100">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <p class="card-text font-weight-bold font-italic">Les Sandwichs</p>
+                            <img src="asset/category/sandwich_cat.jpg" class="card-img-top img-fluid" alt="sandwich">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <p class="card-text font-weight-bold font-italic">Les Pizzas</p>
+                            <img src="asset/category/pizza_cat.jpg" class="card-img-top img-fluid" alt="pizza">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <p class="card-text font-weight-bold font-italic">Les Pasta</p>
+                            <img src="asset/category/pasta_cat.jpg" class="card-img-top img-fluid" alt="pâtes">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between ">
+
+                <button type="submit" class="btn btn-dark font-weight-bold font-italic text-right">Précédent</button>
+                <button type="submit" class="btn btn-dark font-weight-bold font-italic text-right">Suivant</button>
+            </div>
+            <div class="container-fluid col-12 col-md-3">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-1">
+                    <div class="col-4">
                         <div class="card border-0 bg-transparent">
                             <div class="card-body">
                                 <img src="asset/the_district_brand/insta.png" class="card-img-top img-fluid"
@@ -156,19 +219,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-1">
+                    <div class="col-4">
                         <div class="card border-0 bg-transparent">
                             <div class="card-body">
-                                <img src="asset/the_district_brand/twitter.png" class="card-img-top img-fluid"
+                                <img  src="asset/the_district_brand/twitter.png" class="t card-img-top img-fluid"
                                     alt="twitter">
                             </div>
                         </div>
                     </div>
-                    <div class="col-1">
+                    <div class="col-4">
                         <div class="card border-0 bg-transparent">
                             <div class="card-body">
                                 <img src="asset/the_district_brand/facebook-770688_1280.png"
-                                    class="card-img-top img-fluid" alt="facebook">
+                                    class="t card-img-top img-fluid" alt="facebook">
                             </div>
                         </div>
                     </div>
@@ -177,8 +240,13 @@
 
 
             </div>
+
+
+
+
         </div>
     </div>
+   
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
