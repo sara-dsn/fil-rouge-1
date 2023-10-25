@@ -11,6 +11,7 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="asset/css/style.css">
   <title>Contact</title>
+  <link href="asset/js/script.js">
 </head>
 
 <body>
@@ -89,9 +90,13 @@
           <form class="col-8 d-none d-md-block">
             <div class="form-row ">
               <div class="col mr-4 ml-4 mb-4 mt-4 ">
+                <div id="nom" class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong>Holy </strong> 
+                </div>
                 <label class="font-weight-bold font-italic text-right">Nom</label>
-                <input type="text" class="form-control">
+                <input type="text" id="n" class="form-control">
               </div>
+              
               <div class="col mr-4 ml-4 mb-4 mt-4">
                 <label  class="font-weight-bold font-italic text-right">Prénom</label>
                 <input type="text" class="form-control">
@@ -144,7 +149,7 @@
     <div class="container-fluid col-12 ">
       <div class="item-content text-center ml-4 pl-4 ">
 
-        <button type="submit" class="btn btn-dark font-weight-bold font-italic text-right">Envoyer</button>
+        <button type="submit" id="envoyer" class="btn btn-dark font-weight-bold font-italic text-right">Envoyer</button>
 
       </div>
     </div>
