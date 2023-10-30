@@ -68,7 +68,7 @@
                 <div class="search-bar position-absolute">
                     <nav class="navbar navbar-light bg-transparent d-none d-md-block">
                         <form class="form-inline">
-                            <input class="form-control mr-sm-2" type="search" placeholder="rechercher...">
+                            <input class="form-control mr-sm-2" type="search" id="recherche" placeholder="rechercher...">
                             <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">go!</button>
                         </form>
                     </nav>
@@ -146,23 +146,63 @@ $.getJSON("plat.json", function(json){
 var plt=json.plat;
 console.log(ctg);
     for (i=0;i<plt.length;i++){
-var item=ctg[i];
+var item=plt[i];
 var resultat=`<div class="card w-25 mr-4 mb-4"
                 style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
-                <img class="card-img-top" src="asset/category/${item.image}" alt="plat">
+                <img class="card-img-top" src="asset/food/${item.image}" alt="plat">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold font-italic">${item.libelle}</h5>
-                
-                  
+                    <p class="card-text">${item.description}<br> Menu: ${item.prix} </p>
+                    <a href="commande.html" class="btn btn-dark">commander</a>
                 </div>
             </div>`
 affichage.append(resultat);
     };
    
 });
+$("#recherche").click( function(truc){
+   search();
+});
+function search(){
+$.getJSON("plat.json", function(json){
+$("#rechercher").on('input',function(){
+    var searchinput=$(this).val().toLowerCase();
+    var plats=$("#plats");
+    plats.empty();
+
+    var filtre=truc.categorie.filter(function(cible){
+        return cible.libelle.toLowerCase().includes(searchinput);
+    });
+
+$("#plats").on("click",function(){
+var catid=$(this).cible("id");
+var lefiltre=json.plat.filtre(function(cible){
+return json.id_categorie===catid;
+});
+
+});
+
+
+    $each(lefiltre,function(index,cible){
+        for (i=0;i<=cible.lenght;i++){
+plats.append(`<div class="card w-25 mr-4 mb-4"
+                style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
+                <img class="card-img-top" src="asset/food/${cyble.image}" alt="plat">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold font-italic">${cyble.libelle}</h5>
+                    <p class="card-text">${cyble.description}<br> Menu: ${cyble.prix} </p>
+                    <a href="commande.html" class="btn btn-dark">commander</a>
+                </div>
+            </div> `)
+};
+    });
+});
 
 
 });
+};
+});
+
 
 
 
