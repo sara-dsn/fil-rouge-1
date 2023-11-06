@@ -83,113 +83,21 @@
 
                 <div class="row justify-content-center " id="afficher"></div>
             </div>
-            <div class="container-fluid  ">
-                <div class="row ">
-                    <div class="w-25 d-none d-md-block">
-
-
-                    </div>
-
-
-                    <div class="w-25 d-none d-md-block">
-                        <div class="card border-0 bg-transparent  ">
-                            <div class="card-body">
-                                <p class="card-text font-weight-bold font-italic">Les Burgers</p>
-                                <img src="asset/category/burger_cat.jpg" class="t card-img-top img-fluid" alt="burger">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-25 d-none d-md-block">
+            <div class="container-fluid  " id="visible">
+                <div class="w-100 row">
+                    <div class="col-3">
                         <div class="card border-0 bg-transparent">
                             <div class="card-body">
-                                <p class="card-text font-weight-bold font-italic">Les Wraps</p>
-                                <img src="asset/category/wrap_cat.jpg" class="t card-img-top img-fluid" alt="wrap">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-25 d-none d-md-block">
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-body">
-                                <p class="card-text font-weight-bold font-italic">Les Salades</p>
-                                <img src="asset/category/salade_cat.jpg" class="t card-img-top img-fluid" alt="salade">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid ">
-                    <div class="row ">
-                        <div class="w-25 d-none d-md-block">
-
-                        </div>
-                        <div class="w-25 d-none d-md-block">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Les Sandwichs</p>
-                                    <img src="asset/category/sandwich_cat.jpg" class=" t card-img-top img-fluid"
-                                        alt="sandwich">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-25 d-none d-md-block">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Les Pizzas</p>
-                                    <img src="asset/category/pizza_cat.jpg" class="t card-img-top img-fluid"
-                                        alt="pizza">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-25 d-none d-md-block">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Les Pasta</p>
-                                    <img src="asset/category/pasta_cat.jpg" class="t card-img-top img-fluid"
-                                        alt="pâtes">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid ">
-                    <div class="row ">
-                        <div class="col-3 d-none d-md-block">
-
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid"
-                                        alt="Cuisinier">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-25 d-none d-md-block">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Le 360</p>
-                                    <img src="asset/food/cheesburger.jpg" class="t card-img-top img-fluid"
-                                        alt="burger ">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-25 d-none d-md-block">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Le 180</p>
-                                    <img src="asset/food/hamburger.jpg" class="t card-img-top img-fluid" alt="burger">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-25 d-none d-md-block">
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body">
-                                    <p class="card-text font-weight-bold font-italic">Le Cheese</p>
-                                    <img src="asset/food/Food-Name-433.jpeg" class="t card-img-top img-fluid"
-                                        alt="cheese">
-                                </div>
+                                <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
                             </div>
                         </div>
                     </div>
 
+                    <div class="row w-75" id="categorie"></div>
+                    <div class="col-2 mx-2"></div>
+                    <div class="row w-75 justify-content-center " id="txt"></div>
                 </div>
+
 
                 <div class="container col-12">
 
@@ -292,38 +200,100 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script>
         $(document).ready(function () {
+            var visible=$("#visible");
 
-            $("#btn").click(function () {
-                var leplat = $("#recherche").val();
-                search(leplat);
-        
-            });
-            function search(leplat) {
-                $.getJSON("plat.json", function (json) {
-                    var plat = json.plat;
+            $.getJSON("plat.json", function (json) {
+                var affichage = $("#categorie");
+                var ctg = json.categorie;
+                var plt = json.plat;
+                var affiche = $("#txt");
+                for (i = 0; i < ctg.length; i++) {
+                    var item = ctg[i];
+                    var resultat = `<div class="card w-25 mr-4 mb-4"
+                style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
+                <img class="card-img-top" src="asset/category/${item.image}" alt="plat">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold font-italic">${item.libelle}</h5>
                 
+                  
+                </div>
+            </div>`
+                    affichage.append(resultat);
+                };
+                for (i = 0; i < 3; i++) {
+                    var truc = plt[i];
+                    var r = `<div class="card w-25 mr-4 mb-4"
+                style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
+                <img class="card-img-top" src="asset/food/${truc.image}" alt="plat">
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold font-italic">${truc.libelle}</h5>
+                    <p class="card-text">${truc.description}<br> Menu: ${truc.prix} </p>
+                    <a href="commande.html" class="btn btn-dark">commander</a>
+                </div>
+            </div>`
+                    affiche.append(r);
+                };
 
-                    for (i = 0; i < plat.length; i++) {
-                        var plt = plat[i];
-                        var txt = ` 
+
+
+
+            });
+            $("#btn").click(function () {
+              
+                search();
+
+            });
+            $("#recherche").on("keypress", function (e) {
+               
+              if(e.which===13){
+              
+              search();
+             
+            };
+
+          });
+            function search() {
+                var a = $("#afficher");
+                a.empty();
+visible.hide();
+                var input = $("#recherche").val();
+
+                $.getJSON("plat.json", function (json) {
+                    var plt = json.plat;
+                   
+
+               
+                        var pla = plt.filter(function (p) {
+                            return p.libelle.toLowerCase().includes(input.toLowerCase());
+                        });  
+                   
+                console.log(pla)
+                
+                    miseajour(pla);
+                    function miseajour(result) {
+                     
+                        $.each(result, function (element, uno) {
+                            var txt = ` 
                         <div class="card w-25 mx-1 "
                             style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
-                            <img class="card-img-top" src="asset/food/${plt.image}" alt="cheesburger">
+                            <img class="card-img-top" src="asset/food/${uno.image}" alt="cheesburger">
                             <div class="card-body font-weight-bold font-italic">
-                                <h5 class="card-title ">${plt.libelle}</h5>
-                                <p class="card-text">${plt.description} <br> Menu: ${plt.prix}
+                                <h5 class="card-title ">${uno.libelle}</h5>
+                                <p class="card-text">${uno.description} <br> Menu: ${uno.prix}
                                 </p>
                                 <a href="commande.html" class="btn btn-dark">Commander</a>
                             </div>
                         </div>`;
-var affiche=$("#afficher");
-                        affiche.append(txt);
 
-                    };
+                            a.append(txt);
+
+                        });
+
+                        rechercher(input);
+
+                    }
                 });
             };
-
-
         });
     </script>
 </body>
