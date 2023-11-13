@@ -18,67 +18,9 @@
     <div class="parallax-body">
 
         <div class="container-fluid ">
-            <div class="row  pr-0 pl-0 mr-0 ml-0 ">
-                <img class="image-fluid pl-0 col-5 col-md-2 " src="asset/the_district_brand/facebook_cover_photo_1.png"
-                    alt="logo-the-District">
-                <div class="col">
-                    <nav class="navbar navbar-expand-sm  bg-transparent navbar-light d-flex justify-content-end ">
-
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#collapsibleNavbar">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                            <ul class="navbar-nav col-12 ">
-                                <li class="nav-item w-25   ">
-                                    <a class="nav-link h2   font-weight-bold font-italic text-right"
-                                        href="index.html"><u>Accueil</u></a>
-                                </li>
-                                <li class="nav-item h2  w-25">
-                                    <a class="nav-link font-weight-bold font-italic text-right "
-                                        href="categorie.html"><u>Catégorie</u></a>
-                                </li>
-                                <li class="nav-item  h2 w-25 ">
-                                    <a class="nav-link font-weight-bold font-italic text-right"
-                                        href="plats.html"><u>Plats</u></a>
-                                </li>
-                                <li class="nav-item  h2 w-25">
-                                    <a class="nav-link font-weight-bold font-italic text-right"
-                                        href="contact.html"><u>Contact</u></a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </nav>
-                </div>
-            </div>
-
-            <div class="item-content position-relative d-none d-md-block">
-                <img class="img-fluid w-100 h-25  mt-2" src="asset/cat.fond/bandeau.png"
-                    alt="bandeau de décoration couleur bordeau">
-
-                <div class="search-bar position-absolute  mt-1">
-                    <nav class="navbar navbar-light bg-transparent ">
-                        <form class="form-inline">
-                            <input class="form-control mr-sm-2" type="search" placeholder="rechercher...">
-                            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">go!</button>
-                        </form>
-                    </nav>
-                </div>
-            </div>
-
-            <div class="item-content position-relative d-md-none">
-                <img class="img-fluid w-100 mt-2" id="bandeau" style=" margin-bottom: -80px;"
-                    src="asset/cat.fond/fond-bordeau.png" style=" margin-bottom: -80px;"
-                    alt="bandeau de décoration couleur bordeaux">
-                <div class="position-absolute d-flex justify-content-between w-100" style="top: 0; left: 0;">
-                    <img class="img-fluid w-25" alt="verre de vin" src="asset/cat.fond/vin.png">
-                    <img class="img-fluid w-25" alt="cuisinier" src="asset/cat.fond/petitCuisinier.png">
-                </div>
-            </div>
-
-
+            <?php
+                include('header.php');
+            ?>
             <div class="item-content position-relative d-none d-md-block w-25 mx-auto text-center">
 
                 <div class="card "
@@ -148,7 +90,7 @@
                         <div class="container-fluid col-12 ">
                             <div class="item-content text-center ml-4 pl-4 ">
 
-                                <input type="button" id="bouton"
+                                <input type="submit" id="bouton"
                                     class="btn btn-dark font-weight-bold font-italic text-right" value="Envoyer">
                             </div>
                         </div>
@@ -160,8 +102,8 @@
 
                 <div class="card "
                     style="width: 15rem; background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
-                    <img class="card-img-top" src="asset/food/cheesburger.jpg" alt="burger360">
-                    <div class="card-body">
+                    <img class="col-4" src="asset/food/cheesburger.jpg" alt="burger360">
+                    <div class="card-body col-8">
                         <h5 class="card-title">Le 360</h5>
                         <p class="card-text">2 steaks 180g, cheddar, sauce au choix et crudités<br> Total: 11€
                         </p>
@@ -217,7 +159,7 @@
                     <div class="container-fluid col-12 ">
                         <div class="item-content text-center ml-4 pl-4 ">
 
-                            <input type="button" id="boutonsm"
+                            <input type="submit" id="boutonsm"
                                 class="btn btn-dark font-weight-bold font-italic text-right" value="Envoyer">
                         </div>
                     </div>
@@ -234,38 +176,9 @@
 
 
 
-
-
-        <div class="container-fluid col-12 col-md-3">
-            <div class="row d-flex justify-content-center">
-                <div class="col-4">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-body">
-                            <img src="asset/the_district_brand/insta.png" class="card-img-top img-fluid"
-                                alt="instagram">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-body">
-                            <img src="asset/the_district_brand/twitter.png" class="t card-img-top img-fluid"
-                                alt="twitter">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-body">
-                            <img src="asset/the_district_brand/facebook-770688_1280.png"
-                                class="t card-img-top img-fluid" alt="facebook">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
+        <?php
+        include('footer.php');
+        ?>
     </div>
 
 

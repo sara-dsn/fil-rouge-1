@@ -3,85 +3,72 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="asset/css/style.css">
-    <title>Plats</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <title>Contact</title>
 </head>
 
 <body>
-    <div class="parallax-body">
+  <div class="parallax-body">
 
-        <div class="container-fluid">
-        <?php
+    <div class="container-fluid ">
+
+       <?php
         include('header.php');
         ?>
-             <div class="w-100 d-flex row">
+     <div class="w-100 d-flex row">
                  <div class="row justify-content-center " id="afficher"></div>
             </div>
         <div id="visible">
-        <div class="col-12 d-flex justify-content-center">
-<h1 class="font-weight-bold font-italic">Nos Catégories </h1>
-</div>
-            <div class="w-100 row">
-            <div class="col-3">
-                <div class="card border-0 bg-transparent">
-                    <div class="card-body">
-                        <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row w-75" id="plats"></div>
+          <div class="item-content position-relative d-md-none">
+            <img class="img-fluid w-100 mt-2" id="bandeau" src="asset/cat.fond/fond-bordeau.png"
+              style=" margin-bottom: -80px;" alt="bandeau de décoration couleur bordeaux">
+          <div class="position-absolute d-flex justify-content-between w-100" style="top: 0; left: 0;">
+            <img class="img-fluid w-25" alt="verre de vin" src="asset/cat.fond/vin.png">
+           <img class="img-fluid w-25" alt="cuisinier" src="asset/cat.fond/petitCuisinier.png">
+          </div>
         </div>
-</div>
-<div class="d-flex justify-content-between">
-    <a type="submit" href="index.php" class="btn btn-dark" >Précedent</a>
-    <a type="submit" href="plats.php" class="btn btn-dark" >Suivant</a>
-</div>
-        <?php
+
+      </div>
+
+      <div class="container-fluid col-12 mb-4 mt-1">
+          <div class="col-2 ">
+            <div class="card border-0 bg-transparent  ">
+              <div class="card-body">
+                <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
+              </div>
+            </div>
+          </div>
+       <h1>Votre demande est envoyée!</h1>
+       <button type="submit" href="index.php">Retourner sur la page d'acceuil</button>
+      </div>
+      <?php
         include('footer.php');
         ?>
-         </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-         <script>
-            
-$(document).ready(function(){
 
-$.getJSON("plat.json", function(json){
-   var affichage=$("#plats");
-    var ctg=json.categorie;
-var plt=json.plat;
-console.log(ctg);
-    for (i=0;i<plt.length;i++){
-var item=ctg[i];
-var resultat=`<div class="card w-25 mr-4 mb-4"
-                style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:25rem;">
-                <img class="card-img-top taille" src="asset/category/${item.image}" alt="plat">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold font-italic">${item.libelle}</h5>
-                
-                  
-                </div>
-            </div>`
-affichage.append(resultat);
-    };
-   
-});
-$.getJSON("plat.json", function(json){
+    </div>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="asset/js/script.js"></script>
+  <script>
+            
+            $(document).ready(function(){
+            
+            $.getJSON("plat.json", function(json){
                var affichage=$("#plats");
                 var ctg=json.categorie;
             var plt=json.plat;
@@ -132,7 +119,7 @@ $.getJSON("plat.json", function(json){
                                           <h5 class="card-title ">${uno.libelle}</h5>
                                           <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € 
                                           </p>
-                                          <a href="commande.php" class="btn btn-dark">Commander</a>
+                                          <a href="commande.html" class="btn btn-dark">Commander</a>
                                       </div>
                                   </div>`;
             
@@ -146,14 +133,8 @@ $.getJSON("plat.json", function(json){
                           });
                       };
                       });
-
-});
-
-
-
-
- 
-        </script>
+                    });
+</script>
 </body>
 
 </html>

@@ -24,6 +24,9 @@
                  <div class="row justify-content-center " id="afficher"></div>
             </div>
         <div id="visible">
+        <div class="col-12 d-flex justify-content-center">
+<h1 class="font-weight-bold font-italic">Nos Plats </h1>
+</div>
             <div class="w-100 row">
                 <div class="col-3">
                     <div class="card border-0 bg-transparent">
@@ -36,6 +39,10 @@
              <div class="row w-75" id="plats"></div>
         
              </div>
+</div>
+<div class="d-flex justify-content-between">
+    <a type="submit" href="categorie.php" class="btn btn-dark" >Précedent</a>
+    <a type="submit" href="contact.php" class="btn btn-dark" >Suivant</a>
 </div>
             <?php
          include('footer.php');
@@ -64,12 +71,12 @@ console.log(plt);
     for (i=0;i<plt.length;i++){
 var item=plt[i];
 var resultat=`<div class="card w-25 mr-4 mb-4"
-                style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
-                <img class="card-img-top" src="asset/food/${item.image}" alt="plat">
+                style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:35rem;">
+                <img class="card-img-top" style="height:50%;" src="asset/food/${item.image}" alt="plat">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold font-italic">${item.libelle}</h5>
                     <p class="card-text">${item.description}<br> Menu: ${item.prix} €  </p>
-                    <a href="commande.html" class="btn btn-dark">commander</a>
+                    <a href="commande.php" class="btn btn-dark">commander</a>
                 </div>
             </div>`
 affichage.append(resultat);
@@ -116,13 +123,13 @@ visible.hide();
                       $.each(result, function (element, uno) {
                           var txt = ` 
                       <div class="card w-25 mx-1 "
-                          style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
-                          <img class="card-img-top" src="asset/food/${uno.image}" alt="cheesburger">
+                          style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover; height:35rem;">
+                          <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="cheesburger">
                           <div class="card-body font-weight-bold font-italic">
                               <h5 class="card-title ">${uno.libelle}</h5>
                               <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € 
                               </p>
-                              <a href="commande.html" class="btn btn-dark">Commander</a>
+                              <a href="commande.php" class="btn btn-dark">Commander</a>
                           </div>
                       </div>`;
 

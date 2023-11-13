@@ -71,7 +71,7 @@ $contenuFichier="Nom : ".$_SESSION["nom"]
 ."\r\n  Telephone : ".$_SESSION["telephone"]
 ."\r\n  Demande :".$_SESSION["demande"];
 file_put_contents($nomFichier,$contenuFichier);
-header("Location: info.php");
+header("Location: demande.php");
 exit();
 }
  else{
@@ -83,6 +83,8 @@ echo "<br>prenom: ".p($prenom);
 echo "<br>email: ".e($email);
 echo "<br>telephone: ".t($telephone);
 echo "<br>demande: ".d($demande);
+header("Location: contact.php");
+exit();
 
  };
 

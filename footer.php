@@ -19,7 +19,7 @@
             </div>
             <div class="col-4">
                 <div class="card border-0 bg-transparent">
-                    <div class="card-body">
+                    <div class="card-body mt-1 mb-1">
                         <img src="asset/the_district_brand/facebook-770688_1280.png"
                             class="t card-img-top img-fluid" alt="facebook">
                     </div>

@@ -37,6 +37,9 @@
 
 
       <div class="container-fluid col-12 mb-4 mt-1">
+      <div class="col-12 d-flex justify-content-center">
+<h1 class="font-weight-bold font-italic">Formulaire de contact </h1>
+</div>
         <div class="row ">
           <div class="col-2 ">
             <div class="card border-0 bg-transparent  ">
@@ -105,6 +108,9 @@
         </div>
       </div>
         <form action="asset/php/fomulaire.php" method="post" class="form d-md-none">
+        <div class="col-12 d-flex justify-content-center">
+<h1 class="font-weight-bold font-italic">Formulaire de contact </h1>
+</div>
           <div class="col-12">
             <label class="font-weight-bold font-italic text-right">Nom</label>
             <input name="nom" type="text" id="n2" class="form-control">
@@ -157,6 +163,10 @@
         </form>
 
       </div>
+</div>
+<div class="d-flex justify-content-between">
+    <a type="submit" href="plats.php" class="btn btn-dark" >Précedent</a>
+    <a type="submit" href="index.php" class="btn btn-dark" >Suivant</a>
 </div>
       <?php
         include('footer.php');

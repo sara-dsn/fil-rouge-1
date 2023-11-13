@@ -21,7 +21,9 @@
 .t {
     transition: transform 0.5s;
 }
-
+.taille{
+   height:70%; 
+}
 .t:hover {
     transform: scale(1.2); }
     
