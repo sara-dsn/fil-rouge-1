@@ -17,52 +17,14 @@
   <div class="parallax-body">
 
     <div class="container-fluid ">
-      <div class="row  pr-0 pl-0 mr-0 ml-0">
-        <img class="image-fluid pl-0 col-5 col-md-2 " src="asset/the_district_brand/facebook_cover_photo_1.png"
-          alt="logo-the-District">
-        <div class="col">
-          <nav class="navbar navbar-expand-sm  bg-transparent navbar-light d-flex justify-content-end ">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav col-12 ">
-                <li class="nav-item w-25   ">
-                  <a class="nav-link h2   font-weight-bold font-italic text-right" href="index.html"><u>Accueil</u></a>
-                </li>
-                <li class="nav-item h2  w-25">
-                  <a class="nav-link font-weight-bold font-italic text-right "
-                    href="categorie.html"><u>Catégorie</u></a>
-                </li>
-                <li class="nav-item  h2 w-25 ">
-                  <a class="nav-link font-weight-bold font-italic text-right" href="plats.html"><u>Plats</u></a>
-                </li>
-                <li class="nav-item  h2 w-25">
-                  <a class="nav-link font-weight-bold font-italic text-right" href="contact.html"><u>Contact</u></a>
-                </li>
-
-              </ul>
+       <?php
+        include('header.php');
+        ?>
+     <div class="w-100 d-flex row">
+                 <div class="row justify-content-center " id="afficher"></div>
             </div>
-
-          </nav>
-        </div>
-      </div>
-
-      <div class="item-content position-relative d-none d-md-block">
-        <img class="img-fluid w-100 h-25  mt-2" src="asset/cat.fond/bandeau.png"
-          alt="bandeau de décoration couleur bordeau">
-
-        <div class="search-bar position-absolute  mt-1">
-          <nav class="navbar navbar-light bg-transparent ">
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="rechercher...">
-              <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">go!</button>
-            </form>
-          </nav>
-        </div>
-      </div>
-
+        <div id="visible">
       <div class="item-content position-relative d-md-none">
         <img class="img-fluid w-100 mt-2" id="bandeau" src="asset/cat.fond/fond-bordeau.png"
           style=" margin-bottom: -80px;" alt="bandeau de décoration couleur bordeaux">
@@ -83,11 +45,11 @@
               </div>
             </div>
           </div>
-          <form class="col-8 d-none d-md-block">
+          <form action="asset/php/fomulaire.php" method="post" class="col-8 d-none d-md-block">
             <div class="form-row ">
               <div class="col mr-4 ml-4 mb-4 mt-4 ">
                 <label class="font-weight-bold font-italic text-right">Nom</label>
-                <input type="text" id="n" class="form-control">
+                <input name="nom" type="text" id="n" class="form-control">
                 <div id="nom" style="display:none;"
                   class="alert alert-danger border-0 alert-dismissible bg-transparent fade show" role="alert">
                   <strong>Ce champ est obligatoire</strong>
@@ -96,7 +58,7 @@
 
               <div class="col mr-4 ml-4 mb-4 mt-4">
                 <label class="font-weight-bold font-italic text-right">Prénom</label>
-                <input type="text" id="p" class="form-control">
+                <input name="prenom" type="text" id="p" class="form-control">
                 <div id="pre" class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
                   style="display:none;" role="alert">
                   <strong>Ce champ est obligatoire</strong>
@@ -106,7 +68,7 @@
             <div class="form-row">
               <div class="col mr-4 ml-4 mb-4 mt-4">
                 <label class="font-weight-bold font-italic text-right">Email</label>
-                <input type="text" id="e" class="form-control">
+                <input name="email" type="text" id="e" class="form-control">
                 <div id="email" class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
                   style="display:none;" role="alert">
                   <strong>Ce champ est obligatoire</strong>
@@ -114,7 +76,7 @@
               </div>
               <div class="col mr-4 ml-4 mb-4 mt-4">
                 <label class="font-weight-bold font-italic text-right">Téléphone</label>
-                <input type="text" id="t" class="form-control">
+                <input name="telephone" type="text" id="t" class="form-control">
                 <div id="tel" style="display:none;"
                   class="alert border-0 alert-danger alert-dismissible bg-transparent fade show" role="alert">
                   <strong>Ce champ est obligatoire </strong>
@@ -123,8 +85,8 @@
             </div>
             <div class="form-group mr-4 ml-4 mb-4 mt-4">
               <label class="font-weight-bold font-italic text-right">Votre Demande</label>
-              <textarea class="form-control" id="d" rows="4"></textarea>
-              <div id="dem" class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
+              <textarea name="demande" class="form-control" id="d" rows="4"></textarea>
+              <div id="dem" class="alert alert-danger alert-dismissiblaction="#" method="POST"e bg-transparent border-0 fade show"
                 style="display:none;" role="alert">
                 <strong>Ce champ est obligatoire</strong>
               </div>
@@ -132,7 +94,7 @@
             <div class="container-fluid col-12 ">
               <div class="item-content text-center ml-4 pl-4 ">
 
-                <input type="button" id="monbouton" class="btn btn-dark font-weight-bold font-italic text-right"
+                <input name="envoyer" type="submit" id="monbouton" class="btn btn-dark font-weight-bold font-italic text-right"
                   value="Envoyer">
               </div>
             </div>
@@ -142,10 +104,10 @@
 
         </div>
       </div>
-        <form class="form d-md-none">
+        <form action="asset/php/fomulaire.php" method="post" class="form d-md-none">
           <div class="col-12">
             <label class="font-weight-bold font-italic text-right">Nom</label>
-            <input type="text" id="n2" class="form-control">
+            <input name="nom" type="text" id="n2" class="form-control">
             <div id="nom2" style="display:none;"
               class="alert alert-danger border-0 alert-dismissible bg-transparent fade show" role="alert">
               <strong>Ce champ est obligatoire</strong>
@@ -153,7 +115,7 @@
           </div>
           <div class="col-12">
             <label class="font-weight-bold font-italic text-right">Prénom</label>
-            <input type="text" id="p2" class="form-control">
+            <input name="prenom" type="text" id="p2" class="form-control">
             <div id="pre2" class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
               style="display:none;" role="alert">
               <strong>Ce champ est obligatoire</strong>
@@ -163,7 +125,7 @@
 
           <div class="col-12">
             <label class="font-weight-bold font-italic text-right">Email</label>
-            <input type="text" id="e2" class="form-control">
+            <input name="email" type="text" id="e2" class="form-control">
             <div id="email2" class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
               style="display:none;" role="alert">
               <strong>Ce champ est obligatoire</strong>
@@ -171,7 +133,7 @@
           </div>
           <div class="col-12">
             <label class="font-weight-bold font-italic text-right">Téléphone</label>
-            <input id="t2" type="text" class="form-control">
+            <input name="telephone" id="t2" type="text" class="form-control">
             <div id="tel2" style="display:none;"
               class="alert border-0 alert-danger alert-dismissible bg-transparent fade show" role="alert">
               <strong>Ce champ est obligatoire </strong>
@@ -180,7 +142,7 @@
 
           <div class="form-group col-12">
             <label class="font-weight-bold font-italic text-right">Votre Demande</label>
-            <textarea class="form-control" id="d2" rows="4"></textarea>
+            <textarea name="demande" class="form-control" id="d2" rows="4"></textarea>
             <div id="dem2" class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
               style="display:none;" role="alert">
               <strong>Ce champ est obligatoire</strong>
@@ -188,51 +150,23 @@
           </div>
           <div class="item-content text-center ml-4 pl-4 ">
 
-            <input type="button" id="monboutonsm" class="btn btn-dark font-weight-bold font-italic text-right"
+            <input name="envoyer" type="submit" id="monboutonsm" class="btn btn-dark font-weight-bold font-italic text-right"
               value="Envoyer">
           </div>
 
         </form>
 
       </div>
-
-      <div class="container-fluid col-12 col-md-3">
-        <div class="row d-flex justify-content-center">
-          <div class="col-4">
-            <div class="card border-0 bg-transparent">
-              <div class="card-body">
-                <img src="asset/the_district_brand/insta.png" class="card-img-top img-fluid" alt="instagram">
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card border-0 bg-transparent">
-              <div class="card-body">
-                <img src="asset/the_district_brand/twitter.png" class="t card-img-top img-fluid" alt="twitter">
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card border-0 bg-transparent">
-              <div class="card-body">
-                <img src="asset/the_district_brand/facebook-770688_1280.png" class="t card-img-top img-fluid"
-                  alt="facebook">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-
-      </div>
+</div>
+      <?php
+        include('footer.php');
+        ?>
 
     </div>
 
   </div>
 
-  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script> -->
+
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -241,6 +175,77 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script src="asset/js/script.js"></script>
+  <script>
+            
+            $(document).ready(function(){
+            
+            $.getJSON("plat.json", function(json){
+               var affichage=$("#plats");
+                var ctg=json.categorie;
+            var plt=json.plat;
+            
+            $("#btn").click(function () {
+                          
+                          search();
+            
+                      });
+                      $("#recherche").on("keypress", function (e) {
+                         
+                        if(e.which===13){
+                        
+                        search();
+                       
+                      };
+            
+                    });
+                      function search() {
+                          var a = $("#afficher");
+                          a.empty();
+                          var visible=$("#visible");
+                         
+            visible.hide();
+                          var input = $("#recherche").val();
+            
+                          $.getJSON("plat.json", function (json) {
+                              var plt = json.plat;
+                             
+            
+                         
+                                  var pla = plt.filter(function (p) {
+                                      return p.libelle.toLowerCase().includes(input.toLowerCase());
+                                  });  
+                             
+                  
+                          
+                              miseajour(pla);
+            
+                              function miseajour(result) {
+                               
+                                  $.each(result, function (element, uno) {
+                                      var txt = ` 
+                                  <div class="card w-25 mx-1 "
+                                      style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
+                                      <img class="card-img-top" src="asset/food/${uno.image}" alt="cheesburger">
+                                      <div class="card-body font-weight-bold font-italic">
+                                          <h5 class="card-title ">${uno.libelle}</h5>
+                                          <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € 
+                                          </p>
+                                          <a href="commande.html" class="btn btn-dark">Commander</a>
+                                      </div>
+                                  </div>`;
+            
+                                      a.append(txt);
+            
+                                  });
+            
+                                  rechercher(input);
+            
+                              }
+                          });
+                      };
+                      });
+                    });
+</script>
 </body>
 
 </html>
