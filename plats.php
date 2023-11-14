@@ -41,8 +41,8 @@
              </div>
 </div>
 <div class="d-flex justify-content-between">
-    <a type="submit" href="categorie.php" class="btn btn-dark" >Précedent</a>
-    <a type="submit" href="contact.php" class="btn btn-dark" >Suivant</a>
+    <a type="submit" href="categorie.php" class="btn btn-dark t" >Précedent</a>
+    <a type="submit" href="contact.php" class="btn btn-dark t" >Suivant</a>
 </div>
             <?php
          include('footer.php');
@@ -70,19 +70,20 @@ var plt=json.plat;
 console.log(plt);
     for (i=0;i<plt.length;i++){
 var item=plt[i];
-var resultat=`<div class="card w-25 mr-4 mb-4"
+var resultat=`<div class="card w-25 mr-4 mb-4 "
                 style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:35rem;">
-                <img class="card-img-top" style="height:50%;" src="asset/food/${item.image}" alt="plat">
+                <img class="card-img-top" style="height:50%;" src="asset/food/${item.image}" alt="${item.libelle}">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold font-italic">${item.libelle}</h5>
-                    <p class="card-text">${item.description}<br> Menu: ${item.prix} €  </p>
-                    <a href="commande.php" class="btn btn-dark">commander</a>
+                    <p class="card-text " >${item.description}<br> Menu: ${item.prix} €  </p>
+                    <a href="commande.php" class="btn btn-dark t">commander</a>
                 </div>
             </div>`
 affichage.append(resultat);
     };
    
 });
+
 $("#btn").click(function () {
               
               search();
@@ -129,7 +130,7 @@ visible.hide();
                               <h5 class="card-title ">${uno.libelle}</h5>
                               <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € 
                               </p>
-                              <a href="commande.php" class="btn btn-dark">Commander</a>
+                              <a href="commande.php" class="btn btn-dark t">Commander</a>
                           </div>
                       </div>`;
 

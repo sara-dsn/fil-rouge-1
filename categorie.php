@@ -20,99 +20,141 @@
         <?php
         include('header.php');
         ?>
-             <div class="w-100 d-flex row">
+        <div class="row d-flex justify-content-center ml-3 mr-3" >
+               
+               <div id="gg" class="row justify-content-center mt-4"></div>
+               <div class="col-12 text-center" > <a type="submit" id="bottom" href="categorie.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
+           
+            <div class="w-100 d-flex row">
                  <div class="row justify-content-center " id="afficher"></div>
             </div>
-        <div id="visible">
-        <div class="col-12 d-flex justify-content-center">
-<h1 class="font-weight-bold font-italic">Nos Catégories </h1>
-</div>
-            <div class="w-100 row">
-            <div class="col-3">
-                <div class="card border-0 bg-transparent">
-                    <div class="card-body">
-                        <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row w-75" id="plats"></div>
         </div>
-</div>
-<div class="d-flex justify-content-between">
-    <a type="submit" href="index.php" class="btn btn-dark" >Précedent</a>
-    <a type="submit" href="plats.php" class="btn btn-dark" >Suivant</a>
-</div>
+        <div id="visible">
+            <div class="col-12 d-flex justify-content-center">
+              <h1 class="font-weight-bold font-italic">Nos Catégories </h1>
+          </div>
+            <div class="w-100 row">
+                <div class="col-3">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
+                       </div>
+                  </div>
+                </div>
+            
+                <div class="row w-75" id="plats"></div>
+            </div>
+        
+            <div class="d-flex justify-content-between">
+                <a type="submit" href="index.php" class="btn btn-dark t" >Précedent</a>
+                <a type="submit" href="plats.php" class="btn btn-dark t" >Suivant</a>
+            </div>
+        </div>
         <?php
         include('footer.php');
         ?>
          </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        
          <script>
             
 $(document).ready(function(){
-
+    var btn=$("#bottom");
+    var visible=$("#visible");
+   
+   btn.hide();
 $.getJSON("plat.json", function(json){
+  
    var affichage=$("#plats");
     var ctg=json.categorie;
 var plt=json.plat;
-console.log(ctg);
-    for (i=0;i<plt.length;i++){
+var test=$("#gg");
+
+    for (i=0;i<ctg.length;i++){
 var item=ctg[i];
-var resultat=`<div class="card w-25 mr-4 mb-4"
+var resultat=`<div class="t card w-25 mr-4 mb-4 cat"
                 style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:25rem;">
-                <img class="card-img-top taille" src="asset/category/${item.image}" alt="plat">
+                <img class="card-img-top taille" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body">
-                    <h5 class="card-title font-weight-bold font-italic">${item.libelle}</h5>
+                    <h5  value="${item.id_categorie}" class="card-title font-weight-bold font-italic id">${item.libelle}</h5>
                 
                   
                 </div>
-            </div>`
+            </div>`;
 affichage.append(resultat);
     };
    
-});
-$.getJSON("plat.json", function(json){
-               var affichage=$("#plats");
-                var ctg=json.categorie;
-            var plt=json.plat;
-            
+         
+            $(".cat").click(function () {
+               
+    var id=$(this).find(".id").attr("value");
+              plat(id);
+              btn.show();
+              console.log(id);
+             
+             
+          });
+
+          function plat(id){
+         test.empty();
+         
+            $.each(plt, function (element, uno) {
+                var idcat=uno.id_categorie;
+                if (idcat == id){ 
+                            var t = ` 
+                        <div class="card w-25 mx-1 "
+                            style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:35rem;">
+                            <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="${uno.libelle}">
+                            <div class="card-body font-weight-bold font-italic">
+                                <h5 class="card-title ">${uno.libelle}</h5>
+                                <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € </p>
+                                <a href="commande.php" class="btn btn-dark t">Commander</a>
+                            </div>
+                        </div> `;
+                        
+                     
+visible.hide();
+
+                            test.append(t);
+                            
+                           
+                };
+                
+                
+                        });
+          };
             $("#btn").click(function () {
                           
-                          search();
+                 search();
             
-                      });
-                      $("#recherche").on("keypress", function (e) {
+            });
+                    $("#recherche").on("keypress", function (e) {
                          
                         if(e.which===13){
                         
                         search();
                        
-                      };
+                        };
             
                     });
-                      function search() {
+
+                    function search() {
                           var a = $("#afficher");
                           a.empty();
                           var visible=$("#visible");
                          
-            visible.hide();
+                        visible.hide();
                           var input = $("#recherche").val();
             
-                          $.getJSON("plat.json", function (json) {
+                        $.getJSON("plat.json", function (json) {
                               var plt = json.plat;
-                             
-            
-                         
+
                                   var pla = plt.filter(function (p) {
                                       return p.libelle.toLowerCase().includes(input.toLowerCase());
                                   });  
@@ -121,18 +163,18 @@ $.getJSON("plat.json", function(json){
                           
                               miseajour(pla);
             
-                              function miseajour(result) {
+                            function miseajour(result) {
                                
                                   $.each(result, function (element, uno) {
                                       var txt = ` 
                                   <div class="card w-25 mx-1 "
                                       style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover; height:35rem;">
-                                      <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="cheesburger">
+                                      <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="${uno.libelle}">
                                       <div class="card-body font-weight-bold font-italic">
                                           <h5 class="card-title ">${uno.libelle}</h5>
                                           <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € 
                                           </p>
-                                          <a href="commande.php" class="btn btn-dark">Commander</a>
+                                          <a href="commande.php" class="btn btn-dark t">Commander</a>
                                       </div>
                                   </div>`;
             
@@ -142,11 +184,11 @@ $.getJSON("plat.json", function(json){
             
                                   rechercher(input);
             
-                              }
-                          });
+                            };
+                        });
                       };
-                      });
-
+                      
+                    });
 });
 
 

@@ -77,12 +77,12 @@ exit();
  else{
 unset($_SESSION["auth"]);
 session_destroy();
-echo "Veuillez remplir correctement le formulaire s.v.p <br>";
-echo "nom: ".n($nom);
-echo "<br>prenom: ".p($prenom);
-echo "<br>email: ".e($email);
-echo "<br>telephone: ".t($telephone);
-echo "<br>demande: ".d($demande);
+// echo "Veuillez remplir correctement le formulaire s.v.p <br>";
+// echo "nom: ".n($nom);
+// echo "<br>prenom: ".p($prenom);
+// echo "<br>email: ".e($email);
+// echo "<br>telephone: ".t($telephone);
+// echo "<br>demande: ".d($demande);
 header("Location: contact.php");
 exit();
 

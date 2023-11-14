@@ -1,32 +1,37 @@
 $(document).ready(function () {
 
     //Formulaire contact version desktop
-    $("#monbouton").click(function () {
-     
-        contact();
+    $("#monbouton").click(function (e) {
+       
+        contact(e);
     });
     //Formulaire contact version mobile
-    $("#monboutonsm").click(function () {
+    $("#monboutonsm").click(function (e) {
         // alert("a");
-        contactsm();
+        
+        contactsm(e);
     });
     //Formulaire commande version mobile
-    $("#boutonsm").click(function () {
-      
-        commandesm();
+    $("#boutonsm").click(function (e) {
+       
+        commandesm(e);
     });
     //Formulaire commande version desktop
-    $("#bouton").click(function () {
-       
-        commande();
+    $("#bouton").click(function (e) {
+      
+        commande(e);
     });
 
 
 
 
-    function contact() {
+    function contact(e) {
    
-
+        $("#pre").hide();
+        $("#email").hide();
+        $("#tel").hide();
+        $("#dem").hide();
+       
        
         var envoi = true;
         var nom = $("#n").val();
@@ -88,9 +93,13 @@ $(document).ready(function () {
 
 
 
-    function contactsm() {
+    function contactsm(e) {
    
 
+        $("#pre2").hide();
+        $("#email2").hide();
+        $("#tel2").hide();
+        $("#dem2").hide();
        
         var envoi = true;
         var nom = $("#n2").val();
@@ -99,12 +108,11 @@ $(document).ready(function () {
             envoi = false;
             $("#nom2").show();
             e.preventDefault();
+            
         }
         else if (envoi == true) {
             $("#nom2").hide();
-           
-        };
-        var prenom = $("#p2").val();
+            var prenom = $("#p2").val();
         if (prenom === "") {
             envoi = false;
             $("#pre2").show();
@@ -114,6 +122,8 @@ $(document).ready(function () {
             $("#pre2").hide();
        
         };
+        };
+       
 
 
         var email = $("#e2").val();
@@ -155,10 +165,15 @@ $(document).ready(function () {
     
 
 
-    function commande() {
+    function commande(e) {
        
         var envoi = true;
         
+        $("#nompre").hide();
+        $("#email").hide();
+        $("#tel").hide();
+        $("#adresse").hide();
+
         var nompre = $("#np").val();
         if (nompre === "") {
             envoi = false;
@@ -213,10 +228,15 @@ $(document).ready(function () {
     
 
 
-        function commandesm() {
+        function commandesm(e) {
            
             var envoi = true;
-    
+
+            $("#nompre2").hide();
+        $("#email2").hide();
+        $("#tel2").hide();
+        $("#adresse2").hide();
+        
             var nompre = $("#np2").val();
             if (nompre === "") {
                

@@ -19,8 +19,11 @@
 
         <div class="container-fluid ">
             <?php
-                include('header.php');
+                include('fil-rouge-1/header.php');
             ?>
+            <div class="col-12 d-flex justify-content-center">
+<h1 class="font-weight-bold font-italic">Votre Commande :</h1>
+</div>
             <div class="item-content position-relative d-none d-md-block w-25 mx-auto text-center">
 
                 <div class="card "
@@ -29,7 +32,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Le 360</h5>
                         <p class="card-text">2 steaks 180g, cheddar, sauce au choix et crudités<br> Total: 11€</p>
-                        <a href="#" class="btn btn-dark">Quantité: 1</a>
+                        <a href="#" class="btn btn-dark t">Quantité: 1</a>
                     </div>
                 </div>
             </div>
@@ -91,7 +94,7 @@
                             <div class="item-content text-center ml-4 pl-4 ">
 
                                 <input type="submit" id="bouton"
-                                    class="btn btn-dark font-weight-bold font-italic text-right" value="Envoyer">
+                                    class="btn btn-dark font-weight-bold font-italic text-right t" value="Envoyer">
                             </div>
                         </div>
                     </form>
@@ -99,7 +102,9 @@
                 </div>
             </div>
             <div class="item-content position-relative text-center ml-4 w-100 d-md-none">
-
+            <div class="col-12 d-flex justify-content-center">
+<h1 class="font-weight-bold font-italic">Votre Commande :</h1>
+</div>
                 <div class="card "
                     style="width: 15rem; background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
                     <img class="col-4" src="asset/food/cheesburger.jpg" alt="burger360">
@@ -107,7 +112,7 @@
                         <h5 class="card-title">Le 360</h5>
                         <p class="card-text">2 steaks 180g, cheddar, sauce au choix et crudités<br> Total: 11€
                         </p>
-                        <a href="#" class="btn btn-dark">Quantité: 1</a>
+                        <a href="#" class="btn btn-dark t">Quantité: 1</a>
                     </div>
                 </div>
             </div>
@@ -160,7 +165,7 @@
                         <div class="item-content text-center ml-4 pl-4 ">
 
                             <input type="submit" id="boutonsm"
-                                class="btn btn-dark font-weight-bold font-italic text-right" value="Envoyer">
+                                class="btn btn-dark t font-weight-bold font-italic text-right" value="Envoyer">
                         </div>
                     </div>
 
@@ -177,7 +182,7 @@
 
 
         <?php
-        include('footer.php');
+        include('fil-rouge-1/footer.php');
         ?>
     </div>
 

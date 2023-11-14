@@ -27,7 +27,7 @@
         <div id="visible">
           <div class="item-content position-relative d-md-none">
             <img class="img-fluid w-100 mt-2" id="bandeau" src="asset/cat.fond/fond-bordeau.png"
-              style=" margin-bottom: -80px;" alt="bandeau de décoration couleur bordeaux">
+              style=" margin-bottom: 80px;" alt="bandeau de décoration couleur bordeaux">
           <div class="position-absolute d-flex justify-content-between w-100" style="top: 0; left: 0;">
             <img class="img-fluid w-25" alt="verre de vin" src="asset/cat.fond/vin.png">
            <img class="img-fluid w-25" alt="cuisinier" src="asset/cat.fond/petitCuisinier.png">
@@ -36,17 +36,20 @@
 
       </div>
 
-      <div class="container-fluid col-12 mb-4 mt-1">
-          <div class="col-2 ">
-            <div class="card border-0 bg-transparent  ">
-              <div class="card-body">
-                <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
-              </div>
-            </div>
-          </div>
-       <h1>Votre demande est envoyée!</h1>
-       <button type="submit" href="index.php">Retourner sur la page d'acceuil</button>
+      <div class="container-fluid col-12 mb-4 mt-1 d-flex justify-content-start ">
+        <div class="col-2 ">
+           <div class="card border-0 bg-transparent  ">
+            <div class="card-body">
+               <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
+             </div>
+           </div>
+        </div>
+        <div calss="col-10">
+          <h1 class="mt-4">Votre demande est envoyée!</h1><br>
+          <a type="submit" class="btn btn-dark t" href="index.php">Retourner sur la page d'acceuil</a>
+        </div>
       </div>
+
       <?php
         include('footer.php');
         ?>

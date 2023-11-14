@@ -24,10 +24,17 @@
             <div class="w-100 d-flex row">
                  <div class="row justify-content-center " id="afficher"></div>
             </div>
-            <div class="container-fluid  " id="visible">
+            <div class="container-fluid  " >
+            <div class="row d-flex justify-content-center ml-3 mr-3" >
+               
+                <div id="gg" class="row justify-content-center mt-4"></div>
+                <div  > <a type="submit" id="bottom" href="index.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
+            </div>
+            <div id="visible">
             <div class="col-12 d-flex justify-content-center">
-<h1 class="font-weight-bold font-italic">Nos Catégories </h1>
-</div>
+               
+                    <h1 class="font-weight-bold font-italic">Nos Catégories </h1>
+                </div>
                 <div class="w-100 row">
                     <div class="col-3 d-none d-md-block">
                         <div class="card border-0 bg-transparent">
@@ -48,21 +55,19 @@
 
                 <div class="container col-12 d-md-none" id="tel">
                 </div>
-
-            </div>
-            <div class="d-flex justify-content-between">
-    <a type="submit" href="contact.php" class="btn btn-dark" >Précedent</a>
-    <a type="submit" href="categorie.php" class="btn btn-dark" >Suivant</a>
+                <div class="d-flex justify-content-between">
+    <a type="submit" href="contact.php" class="btn btn-dark t" >Précedent</a>
+    <a type="submit" href="categorie.php" class="btn btn-dark t" >Suivant</a>
 </div>
-
+            </div>
+ 
+</div>
         <?php
         include('footer.php');
         ?>
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+ 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -73,8 +78,10 @@
     <script>
         $(document).ready(function () {
             var visible=$("#visible");
-
+var btn=$("#bottom");
+btn.hide();
             $.getJSON("plat.json", function (json) {
+                var test=$("#gg");
                 var affichage = $("#categorie");
                 var tel=$("#tel");
                 var ctg = json.categorie;
@@ -82,17 +89,53 @@
                 var affiche = $("#txt");
                 for (i = 0; i < ctg.length; i++) {
                     var item = ctg[i];
-                    var resultat = `<div class="card w-25 mr-4 mb-4 d-none d-md-block"
+                    var resultat = `<div class="t  cat card w-25 mr-4 mb-4 d-none d-md-block"
                 style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:25rem;">
-                <img class="card-img-top taille" src="asset/category/${item.image}" alt="plat">
+                <img class="card-img-top taille" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body">
-                    <h5 class="card-title font-weight-bold font-italic">${item.libelle}</h5>
+                    <h5 value="${item.id_categorie}" class="card-title font-weight-bold font-italic id">${item.libelle}</h5>
                 
                   
                 </div>
             </div>`
                     affichage.append(resultat);
                 };
+           
+$(".cat").click(function () {
+    var id=$(this).find(".id").attr("value");
+              plat(id);
+              btn.show();
+
+          });
+          function plat(id){
+         test.empty();
+         
+    
+            $.each(plt, function (element, uno) {
+                var idcat=uno.id_categorie;
+                if (idcat == id){ 
+                            var t = ` 
+                        <div class="card w-25 mx-1 "
+                            style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:35rem;">
+                            <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="${uno.libelle}">
+                            <div class="card-body font-weight-bold font-italic">
+                                <h5 class="card-title ">${uno.libelle}</h5>
+                                <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € </p>
+                                <a href="commande.php" class="btn btn-dark t">Commander</a>
+                            </div>
+                        </div> `;
+                        
+                     
+visible.hide();
+
+                            test.append(t);
+                            
+                           
+                };
+                
+                
+                        });
+          };
                 for (i = 0; i < 3; i++) {
                     var truc = plt[i];
                     var r = `<div class="card w-25 mr-4 mb-4 d-none d-md-block"
@@ -101,7 +144,7 @@
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold font-italic">${truc.libelle}</h5>
                     <p class="card-text">${truc.description}<br> Menu: ${truc.prix} €  </p>
-                    <a href="commande.php" class="btn btn-dark">commander</a>
+                    <a href="commande.php" class="btn btn-dark t">commander</a>
                 </div>
             </div>`
                     affiche.append(r);
@@ -114,7 +157,7 @@
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold font-italic">${leplat.libelle}</h5>
                     <p class="card-text">${leplat.description}<br> Menu: ${leplat.prix} €  </p>
-                    <a href="commande.php" class="btn btn-dark">commander</a>
+                    <a href="commande.php" class="btn btn-dark t">commander</a>
                 </div>
             </div>`
                     tel.append(card);
@@ -125,6 +168,7 @@
 
 
             });
+            
             $("#btn").click(function () {
               
                 search();
@@ -168,7 +212,7 @@ visible.hide();
                             <div class="card-body font-weight-bold font-italic">
                                 <h5 class="card-title ">${uno.libelle}</h5>
                                 <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € </p>
-                                <a href="commande.php" class="btn btn-dark">Commander</a>
+                                <a href="commande.php" class="btn btn-dark t">Commander</a>
                             </div>
                         </div>`;
 

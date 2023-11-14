@@ -48,7 +48,7 @@
               </div>
             </div>
           </div>
-          <form action="asset/php/fomulaire.php" method="post" class="col-8 d-none d-md-block">
+          <form action="fomulaire.php" method="post" class="col-8 d-none d-md-block">
             <div class="form-row ">
               <div class="col mr-4 ml-4 mb-4 mt-4 ">
                 <label class="font-weight-bold font-italic text-right">Nom</label>
@@ -89,7 +89,7 @@
             <div class="form-group mr-4 ml-4 mb-4 mt-4">
               <label class="font-weight-bold font-italic text-right">Votre Demande</label>
               <textarea name="demande" class="form-control" id="d" rows="4"></textarea>
-              <div id="dem" class="alert alert-danger alert-dismissiblaction="#" method="POST"e bg-transparent border-0 fade show"
+              <div id="dem" class="alert alert-danger alert-dismissiblaction bg-transparent border-0 fade show"
                 style="display:none;" role="alert">
                 <strong>Ce champ est obligatoire</strong>
               </div>
@@ -97,7 +97,7 @@
             <div class="container-fluid col-12 ">
               <div class="item-content text-center ml-4 pl-4 ">
 
-                <input name="envoyer" type="submit" id="monbouton" class="btn btn-dark font-weight-bold font-italic text-right"
+                <input name="envoyer" type="submit" id="monbouton" class="btn btn-dark font-weight-bold font-italic text-right t"
                   value="Envoyer">
               </div>
             </div>
@@ -107,7 +107,7 @@
 
         </div>
       </div>
-        <form action="asset/php/fomulaire.php" method="post" class="form d-md-none">
+        <form action="fomulaire.php" method="post" class="form d-md-none">
         <div class="col-12 d-flex justify-content-center">
 <h1 class="font-weight-bold font-italic">Formulaire de contact </h1>
 </div>
@@ -156,7 +156,7 @@
           </div>
           <div class="item-content text-center ml-4 pl-4 ">
 
-            <input name="envoyer" type="submit" id="monboutonsm" class="btn btn-dark font-weight-bold font-italic text-right"
+            <input name="envoyer" type="submit" id="monboutonsm" class="btn btn-dark font-weight-bold font-italic text-right t"
               value="Envoyer">
           </div>
 
@@ -165,8 +165,8 @@
       </div>
 </div>
 <div class="d-flex justify-content-between">
-    <a type="submit" href="plats.php" class="btn btn-dark" >Précedent</a>
-    <a type="submit" href="index.php" class="btn btn-dark" >Suivant</a>
+    <a type="submit" href="plats.php" class="btn btn-dark t" >Précedent</a>
+    <a type="submit" href="index.php" class="btn btn-dark t" >Suivant</a>
 </div>
       <?php
         include('footer.php');
@@ -194,8 +194,8 @@
                 var ctg=json.categorie;
             var plt=json.plat;
             
-            $("#btn").click(function () {
-                          
+            $("#btn").click(function (e) {
+                         
                           search();
             
                       });

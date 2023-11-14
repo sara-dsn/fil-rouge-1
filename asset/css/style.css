@@ -22,10 +22,10 @@
     transition: transform 0.5s;
 }
 .taille{
-   height:70%; 
+   height:80%; 
 }
 .t:hover {
-    transform: scale(1.2); }
+    transform: scale(1.1); }
     
 #coupe{
     clip-path: polygon(0% 30%, 100% 30%, 100% 80%, 0% 80%);
