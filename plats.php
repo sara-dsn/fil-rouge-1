@@ -17,58 +17,64 @@
     <div class="parallax-body">
 
         <div class="container-fluid">
-        <?php
-        include('header.php');
-        ?>
-     <div class="w-100 d-flex row">
-                 <div class="row justify-content-center " id="afficher"></div>
-            </div>
-        <div id="visible">
-        <div class="col-12 d-flex justify-content-center">
-<h1 class="font-weight-bold font-italic">Nos Plats </h1>
-</div>
-            <div class="w-100 row">
-                <div class="col-3">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-body">
-                            <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
-                      </div>
-                  </div>
-              </div>
-            
-             <div class="row w-75" id="plats"></div>
-        
-             </div>
-</div>
-<div class="d-flex justify-content-between">
-    <a type="submit" href="categorie.php" class="btn btn-dark t" >Précedent</a>
-    <a type="submit" href="contact.php" class="btn btn-dark t" >Suivant</a>
-</div>
             <?php
-         include('footer.php');
+                  include('header.php');
+            ?>
+            <div class="w-100 d-flex row">
+                <div class="row justify-content-center " id="afficher"></div>
+                <div class="col-12 text-center" > <a type="submit" id="go" href="plats.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
+            </div>
+        </div>
+            <div id="visible" class="container-fluid">
+                <div class="col-12 d-flex justify-content-center">
+                    <h1 class="font-weight-bold font-italic mt-2">Nos Plats </h1>
+                </div>
+                <div class="w-100 row">
+                    <div class="col-3">
+                        <div class="card border-0 bg-transparent">
+                            <div class="card-body">
+                                <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
+                            </div>
+                        </div>
+                  </div>
+                
+            
+                <div class="row w-75 mt-4" id="plats"></div>
+        
+       
+                <div class="col-12 d-flex justify-content-between">
+                    <a type="submit" href="categorie.php" class="btn btn-dark t" >Précedent</a>
+                    <a type="submit" href="contact.php" class="btn btn-dark t" >Suivant</a>
+                </div>
+                </div>
+            </div>
+       
+            <?php
+                include('footer.php');
             ?>
        
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+      
          <script>
             
 $(document).ready(function(){
 
 $.getJSON("plat.json", function(json){
-   var affichage=$("#plats");
-    var ctg=json.categorie;
+var affichage=$("#plats");
+var ctg=json.categorie;
 var plt=json.plat;
-console.log(plt);
-    for (i=0;i<plt.length;i++){
+var btn=$("#go");
+var visible=$("#visible");
+btn.hide();
+
+for (i=0;i<plt.length;i++){
 var item=plt[i];
 var resultat=`<div class="card w-25 mr-4 mb-4 "
                 style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:35rem;">
@@ -93,17 +99,17 @@ $("#btn").click(function () {
              
             if(e.which===13){
             
-            search();
-           
+            search(); //  visible.hide();
+        
           };
 
         });
           function search() {
+            btn.show();
+            visible.hide();
               var a = $("#afficher");
               a.empty();
-              var visible=$("#visible");
-             
-visible.hide();
+        
               var input = $("#recherche").val();
 
               $.getJSON("plat.json", function (json) {
@@ -137,8 +143,6 @@ visible.hide();
                           a.append(txt);
 
                       });
-
-                      rechercher(input);
 
                   }
               });

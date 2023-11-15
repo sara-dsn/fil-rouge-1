@@ -23,13 +23,13 @@
          
             <div class="w-100 d-flex row">
                  <div class="row justify-content-center " id="afficher"></div>
+                 
             </div>
             <div class="container-fluid  " >
             <div class="row d-flex justify-content-center ml-3 mr-3" >
-               
-                <div id="gg" class="row justify-content-center mt-4"></div>
-                <div  > <a type="submit" id="bottom" href="index.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
+               <div id="gg" class="row justify-content-center mt-4"></div>
             </div>
+            <div class="col-12 text-center"> <a type="submit" id="bottom" href="index.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
             <div id="visible">
             <div class="col-12 d-flex justify-content-center">
                
@@ -140,7 +140,7 @@ visible.hide();
                     var truc = plt[i];
                     var r = `<div class="card w-25 mr-4 mb-4 d-none d-md-block"
                 style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover; height:35rem">
-                <img class="card-img-top" style="height:50%;" src="asset/food/${truc.image}" alt="plat">
+                <img class="card-img-top" style="height:50%;" src="asset/food/${truc.image}" alt="${truc.libelle}">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold font-italic">${truc.libelle}</h5>
                     <p class="card-text">${truc.description}<br> Menu: ${truc.prix} €  </p>
@@ -153,7 +153,7 @@ visible.hide();
                     var leplat = plt[i];
                     var card = `<div class="card mb-2 "
                 style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:35rem;">
-                <img class="card-img-top" style="height:50%;" src="asset/food/${leplat.image}" alt="plat">
+                <img class="card-img-top" style="height:50%;" src="asset/food/${leplat.image}" alt="${leplat.libelle}">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold font-italic">${leplat.libelle}</h5>
                     <p class="card-text">${leplat.description}<br> Menu: ${leplat.prix} €  </p>
@@ -179,7 +179,7 @@ visible.hide();
               if(e.which===13){
               
               search();
-             
+            
             };
 
           });
@@ -187,6 +187,7 @@ visible.hide();
                 var a = $("#afficher");
                 a.empty();
 visible.hide();
+btn.show();
                 var input = $("#recherche").val();
 
                 $.getJSON("plat.json", function (json) {
@@ -208,7 +209,7 @@ visible.hide();
                             var txt = ` 
                         <div class="card w-25 mx-1 "
                             style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:35rem;">
-                            <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="cheesburger">
+                            <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body font-weight-bold font-italic">
                                 <h5 class="card-title ">${uno.libelle}</h5>
                                 <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € </p>
@@ -220,7 +221,6 @@ visible.hide();
 
                         });
 
-                        rechercher(input);
 
                     }
                 });

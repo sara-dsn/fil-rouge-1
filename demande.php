@@ -23,6 +23,7 @@
         ?>
      <div class="w-100 d-flex row">
                  <div class="row justify-content-center " id="afficher"></div>
+                 <div class="col-12 text-center" > <a type="submit" id="go" href="demande.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
             </div>
         <div id="visible">
           <div class="item-content position-relative d-md-none">
@@ -75,18 +76,19 @@
                var affichage=$("#plats");
                 var ctg=json.categorie;
             var plt=json.plat;
-            
+            var btn2=("#go");
+            btn2.hide();
             $("#btn").click(function () {
                           
                           search();
-            
+            btn2.show();
                       });
                       $("#recherche").on("keypress", function (e) {
                          
                         if(e.which===13){
                         
                         search();
-                       
+                       btn2.show();
                       };
             
                     });

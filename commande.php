@@ -21,6 +21,18 @@
             <?php
                 include('fil-rouge-1/header.php');
             ?>
+            <div class="container-fluid  " >
+                <div class="w-100 d-flex row">
+                     <div class="row justify-content-center " id="afficher"></div>
+                    <div class="col-12 text-center" > <a type="submit" id="go" href="commande.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
+                </div>
+            </div>
+           
+            <div class="row d-flex justify-content-center ml-3 mr-3" >
+               
+                <div id="gg" class="row justify-content-center mt-4"></div>
+                <div  > <a type="submit" id="bottom" href="index.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
+            </div>
             <div class="col-12 d-flex justify-content-center">
 <h1 class="font-weight-bold font-italic">Votre Commande :</h1>
 </div>
@@ -189,9 +201,7 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -199,6 +209,76 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script src="asset/js/script.js"></script>
+    <script>
+    $(document).ready(function(){
+            var btn2=("#go");
+            btn2.hide();
+            $.getJSON("plat.json", function(json){
+               var affichage=$("#plats");
+                var ctg=json.categorie;
+            var plt=json.plat;
+            
+            $("#btn").click(function (e) {
+                         
+                          search();
+            btn2.show();
+                      });
+                      $("#recherche").on("keypress", function (e) {
+                         
+                        if(e.which===13){
+                        
+                        search();
+                       btn2.show();                      };
+            
+                    });
+                      function search() {
+                          var a = $("#afficher");
+                          a.empty();
+                          var visible=$("#visible");
+                         
+            visible.hide();
+                          var input = $("#recherche").val();
+            
+                          $.getJSON("plat.json", function (json) {
+                              var plt = json.plat;
+                             
+            
+                         
+                                  var pla = plt.filter(function (p) {
+                                      return p.libelle.toLowerCase().includes(input.toLowerCase());
+                                  });  
+                             
+                  
+                          
+                              miseajour(pla);
+            
+                              function miseajour(result) {
+                               
+                                  $.each(result, function (element, uno) {
+                                      var txt = ` 
+                                  <div class="card w-25 mx-1 "
+                                      style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;">
+                                      <img class="card-img-top" src="asset/food/${uno.image}" alt="cheesburger">
+                                      <div class="card-body font-weight-bold font-italic">
+                                          <h5 class="card-title ">${uno.libelle}</h5>
+                                          <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € 
+                                          </p>
+                                          <a href="commande.html" class="btn btn-dark">Commander</a>
+                                      </div>
+                                  </div>`;
+            
+                                      a.append(txt);
+            
+                                  });
+            
+                                  rechercher(input);
+            
+                              }
+                          });
+                      };
+                      });
+                    });
+    </script>
 </body>
 
 </html>

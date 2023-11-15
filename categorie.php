@@ -27,6 +27,7 @@
            
             <div class="w-100 d-flex row">
                  <div class="row justify-content-center " id="afficher"></div>
+                 <div class="col-12 text-center" > <a type="submit" id="go" href="categorie.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
             </div>
         </div>
         <div id="visible">
@@ -67,7 +68,8 @@
 $(document).ready(function(){
     var btn=$("#bottom");
     var visible=$("#visible");
-   
+    var btn2=$("#go");
+   btn2.hide();
    btn.hide();
 $.getJSON("plat.json", function(json){
   
@@ -132,14 +134,15 @@ visible.hide();
             $("#btn").click(function () {
                           
                  search();
-            
+                 btn2.show();
+
             });
                     $("#recherche").on("keypress", function (e) {
                          
                         if(e.which===13){
                         
                         search();
-                       
+                        btn2.show();
                         };
             
                     });
