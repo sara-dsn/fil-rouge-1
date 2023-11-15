@@ -25,12 +25,12 @@
                 <div class="col-12 text-center" > <a type="submit" id="go" href="plats.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
             </div>
         </div>
-            <div id="visible" class="container-fluid">
+            <div id="visible" class="container-fluid ">
                 <div class="col-12 d-flex justify-content-center">
                     <h1 class="font-weight-bold font-italic mt-2">Nos Plats </h1>
                 </div>
                 <div class="w-100 row">
-                    <div class="col-3">
+                    <div class="col-3 d-none d-md-block">
                         <div class="card border-0 bg-transparent">
                             <div class="card-body">
                                 <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
@@ -39,7 +39,7 @@
                   </div>
                 
             
-                <div class="row w-75 mt-4" id="plats"></div>
+                <div class="row col-12 col-md-9 mt-4 ml-3" id="plats"></div>
         
        
                 <div class="col-12 d-flex justify-content-between">
@@ -65,26 +65,26 @@
          <script>
             
 $(document).ready(function(){
-
+    var btn=$("#go");
+var visible=$("#visible");
+btn.hide();
 $.getJSON("plat.json", function(json){
 var affichage=$("#plats");
 var ctg=json.categorie;
 var plt=json.plat;
-var btn=$("#go");
-var visible=$("#visible");
-btn.hide();
+
 
 for (i=0;i<plt.length;i++){
 var item=plt[i];
-var resultat=`<div class="card w-25 mr-4 mb-4 "
-                style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:35rem;">
+var resultat=`<div class="card  col-12 col-md-3  mb-4 "
+                style=" background-size: cover;height:38rem;">
                 <img class="card-img-top" style="height:50%;" src="asset/food/${item.image}" alt="${item.libelle}">
-                <div class="card-body">
+                <div class="card-body ">
                     <h5 class="card-title font-weight-bold font-italic">${item.libelle}</h5>
                     <p class="card-text " >${item.description}<br> Menu: ${item.prix} €  </p>
-                    <a href="commande.php" class="btn btn-dark t">commander</a>
+                    <a href="commande.php" class="btn btn-dark t ">commander</a>
                 </div>
-            </div>`
+            </div>`;
 affichage.append(resultat);
     };
    
@@ -132,11 +132,11 @@ $("#btn").click(function () {
                       <div class="card w-25 mx-1 "
                           style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover; height:35rem;">
                           <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="cheesburger">
-                          <div class="card-body font-weight-bold font-italic">
+                          <div class="card-body font-weight-bold font-italic ">
                               <h5 class="card-title ">${uno.libelle}</h5>
-                              <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € 
+                              <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € 
                               </p>
-                              <a href="commande.php" class="btn btn-dark t">Commander</a>
+                              <a href="commande.php" class="btn btn-dark t ">Commander</a>
                           </div>
                       </div>`;
 
@@ -144,7 +144,7 @@ $("#btn").click(function () {
 
                       });
 
-                  }
+                  };
               });
           };
 

@@ -1,5 +1,4 @@
-<?php
-echo '  <div class="container-fluid">
+<div class="container-fluid">
 <div class="row  pr-0 pl-0 mr-0 ml-0">
     <img class="image-fluid pl-0 col-5 col-md-2 " src="asset/the_district_brand/facebook_cover_photo_1.png"
         alt="logo-the-District">
@@ -59,5 +58,4 @@ echo '  <div class="container-fluid">
         </nav>
 
     </div>
-</div>';
-?>
+</div>

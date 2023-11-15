@@ -35,3 +35,6 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 55%);
     overflow: hidden;
 }
+.fondblanc {
+    background-color: #fef4e8;
+}

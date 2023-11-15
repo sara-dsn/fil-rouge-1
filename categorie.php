@@ -35,7 +35,7 @@
               <h1 class="font-weight-bold font-italic">Nos Catégories </h1>
           </div>
             <div class="w-100 row">
-                <div class="col-3">
+                <div class="col-3 d-none d-md-block">
                     <div class="card border-0 bg-transparent">
                         <div class="card-body">
                             <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
@@ -43,7 +43,7 @@
                   </div>
                 </div>
             
-                <div class="row w-75" id="plats"></div>
+                <div class="row col-12 col-md-9" id="plats"></div>
             </div>
         
             <div class="d-flex justify-content-between">
@@ -80,7 +80,7 @@ var test=$("#gg");
 
     for (i=0;i<ctg.length;i++){
 var item=ctg[i];
-var resultat=`<div class="t card w-25 mr-4 mb-4 cat"
+var resultat=`<div class="t card ml-4 col-12 col-md-4 mr-4 mb-4 cat"
                 style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:25rem;">
                 <img class="card-img-top taille" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body">
@@ -110,9 +110,9 @@ affichage.append(resultat);
                 var idcat=uno.id_categorie;
                 if (idcat == id){ 
                             var t = ` 
-                        <div class="card w-25 mx-1 "
-                            style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:35rem;">
-                            <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="${uno.libelle}">
+                        <div class="card col-12 col-md-3 mx-2 mb-3 fondblanc"
+                            style="background-size: cover;height:20;">
+                            <img class="card-img-top img-fluid" style="height:50%;" src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body font-weight-bold font-italic">
                                 <h5 class="card-title ">${uno.libelle}</h5>
                                 <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € </p>
@@ -171,7 +171,7 @@ visible.hide();
                                   $.each(result, function (element, uno) {
                                       var txt = ` 
                                   <div class="card w-25 mx-1 "
-                                      style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover; height:35rem;">
+                                      style=" background-size: cover; height:35rem;">
                                       <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="${uno.libelle}">
                                       <div class="card-body font-weight-bold font-italic">
                                           <h5 class="card-title ">${uno.libelle}</h5>
