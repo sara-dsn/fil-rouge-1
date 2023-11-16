@@ -198,7 +198,7 @@ visible.hide();
                     <h5 class="card-title font-weight-bold font-italic">${truc.libelle}</h5>
                     <p class="card-text font-italic">${truc.description}<br> Menu: ${truc.prix} €  </p>
                    
-                    <a href="commande.php" class="btn btn-dark t">commander</a>
+                   <div  class=" d-flex justify-content-center" ><a href="commande.php" class="btn btn-dark t">commander</a></div>
                     <span class="stock3 text-danger"><span>
                 </div>
             </div>`);

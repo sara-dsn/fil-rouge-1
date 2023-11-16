@@ -39,7 +39,7 @@
 
                     </div>
                 
-                    <div class=" row col-9 col-md-9 mt-4 ml-3" id="plats"></div>
+                    <div class=" row col-9 col-md-9  ml-3" id="plats"></div>
                 </div>
         
        
@@ -77,13 +77,13 @@ var plt=json.plat;
 
 for (i=0;i<plt.length;i++){
 var item=plt[i];
-var resultat=$( `<div class="card  col-12 col-md-3 mr-2 mb-4">
+var resultat=$( `<div class="card  col-12 col-md-3 mr-2 mb-1">
                 <img class="card-img-top img-fluid himg" src="asset/food/${item.image}" alt="${item.libelle}">
                 <div class="card-body ">
                     <h5 class="card-title font-weight-bold font-italic">${item.libelle}</h5>
                     <p class="card-text " >${item.description}<br> Menu: ${item.prix} €  </p>
                    
-                    <a href="commande.php" class="btn btn-dark t ">commander</a>
+                    <div  class=" d-flex justify-content-center" ><a href="commande.php" class="btn btn-dark t ">commander</a></div>
                     <span class="stock1 text-danger"><span>
                 </div>
             </div>`);
@@ -140,7 +140,7 @@ $("#btn").click(function () {
                               <h5 class="card-title ">${uno.libelle}</h5>
                               <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € 
                              
-                              <a href="commande.php" class="btn btn-dark t ">Commander</a>
+                              <div  class=" d-flex justify-content-center" >< <a href="commande.php" class="btn btn-dark t ">Commander</a></div>
                               </p><span class="stock5 text-danger"><span>
                           </div>
                       </div>`);
