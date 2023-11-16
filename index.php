@@ -93,17 +93,25 @@ var affiche = $("#txt");
                
                 for (i = 0; i < ctg.length; i++) {
                     var item = ctg[i];
-                    var resultat = `<div class="t  cat card w-25 mr-4 mb-4 d-none d-md-block">
+                    var resultat = $( `<div class="t  cat card w-25 mr-4 mb-4 d-none d-md-block">
                 <img class="card-img-top taille" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body">
-                    <h5 value="${item.id_categorie}" class="card-title font-weight-bold font-italic id">${item.libelle}</h5>
-                
+                    <h5 value="${item.id_categorie}" class=" card-title font-weight-bold font-italic id">${item.libelle}</h5>
+                <span class="stock"><span>
                   
                 </div>
-            </div>`
+            </div>`);
                     affichage.append(resultat);
+//                     var stock=resultat.find(".stock");
+// stock.text("");
+// stock.append(itm.active==="No"?"<p class='text-danger'>Disponible prochainement</p>":'')
+var stock = resultat.find(".stock");
+    stock.text(item.active === 'Yes' ? 'Yes' : 'No');
+    stock.removeClass('text-bg-success text-bg-danger');
+    stock.addClass(item.active === 'Yes' ? 'text-bg-success' : 'text-bg-danger');
+
                 };
-           
+
 $(".cat").click(function () {
     var id=$(this).find(".id").attr("value");
               plat(id);
