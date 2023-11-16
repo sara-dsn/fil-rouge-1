@@ -42,7 +42,7 @@
         <img class="img-fluid w-25" alt="cuisinier" src="asset/cat.fond/petitCuisinier.png">
     </div>
 </div>
-<div class="item-content position-relative mt-0 d-none d-md-block ">
+<div class="item-content position-relative mt-0 d-none d-md-block mt-3 mb-4 ">
     <video autoplay loop muted playsinline poster="asset/the_district_brand/video.mp4" id="coupe"class=" w-100 ">
         <source src="asset/the_district_brand/video.mp4" type="video/mp4">
     </video>

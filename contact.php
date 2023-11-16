@@ -164,16 +164,20 @@
           function miseajour(result) {
                                
             $.each(result, function (element, uno) {
-             var txt = `<div class="card w-25 mx-1 ">
+             var txt = $(`<div class="card w-25 mx-1 ">
              <img class="card-img-top" src="asset/food/${uno.image}" alt="${uno.libelle}">
              <div class="card-body font-weight-bold font-italic">
               <h5 class="card-title ">${uno.libelle}</h5>
              <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € </p>
              <a href="commande.html" class="btn btn-dark">Commander</a>
+             <span class="stock5 text-danger"><span>
+
              </div>
-              </div>`;
+              </div>`);
             
               a.append(txt);
+              var stock = txt.find(".stock5");
+    stock.text(uno.active === 'Yes' ? '' : 'Disponible prochainement');
             });
             
                 visible.hide();

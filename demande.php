@@ -115,18 +115,21 @@
                               function miseajour(result) {
                                
                                   $.each(result, function (element, uno) {
-                                      var txt = ` 
+                                      var txt = $(` 
                                   <div class="card w-25 mx-1 ">
                                       <img class="card-img-top himg" src="asset/food/${uno.image}" alt="cheesburger">
                                       <div class="card-body font-weight-bold font-italic">
                                           <h5 class="card-title ">${uno.libelle}</h5>
                                           <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € 
-                                          </p>
+                                      
                                           <a href="commande.html" class="btn btn-dark">Commander</a>
+                                          </p><span class="stock1 text-danger"><span>
                                       </div>
-                                  </div>`;
+                                  </div>`);
             
                                       a.append(txt);
+                                      var stock = resultat.find(".stock1");
+    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
             
                                   });
             

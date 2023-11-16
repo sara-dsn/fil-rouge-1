@@ -97,18 +97,15 @@ var affiche = $("#txt");
                 <img class="card-img-top taille" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body">
                     <h5 value="${item.id_categorie}" class=" card-title font-weight-bold font-italic id">${item.libelle}</h5>
-                <span class="stock"><span>
+                <span class="stock text-danger"><span>
                   
                 </div>
             </div>`);
                     affichage.append(resultat);
-//                     var stock=resultat.find(".stock");
-// stock.text("");
-// stock.append(itm.active==="No"?"<p class='text-danger'>Disponible prochainement</p>":'')
+              
 var stock = resultat.find(".stock");
-    stock.text(item.active === 'Yes' ? 'Yes' : 'No');
-    stock.removeClass('text-bg-success text-bg-danger');
-    stock.addClass(item.active === 'Yes' ? 'text-bg-success' : 'text-bg-danger');
+    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
+ 
 
                 };
 
@@ -125,21 +122,25 @@ $(".cat").click(function () {
             $.each(plt, function (element, uno) {
                 var idcat=uno.id_categorie;
                 if (idcat == id){ 
-                            var t = ` 
+                            var t = $( ` 
                         <div class="card w-25 mx-1 ">
                             <img class="card-img-top himg"  src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body ">
                                 <h5 class="card-title font-weight-bold font-italic">${uno.libelle}</h5>
                                 <p class="card-text font-italic">${uno.description} <br> Menu: ${uno.prix} € </p>
+                               
                                 <a href="commande.php" class="btn btn-dark t">Commander</a>
+                                <span class="stock1 text-danger"><span>
+                                
                             </div>
-                        </div> `;
+                        </div> `);
                         
                      
 visible.hide();
 
                             test.append(t);
-                            
+                            var stock = resultat.find(".stock1");
+    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
                            
                 };
                 
@@ -163,21 +164,26 @@ visible.hide();
                        $.each(plt, function (element, uno) {
                            var idcat=uno.id_categorie;
                            if (idcat == id){ 
-                                       var t = ` 
+                                       var t =$(  ` 
                                    <div class="card col-12 col-md-3 mx-2 mb-3 ">
                                        <img class="card-img-top img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
                                        <div class="card-body ">
                                            <h5 class="card-title font-weight-bold font-italic">${uno.libelle}</h5>
                                            <p class="card-text text-center font-italic">${uno.description} <br> Menu: ${uno.prix} € </p>
+                                        
                                            <a href="commande.php" class="btn btn-dark  text-center t">Commander</a>
+                                           <span class="stock2 text-danger"><span>
                                        </div>
-                                   </div> `;
+                                   </div> `);
                                    
                                 
            visible.hide();
            
                                        test.append(t);
-                                       
+
+
+                                       var stock = t.find(".stock2");
+    stock.text(uno.active === 'Yes' ? '' : 'Disponible prochainement');
                                       
                            };
                            
@@ -186,27 +192,40 @@ visible.hide();
                      };
                 for (i = 0; i < 3; i++) {
                     var truc = plt[i];
-                    var r = `<div class="card w-25 mr-4 mb-4 d-none d-md-block">
+                    var r = $( `<div class="card w-25 mr-4 mb-4 d-none d-md-block">
                 <img class="card-img-top himg"  src="asset/food/${truc.image}" alt="${truc.libelle}">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold font-italic">${truc.libelle}</h5>
                     <p class="card-text font-italic">${truc.description}<br> Menu: ${truc.prix} €  </p>
+                   
                     <a href="commande.php" class="btn btn-dark t">commander</a>
+                    <span class="stock3 text-danger"><span>
                 </div>
-            </div>`
+            </div>`);
+
                     affiche.append(r);
+
+
+                    var stock = resultat.find(".stock3");
+    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
                 };
                 for (i = 0; i < 5; i++) {
                     var leplat = plt[i];
-                    var card = `<div class="card mb-2 ">
+                    var card = $( `<div class="card mb-2 ">
                 <img class="card-img-top himg" src="asset/food/${leplat.image}" alt="${leplat.libelle}">
                 <div class="card-body">
                     <h5 class="card-title font-weight-bold font-italic">${leplat.libelle}</h5>
                     <p class="card-text font-italic">${leplat.description}<br> Menu: ${leplat.prix} €  </p>
+    
                     <a href="commande.php" class="btn btn-dark t">commander</a>
+                    <span class="stock4 text-danger"><span>
                 </div>
-            </div>`
+            </div>`);
+            
                     tel.append(card);
+
+                    var stock = resultat.find(".stock4");
+    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
                 };
 
 
@@ -253,17 +272,21 @@ btn.show();
                     function miseajour(result) {
                      
                         $.each(result, function (element, uno) {
-                            var txt = ` 
+                            var txt = $( ` 
                         <div class="card d-flex justify-content-center w-25 mx-1 ">
                             <img class="card-img-top himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body ">
                                 <h5 class="card-title font-weight-bold font-italic">${uno.libelle}</h5>
                                 <p class="card-text font-italic">${uno.description} <br> Menu: ${uno.prix} € </p>
                                 <a href="commande.php" class="btn btn-dark t">Commander</a>
+                                <span class="stock5 text-danger"><span>
+
                             </div>
-                        </div>`;
+                        </div>`);
 
                             a.append(txt);
+                            var stock = txt.find(".stock5");
+    stock.text(uno.active === 'Yes' ? '' : 'Disponible prochainement');
 
                         });
 

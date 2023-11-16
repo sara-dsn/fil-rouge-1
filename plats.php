@@ -77,15 +77,19 @@ var plt=json.plat;
 
 for (i=0;i<plt.length;i++){
 var item=plt[i];
-var resultat=`<div class="card  col-12 col-md-3 mr-2 mb-4">
+var resultat=$( `<div class="card  col-12 col-md-3 mr-2 mb-4">
                 <img class="card-img-top img-fluid himg" src="asset/food/${item.image}" alt="${item.libelle}">
                 <div class="card-body ">
                     <h5 class="card-title font-weight-bold font-italic">${item.libelle}</h5>
                     <p class="card-text " >${item.description}<br> Menu: ${item.prix} €  </p>
+                   
                     <a href="commande.php" class="btn btn-dark t ">commander</a>
+                    <span class="stock1 text-danger"><span>
                 </div>
-            </div>`;
+            </div>`);
 affichage.append(resultat);
+var stock = resultat.find(".stock1");
+    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');                   
     };
    
 });
@@ -129,18 +133,21 @@ $("#btn").click(function () {
                   function miseajour(result) {
                    
                       $.each(result, function (element, uno) {
-                          var txt = ` 
+                          var txt =$( ` 
                       <div class="card w-25 mx-1">
                           <img class="card-img-top img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
                           <div class="card-body font-weight-bold font-italic ">
                               <h5 class="card-title ">${uno.libelle}</h5>
                               <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € 
-                              </p>
+                             
                               <a href="commande.php" class="btn btn-dark t ">Commander</a>
+                              </p><span class="stock5 text-danger"><span>
                           </div>
-                      </div>`;
+                      </div>`);
 
                           a.append(txt);
+                          var stock = txt.find(".stock5");
+    stock.text(uno.active === 'Yes' ? '' : 'Disponible prochainement');
 
                       });
 
