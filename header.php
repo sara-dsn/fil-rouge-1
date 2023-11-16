@@ -36,16 +36,14 @@
 </div>
 
 <div class="item-content position-relative d-md-none">
-    <img class="img-fluid w-100 mt-2" id="bandeau" src="asset/cat.fond/fond-bordeau.png"
-        style=" margin-bottom: -80px;" alt="bandeau de décoration couleur bordeaux">
-    <div class="position-absolute d-flex justify-content-between w-100" style="top: 0; left: 0;">
+    <img class="img-fluid w-100 mt-2" id="bandeau" src="asset/cat.fond/fond-bordeau.png"alt="bandeau de décoration couleur bordeaux">
+    <div class="position-absolute d-flex justify-content-between w-100 bandeausm">
         <img class="img-fluid w-25" alt="verre de vin" src="asset/cat.fond/vin.png">
         <img class="img-fluid w-25" alt="cuisinier" src="asset/cat.fond/petitCuisinier.png">
     </div>
 </div>
 <div class="item-content position-relative mt-0 d-none d-md-block ">
-    <video autoplay loop muted playsinline poster="asset/the_district_brand/video.mp4" id="coupe"
-        style="margin-top: -300px; margin-bottom: -200px;" class=" w-100 ">
+    <video autoplay loop muted playsinline poster="asset/the_district_brand/video.mp4" id="coupe"class=" w-100 ">
         <source src="asset/the_district_brand/video.mp4" type="video/mp4">
     </video>
     <div class="search-bar position-absolute">

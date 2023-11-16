@@ -226,7 +226,7 @@
                       $("#recherche").on("keypress", function (e) {
                          
                         if(e.which===13){
-                        
+                        e.preventDefault();
                         search();
                        btn2.show();                      };
             

@@ -27,9 +27,8 @@
             </div>
         <div id="visible">
           <div class="item-content position-relative d-md-none">
-            <img class="img-fluid w-100 mt-2" id="bandeau" src="asset/cat.fond/fond-bordeau.png"
-              style=" margin-bottom: 80px;" alt="bandeau de décoration couleur bordeaux">
-          <div class="position-absolute d-flex justify-content-between w-100" style="top: 0; left: 0;">
+            <img class="img-fluid w-100 mt-2" id="bandeau" src="asset/cat.fond/fond-bordeau.png" alt="bandeau de décoration couleur bordeaux">
+          <div class="position-absolute d-flex justify-content-between w-100">
             <img class="img-fluid w-25" alt="verre de vin" src="asset/cat.fond/vin.png">
            <img class="img-fluid w-25" alt="cuisinier" src="asset/cat.fond/petitCuisinier.png">
           </div>
@@ -86,7 +85,7 @@
                       $("#recherche").on("keypress", function (e) {
                          
                         if(e.which===13){
-                        
+                        e.preventDefault();
                         search();
                        btn2.show();
                       };
@@ -117,9 +116,8 @@
                                
                                   $.each(result, function (element, uno) {
                                       var txt = ` 
-                                  <div class="card w-25 mx-1 "
-                                      style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover; height:35rem;">
-                                      <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="cheesburger">
+                                  <div class="card w-25 mx-1 ">
+                                      <img class="card-img-top himg" src="asset/food/${uno.image}" alt="cheesburger">
                                       <div class="card-body font-weight-bold font-italic">
                                           <h5 class="card-title ">${uno.libelle}</h5>
                                           <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € 

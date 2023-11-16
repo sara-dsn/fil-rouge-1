@@ -18,11 +18,10 @@
 #f{
     height: 3%;
 }
+
+
 .t {
     transition: transform 0.5s;
-}
-.taille{
-   height:80%; 
 }
 .t:hover {
     transform: scale(1.1); }
@@ -30,11 +29,29 @@
 #coupe{
     clip-path: polygon(0% 30%, 100% 30%, 100% 80%, 0% 80%);
     overflow: hidden;
+    margin-top: -300px; 
+    margin-bottom: -200px;
 }
 #bandeau{
     clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 55%);
     overflow: hidden;
+    margin-bottom: -80px;
 }
-.fondblanc {
+.bandeausm{
+    top: 0; 
+    left: 0;
+}
+.card {
     background-color: #fef4e8;
+    background-size: cover;
+  
 }
+.taille{
+    height:80%; 
+ }
+ .himg{
+     height:45%;
+ }
+ .alert{
+    display:none;
+ }

@@ -23,12 +23,13 @@
         <div class="row d-flex justify-content-center ml-3 mr-3" >
                
                <div id="gg" class="row justify-content-center mt-4"></div>
-               <div class="col-12 text-center" > <a type="submit" id="bottom" href="categorie.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
+               
            
             <div class="w-100 d-flex row">
                  <div class="row justify-content-center " id="afficher"></div>
-                 <div class="col-12 text-center" > <a type="submit" id="go" href="categorie.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
+              
             </div>
+            <div class="col-12 text-center" > <a type="submit" id="bottom" href="categorie.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
         </div>
         <div id="visible">
             <div class="col-12 d-flex justify-content-center">
@@ -68,11 +69,9 @@
 $(document).ready(function(){
     var btn=$("#bottom");
     var visible=$("#visible");
-    var btn2=$("#go");
-   btn2.hide();
    btn.hide();
 $.getJSON("plat.json", function(json){
-  
+    var a = $("#afficher");
    var affichage=$("#plats");
     var ctg=json.categorie;
 var plt=json.plat;
@@ -80,11 +79,10 @@ var test=$("#gg");
 
     for (i=0;i<ctg.length;i++){
 var item=ctg[i];
-var resultat=`<div class="t card ml-4 col-12 col-md-4 mr-4 mb-4 cat"
-                style=" background-image: url('asset/cat.fond/fond-blanc.png'); background-size: cover;height:25rem;">
-                <img class="card-img-top taille" src="asset/category/${item.image}" alt="${item.libelle}">
+var resultat=`<div class="t card ml-4 col-12 col-md-4 mr-4 mb-4  ">
+                <img class="card-img-top img-fluid taille" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body">
-                    <h5  value="${item.id_categorie}" class="card-title font-weight-bold font-italic id">${item.libelle}</h5>
+                    <h5  value="${item.id_categorie}" class="card-title  text-center font-weight-bold font-italic id">${item.libelle}</h5>
                 
                   
                 </div>
@@ -93,30 +91,29 @@ affichage.append(resultat);
     };
    
          
-            $(".cat").click(function () {
+            $(".card").click(function () {
                
     var id=$(this).find(".id").attr("value");
               plat(id);
-              btn.show();
-              console.log(id);
+       
              
              
           });
 
           function plat(id){
+            btn.show();
          test.empty();
          
             $.each(plt, function (element, uno) {
                 var idcat=uno.id_categorie;
                 if (idcat == id){ 
                             var t = ` 
-                        <div class="card col-12 col-md-3 mx-2 mb-3 fondblanc"
-                            style="background-size: cover;height:20;">
-                            <img class="card-img-top img-fluid" style="height:50%;" src="asset/food/${uno.image}" alt="${uno.libelle}">
-                            <div class="card-body font-weight-bold font-italic">
-                                <h5 class="card-title ">${uno.libelle}</h5>
-                                <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € </p>
-                                <a href="commande.php" class="btn btn-dark t">Commander</a>
+                        <div class="card col-12 col-md-3 mx-2 mb-3 ">
+                            <img class="card-img-top img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
+                            <div class="card-body ">
+                                <h5 class="card-title font-weight-bold font-italic">${uno.libelle}</h5>
+                                <p class="card-text text-center">${uno.description} <br> Menu: ${uno.prix} € </p>
+                                <a href="commande.php" class="btn btn-dark  text-center t">Commander</a>
                             </div>
                         </div> `;
                         
@@ -134,21 +131,22 @@ visible.hide();
             $("#btn").click(function () {
                           
                  search();
-                 btn2.show();
+            
 
             });
                     $("#recherche").on("keypress", function (e) {
                          
                         if(e.which===13){
-                        
+                            e.preventDefault();
                         search();
-                        btn2.show();
+                   
                         };
             
                     });
 
                     function search() {
-                          var a = $("#afficher");
+                        btn.show();
+                       
                           a.empty();
                           var visible=$("#visible");
                          
@@ -170,14 +168,13 @@ visible.hide();
                                
                                   $.each(result, function (element, uno) {
                                       var txt = ` 
-                                  <div class="card w-25 mx-1 "
-                                      style=" background-size: cover; height:35rem;">
-                                      <img class="card-img-top" style="height:50%;" src="asset/food/${uno.image}" alt="${uno.libelle}">
-                                      <div class="card-body font-weight-bold font-italic">
-                                          <h5 class="card-title ">${uno.libelle}</h5>
-                                          <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € 
+                                  <div class="card w-25 mx-1 ">
+                                      <img class="card-img-top img-fluid himg"  src="asset/food/${uno.image}" alt="${uno.libelle}">
+                                      <div class="card-body ">
+                                          <h5 class="card-title font-weight-bold font-italic ">${uno.libelle}</h5>
+                                          <p class="card-text  text-center">${uno.description} <br> Menu: ${uno.prix} € 
                                           </p>
-                                          <a href="commande.php" class="btn btn-dark t">Commander</a>
+                                          <a href="commande.php" class="btn btn-dark  text-center t">Commander</a>
                                       </div>
                                   </div>`;
             
