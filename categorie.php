@@ -35,7 +35,7 @@
             <div class="col-12 d-flex justify-content-center">
               <h1 class="font-weight-bold font-italic">Nos Catégories </h1>
           </div>
-            <div class="w-100 row">
+            <div class="w-100 row d-flex justify-content-center">
                 <div class="col-3 d-none d-md-block">
                     <div class="card border-0 bg-transparent">
                         <div class="card-body">
@@ -44,7 +44,7 @@
                   </div>
                 </div>
             
-                <div class="row col-12 col-md-9" id="plats"></div>
+                <div class="row col-12 col-md-9 mr-2" id="plats"></div>
             </div>
         
             <div class="d-flex justify-content-between">
@@ -79,7 +79,7 @@ var test=$("#gg");
 
     for (i=0;i<ctg.length;i++){
 var item=ctg[i];
-var resultat=$( `<div class="t card ml-4 col-12 col-md-3  mb-4  ">
+var resultat=$( `<div class="t card ml-4 col-12 col-md-3  mb-4 ">
                 <img class="card-img-top img-fluid taille" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body">
                     <h5  value="${item.id_categorie}" class="card-title  text-center font-weight-bold font-italic id">${item.libelle}</h5>

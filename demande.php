@@ -26,30 +26,26 @@
                  <div class="col-12 text-center" > <a type="submit" id="go" href="demande.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
             </div>
         <div id="visible">
-          <div class="item-content position-relative d-md-none">
-            <img class="img-fluid w-100 mt-2" id="bandeau" src="asset/cat.fond/fond-bordeau.png" alt="bandeau de décoration couleur bordeaux">
-          <div class="position-absolute d-flex justify-content-between w-100">
-            <img class="img-fluid w-25" alt="verre de vin" src="asset/cat.fond/vin.png">
-           <img class="img-fluid w-25" alt="cuisinier" src="asset/cat.fond/petitCuisinier.png">
-          </div>
-        </div>
+          
 
-      </div>
+      
 
-      <div class="container-fluid col-12 mb-4 mt-1 d-flex justify-content-start ">
-        <div class="col-2 ">
+      <div class="container-fluid col-12 mb-4 mt-1 d-flex  ">
+        <div class="col-2 d-none d-md-block ">
            <div class="card border-0 bg-transparent  ">
             <div class="card-body">
-               <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
+               <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid  " alt="Cuisinier">
              </div>
            </div>
         </div>
-        <div calss="col-10">
-          <h1 class="mt-4">Votre demande est envoyée!</h1><br>
-          <a type="submit" class="btn btn-dark t" href="index.php">Retourner sur la page d'acceuil</a>
-        </div>
+        <div calss="col-10 justify-content-center ">
+          <h2 class="mt-4 ml-4">Votre demande est envoyée,<br> Nous vous répondrons au plus vite !</h2><br>
+          </div>
+          </div>
+         <div class="w-100 d-flex justify-content-center"> <a type="submit" class="btn btn-dark t " href="index.php">Retourner sur la page d'acceuil</a></div>
+        
       </div>
-
+     
       <?php
         include('footer.php');
         ?>
@@ -75,23 +71,24 @@
                var affichage=$("#plats");
                 var ctg=json.categorie;
             var plt=json.plat;
-            var btn2=("#go");
-            btn2.hide();
+            var btn=$("#go");
+            btn.hide();
             $("#btn").click(function () {
                           
                           search();
-            btn2.show();
+          
                       });
                       $("#recherche").on("keypress", function (e) {
                          
                         if(e.which===13){
                         e.preventDefault();
                         search();
-                       btn2.show();
+                    
                       };
             
                     });
                       function search() {
+                        btn.show();
                           var a = $("#afficher");
                           a.empty();
                           var visible=$("#visible");

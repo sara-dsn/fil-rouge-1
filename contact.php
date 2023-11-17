@@ -38,7 +38,7 @@
             <h1 class="font-weight-bold font-italic">Formulaire de contact </h1>
           </div>
           <div class="row ">
-            <div class="col-2 col-md-block ">
+            <div class="col-2 d-none d-md-block ">
               <div class="card border-0 bg-transparent  ">
                <div class="card-body">
                  <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
@@ -165,7 +165,7 @@
                                
             $.each(result, function (element, uno) {
              var txt = $(`<div class="card w-25 mx-1 ">
-             <img class="card-img-top" src="asset/food/${uno.image}" alt="${uno.libelle}">
+             <img class="card-img-top img-fluid" src="asset/food/${uno.image}" alt="${uno.libelle}">
              <div class="card-body font-weight-bold font-italic">
               <h5 class="card-title ">${uno.libelle}</h5>
              <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € </p>

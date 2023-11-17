@@ -72,7 +72,7 @@ $contenuFichier="Nom : ".$_SESSION["nom"]
 ."\r\n  Demande :".$_SESSION["demande"];
 file_put_contents($nomFichier,$contenuFichier);
 header("Location: demande.php");
-exit();
+exit(e.preventDefault());
 }
  else{
 unset($_SESSION["auth"]);

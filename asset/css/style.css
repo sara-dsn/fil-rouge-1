@@ -51,15 +51,29 @@
 .card {
     background-color: #fef4e8;
     background-size: cover;
-    height:22%;
+   
+    position: relative;
   
 }
 .taille{
-    height:80%; 
+margin-top:2%;
+    height:78%; 
+   
  }
- .himg{
-     height:45%;
- }
+
  .alert{
     display:none;
  }
+  .himg{
+    padding-top:3%;
+     height:42%;
+    }
+  
+    
+
+    .card-body{
+        padding-right:0%;
+        padding-left: 0%;
+        margin-bottom:0%;
+      
+    }
