@@ -47,7 +47,7 @@
                 <div class="row col-12 col-md-9 mr-2" id="plats"></div>
             </div>
         
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between mt-4">
                 <a type="submit" href="index.php" class="btn btn-dark t" >Précedent</a>
                 <a type="submit" href="plats.php" class="btn btn-dark t" >Suivant</a>
             </div>
@@ -79,9 +79,9 @@ var test=$("#gg");
 
     for (i=0;i<ctg.length;i++){
 var item=ctg[i];
-var resultat=$( `<div class="t card ml-4 col-12 col-md-3  mb-4 ">
+var resultat=$( `<div class="t  card ml-4 col-12 col-md-3  mb-4 ">
                 <img class="card-img-top img-fluid taille" src="asset/category/${item.image}" alt="${item.libelle}">
-                <div class="card-body">
+                <div class="card-body ">
                     <h5  value="${item.id_categorie}" class="card-title  text-center font-weight-bold font-italic id">${item.libelle}</h5>
                 
                     <span class="stock text-danger"><span>

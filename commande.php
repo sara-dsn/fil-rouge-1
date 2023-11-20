@@ -177,7 +177,7 @@
                         <div class="item-content text-center ml-4 pl-4 ">
 
                             <input type="submit" id="boutonsm"
-                                class="btn btn-dark t font-weight-bold font-italic text-right" value="Envoyer">
+                                class="btn btn-dark t font-weight-bold font-italic text-right mt-4" value="Envoyer">
                         </div>
                     </div>
 
