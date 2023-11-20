@@ -20,14 +20,18 @@
             <?php
             include('header.php');
             ?>
-         
+
             <div class="w-100 d-flex row">
               <div class="row justify-content-center " id="afficher"></div>
             </div>
-           
-                <div class="row   d-flex justify-content-center " >
+
+            <div class="w-100 row d-flex  justify-content-center">
+             
+                <div class="row col-9 justify-content-center" >
                     <div id="gg" class="row justify-content-center mt-4 "></div>
+                   
                 </div>
+            </div>
                 <div class="col-12 text-center">
                     <a type="submit" id="bottom" href="index.php" class="btn btn-dark t text-center mt-4" >Précedent</a>
                 </div>
@@ -49,15 +53,15 @@
                         </div>
                         <div class="w-100 d-flex justify-content-center row">
                     
-                        <div class="row col-8 cardContainer  ml-3 d-flex justify-content-center " id="txt"></div>
-                    </div>
+                            <div class="row col-8 cardContainer  ml-3 d-flex justify-content-center " id="txt"></div>
                         </div>
+                    </div>
                     <div class="container-fluid col-12 d-md-none" id="tel"> </div>
-                <div class="d-flex justify-content-between mt-4">
-                    <a type="submit" href="contact.php" class="btn btn-dark t" >Précedent</a>
-                     <a type="submit" href="categorie.php" class="btn btn-dark t" >Suivant</a>
+                    <div class="d-flex justify-content-between mt-4">
+                        <a type="submit" href="contact.php" class="btn btn-dark t" >Précedent</a>
+                         <a type="submit" href="categorie.php" class="btn btn-dark t" >Suivant</a>
+                  </div>
                 </div>
-           
 
  
 
@@ -140,7 +144,7 @@ $(".cat").click(function () {
                 var idcat=uno.id_categorie;
                 if (idcat == id){ 
                             var t = $( ` 
-                        <div class="card w-25 mx-1 ">
+                        <div class="card col-12 col-md-3 mx-1 ">
                             <img class="card-img-top himg"  src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body ">
                                 <h5 class="card-title font-weight-bold font-italic">${uno.libelle}</h5>

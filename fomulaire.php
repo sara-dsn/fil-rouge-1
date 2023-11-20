@@ -84,7 +84,7 @@ session_destroy();
 // echo "<br>telephone: ".t($telephone);
 // echo "<br>demande: ".d($demande);
 header("Location: contact.php");
-exit();
+exit(e.preventDefault());
 
  };
 

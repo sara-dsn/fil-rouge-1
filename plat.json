@@ -24,12 +24,7 @@
       "image": "pasta_cat.jpg",
       "active": "Yes"
      },
-     {
-      "id_categorie": 11,
-      "libelle": "Sandwich",
-      "image": "sandwich_cat.jpg",
-      "active": "Yes"
-     },
+
 
      {
       "id_categorie": 13,
@@ -42,6 +37,12 @@
       "libelle": "Veggie",
       "image": "veggie_cat.jpg",
       "active": "Yes"
+     },
+     {
+      "id_categorie": 11,
+      "libelle": "Sandwich",
+      "image": "sandwich_cat.jpg",
+      "active": "No"
      },
      {
         "id_categorie": 12,

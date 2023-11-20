@@ -46,8 +46,8 @@
              </div>
             </div>
             <form action="fomulaire.php" method="post" class="col-12 col-md-8">
-              <div class="form-row ">
-                <div class="col-11 col-md-5 mr-4 ml-4 mb-4 mt-4 ">
+              <div class="form-row w-100 ">
+                <div class="col-12 col-md-6  pl-3 mb-4 mt-4 ">
                  <label class="font-weight-bold font-italic text-right">Nom</label>
                   <input name="nom" type="text" id="n" class="form-control">
                   <div id="nom"class="alert alert-danger border-0 alert-dismissible bg-transparent fade show" role="alert">
@@ -55,7 +55,7 @@
                  </div>
                 </div>
 
-                <div class="col-11 col-md-5 mr-4 ml-4 mb-4 mt-4">
+                <div class="col-12 col-md-6 mb-4 mt-4">
                   <label class="font-weight-bold font-italic text-right">Prénom</label>
                   <input name="prenom" type="text" id="p" class="form-control">
                   <div id="pre" class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"role="alert">
@@ -63,15 +63,15 @@
                   </div>
                 </div>
               </div>
-              <div class="form-row">
-                <div class="col-11 col-md-5 mr-4 ml-4 mb-4 mt-4">
+              <div class="form-row w-100">
+                <div class="col-12 col-md-6  mb-4 pl-3 mt-4">
                   <label class="font-weight-bold font-italic text-right">Email</label>
                   <input name="email" type="text" id="e" class="form-control">
                  <div id="email" class="alert alert-danger alert-dismissible bg-transparent border-0 fade show" role="alert">
                    <strong>Ce champ est obligatoire</strong>
                   </div>
                </div>
-               <div class="col-11 col-md-5  mr-2 ml-4 mb-4 mt-4">
+               <div class="col-12 col-md-6    mb-4 mt-4">
                   <label class="font-weight-bold font-italic text-right">Téléphone</label>
                   <input name="telephone" type="text" id="t" class="form-control">
                   <div id="tel"class="alert border-0 alert-danger alert-dismissible bg-transparent fade show" role="alert">
@@ -79,7 +79,7 @@
                  </div>
                </div>
               </div>
-              <div class="col-12 col-md-11 mr-4 pl-3 pr-4 ml-1 form-group ">
+              <div class="col-12 form-group ">
                 <label class="font-weight-bold font-italic text-right">Votre Demande</label>
                 <textarea name="demande" class="form-control mr-4" id="d" rows="4"></textarea>
                 <div id="dem" class="alert alert-danger alert-dismissiblaction bg-transparent border-0 fade show" role="alert">
