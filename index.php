@@ -92,10 +92,10 @@ var affiche = $("#txt");
                
                 for (i = 0; i < ctg.length; i++) {
                     var item = ctg[i];
-                    var resultat = $( `<div class="t  cat card w-25 mr-4 mb-4 d-none d-md-block">
-                <img class="pr-3 pt-3 pl-3 card-img-top taille" src="asset/category/${item.image}" alt="${item.libelle}">
+                    var resultat = $( `<div class="t  cat card custom-card col-3 mr-4 mb-4 d-none d-md-block">
+                <img class=" card-img-top taille" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body pl-3">
-                    <h5 value="${item.id_categorie}" class=" card-title font-weight-bold font-italic id">${item.libelle}</h5>
+                    <h3 value="${item.id_categorie}" class=" card-title font-weight-bold font-italic id">${item.libelle}</h3>
                 <span class="stock text-danger"><span>
                   
                 </div>
@@ -145,9 +145,9 @@ $(".cat").click(function () {
                             <img class="card-img-top himg"  src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body ">
                                 <h5 class="card-title font-weight-bold font-italic">${uno.libelle}</h5>
-                                <p class="card-text font-italic">${uno.description} <br> Menu: ${uno.prix} € </p>
+                                <p class="card-text font-italic">${uno.description} <br> Menu:ghhghh ${uno.prix} € </p>
                                
-                                <a href="commande.php" class="btn btn-dark t">Commander</a>
+                               <div class="justify-content-center"> <a href="commande.php" class="btn btn-dark t">Commander</a></div>
                                 <span class="stock1 text-danger"><span>
                                 
                             </div>

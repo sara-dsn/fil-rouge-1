@@ -56,13 +56,11 @@
   
 }
 .taille{
-margin-top:2%;
-    height:60%; 
+padding-top:2%;
+    height:80%; 
    
  }
-.b{
-    height:1%;
-}
+
  .alert{
     display:none;
  }
@@ -71,7 +69,9 @@ margin-top:2%;
      height:42%;
     }
 
-    
+    .custom-card{
+        height:450px;
+    }
 
     .card-body{
         padding-right:0%;
