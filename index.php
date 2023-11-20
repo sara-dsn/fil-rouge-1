@@ -51,9 +51,8 @@
                     
                         <div class="row col-8 cardContainer  ml-3 d-flex justify-content-center " id="txt"></div>
                     </div>
-</div>
-                    <div class="container-fluid col-12 d-md-none" id="tel">
-                </div>
+                        </div>
+                    <div class="container-fluid col-12 d-md-none" id="tel"> </div>
                 <div class="d-flex justify-content-between mt-4">
                     <a type="submit" href="contact.php" class="btn btn-dark t" >Précedent</a>
                      <a type="submit" href="categorie.php" class="btn btn-dark t" >Suivant</a>
@@ -273,7 +272,7 @@ btn.show();
                      
                         $.each(result, function (element, uno) {
                             var txt = $( ` 
-                        <div class="card d-flex justify-content-center col-12 col-md-3 mx-1 ">
+                        <div class="card d-flex justify-content-center col-12 col-md-2 mx-1 ">
                             <img class="card-img-top img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body ">
                                 <h5 class="card-title font-weight-bold font-italic">${uno.libelle}</h5>
