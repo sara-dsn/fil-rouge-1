@@ -82,7 +82,7 @@ var item=ctg[i];
 var resultat=$( `<div class="t  card custom-card ml-4 col-12 col-md-3  mb-4 ">
                 <img class="card-img-top img-fluid taille" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body ">
-                    <h3  value="${item.id_categorie}" class="card-title  text-center font-weight-bold font-italic id">${item.libelle}</h3>
+                    <h3  value="${item.id_categorie}" class="card-title titre  text-center font-weight-bold font-italic id">${item.libelle}</h3>
                 
                     <span class="stock text-danger "><span>
                 </div>

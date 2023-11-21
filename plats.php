@@ -80,7 +80,7 @@ for (i=0;i<plt.length;i++){
 var item=plt[i];
 var resultat=$( `
 
-            <div class="card col-12 col-md-3 mr-3 mb-3 ">
+            <div class="card col-12 col-md-3 mr-3 mb-3">
     <img class="card-img-top img-fluid himg" src="asset/food/${item.image}" alt="${item.libelle}">
     <div class="card-body font-italic">
         <h5 class="card-title font-weight-bold">${item.libelle}</h5>

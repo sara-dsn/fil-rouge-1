@@ -61,12 +61,12 @@
                                  </div>
                              </div>
                         </div>
-                        <form class="col-8 ">
+                        <form class="col-8 " method="POST" action="form.commande.php">
 
                         <div class="col mr-4 pr-4 ml-2 mb-4 mt-4 ">
                             <label class="font-weight-bold font-italic text-right">Nom et
                                 Prénom</label>
-                            <input type="text" id="np" class="form-control">
+                            <input type="text" name="np" id="np" class="form-control">
                             <div id="nompre"
                                 class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
                                 style="display:none;" role="alert">
@@ -77,7 +77,7 @@
                         <div class="form-row">
                             <div class="col mr-4 ml-4 mb-4 mt-4">
                                 <label class="font-weight-bold font-italic text-right">Email</label>
-                                <input type="text" id="e" class="form-control">
+                                <input type="text" name="e" id="e" class="form-control">
                                 <div id="email"
                                     class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
                                     style="display:none;" role="alert">
@@ -86,7 +86,7 @@
                             </div>
                             <div class="col mr-4 ml-4 mb-4 mt-4">
                                 <label class="font-weight-bold font-italic text-right">Téléphone</label>
-                                <input type="text" id="t" class="form-control">
+                                <input type="text" name="t" id="t" class="form-control">
                                 <div id="tel"
                                     class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
                                     style="display:none;" role="alert">
@@ -96,7 +96,7 @@
                         </div>
                         <div class="form-group mr-4 ml-4 mb-4 mt-4">
                             <label class="font-weight-bold font-italic text-right">Votre Adresse</label>
-                            <textarea class="form-control" id="a" rows="4"></textarea>
+                            <textarea class="form-control" name="a" id="a" rows="4"></textarea>
                             <div id="adresse"
                                 class="alert alert-danger alert-dismissible fade bg-transparent border-0 show"
                                 style="display:none;" role="alert">

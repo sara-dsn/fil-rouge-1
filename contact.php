@@ -151,7 +151,7 @@
         
      
         var input = $("#recherche").val();
-        console.log("ok")
+  
         $.getJSON("plat.json", function (json) {
           var plt = json.plat;
 
