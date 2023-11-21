@@ -145,7 +145,7 @@ $("#btn").click(function () {
                           var txt =$( ` 
                       <div class="card w-25 mx-1 ">
                           <img class="card-img-top img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
-                          <div class="card-body  font-italic d-flex flex-column">
+                          <div class="card-body  font-italic ">
                               <h5 class="card-title font-weight-bold">${uno.libelle}</h5>
                               <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
                               <span class="stock5 text-danger"><span>

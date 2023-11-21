@@ -55,6 +55,9 @@
     position: relative;
   
 }
+.titre{
+    color:#970747;
+}
 .taille{
 padding-top:2%;
     height:80%; 

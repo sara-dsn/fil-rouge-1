@@ -96,7 +96,7 @@ var affiche = $("#txt");
                 for (i = 0; i < ctg.length; i++) {
                     var item = ctg[i];
                     var resultat = $( `<div class="t  cat card custom-card col-3 mr-4 mb-4 d-none d-md-block">
-                <img class=" card-img-top taille img-fluid" src="asset/category/${item.image}" alt="${item.libelle}">
+                <img class=" card-img-top taille titre img-fluid" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body pl-3">
                     <h3 value="${item.id_categorie}" class=" card-title font-weight-bold font-italic id">${item.libelle}</h3>
                 <span class="stock text-danger"><span>
@@ -122,15 +122,15 @@ var stock = resultat.find(".stock");
                                     </div> 
                                     <div class="mt-auto text-center"><a href="commande.php" class="btn btn-warning t">commander</a></div>
                                 </div>-->
-                                
-                                <div class="card col-3 mr-4 mb-1 d-none d-md-block d-flex flex-column">
-    <img class="card-img-top himg img-fluid" src="asset/food/${truc.image}" alt="${truc.libelle}">
+
+                                <div class="card col-3 mr-4 mb-1 d-none d-md-block ">
+    <img class="card-img-top  img-fluid himg" src="asset/food/${truc.image}" alt="${truc.libelle}">
     <div class="card-body font-italic">
         <h5 class="card-title font-weight-bold ">${truc.libelle}</h5>
         <p class="card-text ">${truc.description}<br> Menu: ${truc.prix} €</p>
         <span class="stock3 text-danger"></span>
     </div>
-    <div class="mt-auto text-center justify-content-end" >
+    <div class="mt-auto text-center " >
         <a href="commande.php" class="btn btn-info t">Commander</a>
     </div>
 </div>
