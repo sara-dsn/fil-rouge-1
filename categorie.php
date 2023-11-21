@@ -115,10 +115,10 @@ var stock = resultat.find(".stock");
                             <div class="card-body ">
                                 <h5 class="card-title font-weight-bold font-italic">${uno.libelle}</h5>
                                 <p class="card-text text-center">${uno.description} <br> Menu: ${uno.prix} € </p>
-                               
-                                <a href="commande.php" class="btn btn-dark  text-center t">Commander</a>
-                                <span class="stock2 text-danger"><span>
-                            </div>
+                               <span class="stock2 text-danger"><span>
+                                
+                                
+                            </div><div class="mt-auto mb-2 text-center"><a href="commande.php" class="btn btn-warning  text-center t">Commander</a></div>
                         </div> `);
                         
                      
@@ -177,11 +177,12 @@ visible.hide();
                                       <img class="card-img-top img-fluid himg"  src="asset/food/${uno.image}" alt="${uno.libelle}">
                                       <div class="card-body ">
                                           <h5 class="card-title font-weight-bold font-italic ">${uno.libelle}</h5>
-                                          <p class="card-text  text-center">${uno.description} <br> Menu: ${uno.prix} € 
-                                          <a href="commande.php" class="btn btn-dark  text-center t">Commander</a>
-                                          </p>       <span class="stock5 text-danger"><span>
+                                          <p class="card-text  text-center">${uno.description} <br> Menu: ${uno.prix} €   </p> 
+                                        <span class="stock5 text-danger"><span>  
+                                        
+                                              
 
-                                      </div>
+                                      </div><div class="mt-auto mb-2 text-center"><a href="commande.php" class="btn btn-warning  text-center t">Commander</a></div>
                                   </div>`);
             
                                       a.append(txt);

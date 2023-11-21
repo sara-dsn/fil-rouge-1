@@ -169,10 +169,11 @@
              <div class="card-body font-weight-bold font-italic">
               <h5 class="card-title ">${uno.libelle}</h5>
              <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € </p>
-             <a href="commande.html" class="btn btn-dark">Commander</a>
              <span class="stock5 text-danger"><span>
+          
+           
 
-             </div>
+             </div>  <div class="mt-auto mb-2 text-center"> <a href="commande.html" class="btn btn-warning">Commander</a></div>
               </div>`);
             
               a.append(txt);

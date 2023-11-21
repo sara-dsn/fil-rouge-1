@@ -96,7 +96,7 @@ var affiche = $("#txt");
                 for (i = 0; i < ctg.length; i++) {
                     var item = ctg[i];
                     var resultat = $( `<div class="t  cat card custom-card col-3 mr-4 mb-4 d-none d-md-block">
-                <img class=" card-img-top taille" src="asset/category/${item.image}" alt="${item.libelle}">
+                <img class=" card-img-top taille img-fluid" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body pl-3">
                     <h3 value="${item.id_categorie}" class=" card-title font-weight-bold font-italic id">${item.libelle}</h3>
                 <span class="stock text-danger"><span>
@@ -112,22 +112,39 @@ var stock = resultat.find(".stock");
                 };
                 for (i = 0; i < 3; i++) {
                     var truc = plt[i];
-                    var r = $( `<div class="card col-3 mr-4 mb-1 d-none d-md-block">
+                    var r = $( `
+                   <!-- <div class="card col-3 mr-4 mb-1 d-none d-md-block d-flex flex-column">
                                     <img  class="card-img-top himg img-fluid "  src="asset/food/${truc.image}" alt="${truc.libelle}">
-                                    <div class="card-body">
-                                        <h5 class="card-title font-weight-bold font-italic">${truc.libelle}</h5>
-                                        <p class="card-text font-italic">${truc.description}<br> Menu: ${truc.prix} €  </p>
-                   
-                                        <div  class=" d-flex justify-content-center" ><a href="commande.php" class="btn btn-dark t">commander</a></div>
+                                    <div class="card-body font-italic">
+                                        <h5 class="card-title font-weight-bold ">${truc.libelle}</h5>
+                                        <p class="card-text ">${truc.description}<br> Menu: ${truc.prix} €  </p>
                                         <span class="stock3 text-danger"><span>
-                                    </div>
-                                </div>`);
+                                    </div> 
+                                    <div class="mt-auto text-center"><a href="commande.php" class="btn btn-warning t">commander</a></div>
+                                </div>-->
+                                
+                                <div class="card col-3 mr-4 mb-1 d-none d-md-block d-flex flex-column">
+    <img class="card-img-top himg img-fluid" src="asset/food/${truc.image}" alt="${truc.libelle}">
+    <div class="card-body font-italic">
+        <h5 class="card-title font-weight-bold ">${truc.libelle}</h5>
+        <p class="card-text ">${truc.description}<br> Menu: ${truc.prix} €</p>
+        <span class="stock3 text-danger"></span>
+    </div>
+    <div class="mt-auto text-center justify-content-end" >
+        <a href="commande.php" class="btn btn-info t">Commander</a>
+    </div>
+</div>
+
+
+
+
+                                `);
 
                     affiche.append(r);
 
 
                     var stock = resultat.find(".stock3");
-    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
+    stock.text(truc.active === 'Yes' ? '' : 'Disponible prochainement');
                 };
 
 $(".cat").click(function () {
@@ -145,15 +162,15 @@ $(".cat").click(function () {
                 if (idcat == id){ 
                             var t = $( ` 
                         <div class="card col-12 col-md-3 mx-1 ">
-                            <img class="card-img-top himg"  src="asset/food/${uno.image}" alt="${uno.libelle}">
-                            <div class="card-body ">
-                                <h5 class="card-title font-weight-bold font-italic">${uno.libelle}</h5>
-                                <p class="card-text font-italic">${uno.description} <br> Menu:ghhghh ${uno.prix} € </p>
-                               
-                               <div class="justify-content-center"> <a href="commande.php" class="btn btn-dark t">Commander</a></div>
-                                <span class="stock1 text-danger"><span>
+                            <img class="card-img-top himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
+                            <div class="card-body font-italic">
+                                <h5 class="card-title font-weight-bold ">${uno.libelle}</h5>
+                                <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
+                                 <span class="stock1 text-danger"><span>
+                                 
+                              
                                 
-                            </div>
+                            </div><div class="mt-auto mb-2 text-center"><a href="commande.php" class="btn btn-warning t">Commander</a></div>
                         </div> `);
                         
                      
@@ -161,74 +178,32 @@ visible.hide();
 
                             test.append(t);
                             var stock = resultat.find(".stock1");
-    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
+    stock.text(uno.active === 'Yes' ? '' : 'Disponible prochainement');
                            
                 };
                 
                 
                         });
           };
-          $(".card").click(function () {
-               
-               var id=$(this).find(".id").attr("value");
-                         plat(id);
-                  
-                        
-                        
-                     });
-           
-                     function plat(id){
-                       btn.show();
-                    test.empty();
-                    a.empty();
-                    
-                       $.each(plt, function (element, uno) {
-                           var idcat=uno.id_categorie;
-                           if (idcat == id){ 
-                                       var t =$(  ` 
-                                   <div class="card col-12 col-md-3 mx-2 mb-3 ">
-                                       <img class="card-img-top img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
-                                       <div class="card-body ">
-                                           <h5 class="card-title font-weight-bold font-italic">${uno.libelle}</h5>
-                                           <p class="card-text text-center font-italic">${uno.description} <br> Menu: ${uno.prix} € </p>
-                                        
-                                           <a href="commande.php" class="btn btn-dark  text-center t">Commander</a>
-                                           <span class="stock2 text-danger"><span>
-                                       </div>
-                                   </div> `);
-                                   
-                                
-           visible.hide();
-           
-                                       test.append(t);
-
-
-                                       var stock = t.find(".stock2");
-    stock.text(uno.active === 'Yes' ? '' : 'Disponible prochainement');
-                                      
-                           };
-                           
-                           
-                                   });
-                     };
+          
                
                 for (i = 0; i < 5; i++) {
                     var leplat = plt[i];
                     var card = $( `<div class="card col-12 col-md-3 mb-2 ">
                 <img class="card-img-top img-fluid himg" src="asset/food/${leplat.image}" alt="${leplat.libelle}">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold font-italic">${leplat.libelle}</h5>
-                    <p class="card-text font-italic">${leplat.description}<br> Menu: ${leplat.prix} €  </p>
-    
-                    <a href="commande.php" class="btn btn-dark t">commander</a>
-                    <span class="stock4 text-danger"><span>
-                </div>
+                <div class="card-body font-italic">
+                    <h5 class="card-title font-weight-bold ">${leplat.libelle}</h5>
+                    <p class="card-text ">${leplat.description}<br> Menu: ${leplat.prix} €  </p>
+               <span class="stock4 text-danger"><span>
+              
+         
+                </div> <div class="mt-auto mb-2 text-center"> <a href="commande.php" class="btn btn-warning t">commander</a></div>
             </div>`);
             
                     tel.append(card);
 
                     var stock = resultat.find(".stock4");
-    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
+    stock.text(leplat.active === 'Yes' ? '' : 'Disponible prochainement');
                 };
 
 
@@ -276,15 +251,16 @@ btn.show();
                      
                         $.each(result, function (element, uno) {
                             var txt = $( ` 
-                        <div class="card d-flex justify-content-center col-12 col-md-2 mx-1 ">
+                        <div class="card d-flex flex-column col-12 col-md-2 mx-1 ">
                             <img class="card-img-top img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
-                            <div class="card-body ">
-                                <h5 class="card-title font-weight-bold font-italic">${uno.libelle}</h5>
-                                <p class="card-text font-italic">${uno.description} <br> Menu: ${uno.prix} € </p>
-                                <a href="commande.php" class="btn btn-dark t">Commander</a>
-                                <span class="stock5 text-danger"><span>
+                            <div class="card-body font-italic ">
+                                <h5 class="card-title font-weight-bold ">${uno.libelle}</h5>
+                                <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
+                              
+                                
+                                  <span class="stock5 text-danger"><span>
 
-                            </div>
+                            </div> <div class="mt-auto mb-2 text-center"><a href="commande.php" class="btn btn-warning t">Commander</a></div>
                         </div>`);
 
                             a.append(txt);

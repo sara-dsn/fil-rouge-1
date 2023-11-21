@@ -41,11 +41,11 @@
                 <div class="d-flex justify-content-center">
 
                     <div class="card  col-12 col-md-3 ml-4 ">
-                        <img class="card-img-top mt-2" src="asset/food/cheesburger.jpg" alt="burger360">
+                        <img class="card-img-top img-fluid mt-2" src="asset/food/cheesburger.jpg" alt="burger360">
                          <div class="card-body">
                             <h5 class="card-title">Le 360</h5>
                           <p class="card-text">2 steaks 180g, cheddar, sauce au choix et crudités<br> Total: 11€</p>
-                         <button class="btn btn-dark t">Quantité: 1</button>
+                         <button class="btn btn-warning t">Quantité: 1</button>
                        </div>
                     </div>
               </div>
@@ -189,14 +189,14 @@
                                   $.each(result, function (element, uno) {
                                       var txt = $(` 
                                   <div class="card col-3  mx-1 ">
-                                      <img class="card-img-top mt-2" src="asset/food/${uno.image}" alt="${uno.libelle}">
+                                      <img class="card-img-top img-fluid mt-2" src="asset/food/${uno.image}" alt="${uno.libelle}">
                                       <div class="card-body  font-italic">
                                           <h5 class="card-title font-weight-bold ">${uno.libelle}</h5>
                                           <p class="card-text">${uno.description} <br> Menu: ${uno.prix} €  </p> 
-                                  
-                                          <a href="commande.html" class="btn btn-dark">Commander</a>
-                                         <span class="stock5 text-danger"><span>
-                                      </div>
+                                    <span class="stock5 text-danger"><span>
+                                         
+                                       
+                                      </div> <div class="mt-auto mb-2 text-center"> <a href="commande.html" class="btn btn-warning">Commander</a></div>
                                   </div>`);
             
                                       a.append(txt);

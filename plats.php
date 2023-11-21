@@ -50,7 +50,7 @@
                 </div>
                 </div>
             
-       
+     
             <?php
                 include('footer.php');
             ?>
@@ -78,16 +78,24 @@ var plt=json.plat;
 
 for (i=0;i<plt.length;i++){
 var item=plt[i];
-var resultat=$( `<div class="card  col-12 col-md-3 mr-3 mb-3">
-                    <img class="card-img-top img-fluid himg" src="asset/food/${item.image}" alt="${item.libelle}">
-                    <div class="card-body font-italic">
-                         <h5 class="card-title font-weight-bold ">${item.libelle}</h5>
-                         <p class="card-text " >${item.description}<br> Menu: ${item.prix} €  </p>
-                  
-                    <div  class=" d-flex justify-content-center align-items-end" ><a href="commande.php" class="btn btn-dark t ">commander</a></div>
-                    <span class="stock1 text-danger"><span>
-                </div>  
-            </div>`);
+var resultat=$( `
+
+            <div class="card col-12 col-md-3 mr-3 mb-3 ">
+    <img class="card-img-top img-fluid himg" src="asset/food/${item.image}" alt="${item.libelle}">
+    <div class="card-body font-italic">
+        <h5 class="card-title font-weight-bold">${item.libelle}</h5>
+        <p class="card-text">${item.description} <br> Menu: ${item.prix} €</p>
+        <span class="stock5 text-danger"></span>
+    </div>
+    <div class="mt-auto mb-2 text-center">
+        <a href="commande.php" class="btn btn-warning t">Commander</a>
+    </div>
+</div>
+
+
+
+                
+            `);
 affichage.append(resultat);
 var stock = resultat.find(".stock1");
     stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');                   
@@ -135,16 +143,20 @@ $("#btn").click(function () {
                    
                       $.each(result, function (element, uno) {
                           var txt =$( ` 
-                      <div class="card w-25 mx-1">
+                      <div class="card w-25 mx-1 ">
                           <img class="card-img-top img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
-                          <div class="card-body  font-italic ">
+                          <div class="card-body  font-italic d-flex flex-column">
                               <h5 class="card-title font-weight-bold">${uno.libelle}</h5>
-                              <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € 
-                             
-                              <div  class=" d-flex justify-content-center" ><a href="commande.php" class="btn btn-dark t ">Commander</a></div>
-                              </p><span class="stock5 text-danger"><span>
-                          </div>
-                      </div>`);
+                              <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
+                              <span class="stock5 text-danger"><span>
+                          
+                              
+                     
+                          </div><div  class=" mt-auto text-center mb-2" ><a href="commande.php" class="btn btn-warning t ">Commander</a></div>
+                      </div>
+                
+                          
+                      `);
 
                           a.append(txt);
                           var stock = txt.find(".stock5");

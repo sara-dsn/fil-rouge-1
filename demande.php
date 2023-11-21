@@ -114,19 +114,19 @@
                                   $.each(result, function (element, uno) {
                                       var txt = $(` 
                                   <div class="card w-25 mx-1 ">
-                                      <img class="card-img-top himg" src="asset/food/${uno.image}" alt="cheesburger">
+                                      <img class="card-img-top img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
                                       <div class="card-body font-weight-bold font-italic">
                                           <h5 class="card-title ">${uno.libelle}</h5>
                                           <p class="card-text">${uno.description} <br> Menu: ${uno.prix} € 
-                                      
-                                          <a href="commande.html" class="btn btn-dark">Commander</a>
-                                          </p><span class="stock1 text-danger"><span>
-                                      </div>
+                                        </p><span class="stock1 text-danger"><span>
+                                         
+                                        
+                                      </div> <div class="mt-auto mb-2 text-center"><a href="commande.html" class="btn btn-warning">Commander</a></div>
                                   </div>`);
             
                                       a.append(txt);
                                       var stock = resultat.find(".stock1");
-    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
+    stock.text(uno.active === 'Yes' ? '' : 'Disponible prochainement');
             
                                   });
             
