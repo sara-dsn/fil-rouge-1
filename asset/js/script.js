@@ -46,15 +46,15 @@ $(document).ready(function () {
        
         };
        
-        console.log("hih");
+      
         var email = $("#e").val();
         if (email === "") {
             
             envoi = false;
             $("#email").show();
-            alert(email);
+            
             e.preventDefault();
-            console.log(email);
+         
         }
         else if (envoi == true) {
             $("#email").hide();
@@ -111,26 +111,26 @@ $(document).ready(function () {
         };
 
 
-        var email = $("#e").val();
+        var email = $("#e2").val();
         if (email === "") {
             envoi = false;
-            $("#email").show();
+            $("#email2").show();
             e.preventDefault();
         }
         else if (envoi == true) {
-            $("#email").hide();
+            $("#email2").hide();
        
         };
 
 
-        var tel = $("#t").val();
+        var tel = $("#t2").val();
         if (tel === "") {
             envoi = false;
-            $("#tel").show();
+            $("#tel2").show();
             e.preventDefault();
         }
         else if (envoi == true) {
-            $("#tel").hide();
+            $("#tel2").hide();
           
         };
 

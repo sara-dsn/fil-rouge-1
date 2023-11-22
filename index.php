@@ -65,8 +65,8 @@
                             <div class="form-row">
                                 <div class="col mr-4 ml-4 mb-4 mt-4">
                                     <label class="font-weight-bold font-italic text-right">Email</label>
-                                    <input type="text" id="e" name="e" class="form-control">
-                                    <div id="email"
+                                    <input type="text" id="e2" name="e" class="form-control">
+                                    <div id="email2"
                                         class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
                                         style="display:none;" role="alert">
                                         <strong>Ce champ est obligatoire </strong>
@@ -74,8 +74,8 @@
                                 </div>
                                 <div class="col mr-4 ml-4 mb-4 mt-4">
                                     <label class="font-weight-bold font-italic text-right">Téléphone</label>
-                                    <input type="text" id="t" name="t" class="form-control">
-                                    <div id="tel"
+                                    <input type="text" id="t2" name="t" class="form-control">
+                                    <div id="tel2"
                                         class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
                                         style="display:none;" role="alert">
                                         <strong>Ce champ est obligatoire</strong>

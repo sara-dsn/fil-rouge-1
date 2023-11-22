@@ -1,6 +1,8 @@
 <?php
 session_start();
+
 if(isset($_POST["envoyer"])){
+
 $nom=$_POST["nom"];
 $prenom=$_POST["prenom"];
 $email=$_POST["email"];
@@ -71,7 +73,7 @@ $contenuFichier="Nom : ".$_SESSION["nom"]
 ."\r\n  Telephone : ".$_SESSION["telephone"]
 ."\r\n  Demande :".$_SESSION["demande"];
 file_put_contents($nomFichier,$contenuFichier);
-header("Location: demande.php");
+header("Location: index.php?page=demande");
 exit(e.preventDefault());
 }
  else{
@@ -83,7 +85,7 @@ session_destroy();
 // echo "<br>email: ".e($email);
 // echo "<br>telephone: ".t($telephone);
 // echo "<br>demande: ".d($demande);
-header("Location: contact.php");
+header("Location: index.php?page=contact");
 exit(e.preventDefault());
 
  };
