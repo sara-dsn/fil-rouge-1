@@ -55,7 +55,7 @@
                             <div class="col mr-4 pr-4 ml-2 mb-4 mt-4 ">
                                 <label class="font-weight-bold font-italic text-right">Nom et
                                 Prénom</label>
-                                <input type="text" id="np" class="form-control">
+                                <input type="text" id="np" name="np" class="form-control">
                                 <div id="nompre"
                                     class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
                                     style="display:none;" role="alert">
@@ -66,7 +66,7 @@
                             <div class="form-row">
                                 <div class="col mr-4 ml-4 mb-4 mt-4">
                                     <label class="font-weight-bold font-italic text-right">Email</label>
-                                    <input type="text" id="e" class="form-control">
+                                    <input type="text" id="e" name="e" class="form-control">
                                     <div id="email"
                                         class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
                                         style="display:none;" role="alert">
@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="col mr-4 ml-4 mb-4 mt-4">
                                     <label class="font-weight-bold font-italic text-right">Téléphone</label>
-                                    <input type="text" id="t" class="form-control">
+                                    <input type="text" id="t" name="t" class="form-control">
                                     <div id="tel"
                                         class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
                                         style="display:none;" role="alert">
@@ -85,7 +85,7 @@
                             </div>
                             <div class="form-group mr-4 ml-4 mb-4 mt-4">
                                 <label class="font-weight-bold font-italic text-right">Votre Adresse</label>
-                                <textarea class="form-control" id="a" rows="4"></textarea>
+                                <textarea class="form-control" id="a" name="a" rows="4"></textarea>
                                 <div id="adresse"
                                     class="alert alert-danger alert-dismissible fade bg-transparent border-0 show"
                                     style="display:none;" role="alert">
@@ -95,7 +95,7 @@
                             <div class="container-fluid col-12 ">
                                 <div class="item-content text-center ml-4 pl-4 ">
 
-                                    <input type="submit" id="bouton"
+                                    <input type="submit" name="bouton" id="bouton"
                                      class="btn btn-dark font-weight-bold font-italic text-right t" value="Envoyer">
                                 </div>
                             </div>

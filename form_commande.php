@@ -1,32 +1,35 @@
 <?php
 session_start();
+var_DUMP("hih");
 
 if(isset($_POST["bouton"])){
 $nompre=$_POST["np"];
-var_DUMP("hih");
+
 $email=$_POST["e"];
 $telephone=$_POST["t"];
 $adresse=$_POST["a"];
-
+var_DUMP("hah");
 function np($nompre){
-    $validation= "/^[a-zA-Z]+$/";
-    if (preg_match($validation,$nom)){
+    $validation= "/^[a-zA-Z]+\s[a-zA-Z]+$/";
+    if (preg_match($validation,$nompre)){
 return true;
     }
     else{
-        return false;
         echo " <p>Veuillez entre votre nom et votre prénom s.v.p<p>";
+        return false;
+        
     };
 };
 
 function e($email){
-    $validation= "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/";
+    $validation= "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,3}$/";
     if (preg_match($validation,$email)){
 return true;
     }
     else{
-        return false;
         echo " <p>Veuillez entre votre email s.v.p<p>";
+        return false;
+       
     };
 };
 function t($telephone){
@@ -35,18 +38,20 @@ function t($telephone){
 return true;
     }
     else{
+         echo " <p>Veuillez entre votre numéro de téléphone s.v.p<p>";
         return false;
-        echo " <p>Veuillez entre votre numéro de téléphone s.v.p<p>";
+       
     };
 };
 function a($adresse){
-    $validation= "/^[0-9]+[a-zA-Z]+$/";
-    if (preg_match($validation,$demande)){
+    $validation= "/^[0-9]+\s[a-zA-Z\s]+$/";
+    if (preg_match($validation,$adresse)){
 return true;
     }
     else{
-        return false;
         echo " <p>Veuillez entre votre adresse s.v.p<p>";
+        return false;
+        
     };
 };
  if(np($nompre)==true&e($email)==true &t($telephone)==true &a($adresse)==true){
@@ -61,8 +66,9 @@ $contenuFichier="Nom et Prénom: ".$_SESSION["np"]
 ."\r\n  Telephone : ".$_SESSION["t"]
 ."\r\n  Adresse :".$_SESSION["a"];
 file_put_contents($nomFichier,$contenuFichier);
-header("Location: demande.php");
-exit(e.preventDefault());
+echo "hihi";
+header("Location: livreur.php");
+exit();
 }
  else{
 unset($_SESSION["auth"]);
@@ -73,8 +79,8 @@ session_destroy();
 // echo "<br>email: ".e($email);
 // echo "<br>telephone: ".t($telephone);
 // echo "<br>demande: ".d($demande);
-header("Location: commande.php");
-exit(e.preventDefault());
+// header("Location: .php");
+// exit();
 
  };
 
