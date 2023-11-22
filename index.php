@@ -111,7 +111,10 @@
           
         </div>
                 <div class="col-12 text-center">
-                    <a type="submit" id="bottom" href="index.php" class="btn btn-dark t text-center mt-4" >Précedent</a>
+                    <button type="submit" id="bottom" onclick="history.back(); location.reload(true);" class="btn btn-dark t text-center mt-4" >Précedent</button>
+                    <!-- <button type="button" id="bottom" onclick="window.history.go(-1)" class="btn btn-dark t text-center mt-4">Précédent</button> -->
+                   
+
                 </div>
            
                 <main>
@@ -131,9 +134,9 @@
     else if($_GET['page']=='demande'){
         include('demande.php');
     }
-    // else if($_GET['page']=='livreur'){
-    //     include('livreur.php');
-    // }                                
+    else if($_GET['page']=='livreur'){
+        include('livreur.php');
+    }                                
     ;
     
     ?>
@@ -169,6 +172,13 @@
             btn.hide();
            titre.hide();
             form.hide();
+// BOUTTON RETOUR:
+$("#bottom").click(function(){
+    history.back();
+    location.reload(true);
+    console.log("retour");
+});
+
        $.getJSON("plat.json", function (json) {
          
                 var ctg = json.categorie;
