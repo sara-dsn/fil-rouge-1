@@ -17,15 +17,15 @@
                     </li>
                     <li class="nav-item h2  w-25">
                         <a class="nav-link font-weight-bold font-italic text-right "
-                            href="categorie.php"><u>Catégorie</u></a>
+                            href="index.php?page=categorie"><u>Catégorie</u></a>
                     </li>
                     <li class="nav-item  h2 w-25 ">
                         <a class="nav-link font-weight-bold font-italic text-right"
-                            href="plats.php"><u>Plats</u></a>
+                            href="index.php?page=plats"><u>Plats</u></a>
                     </li>
                     <li class="nav-item  h2 w-25">
                         <a class="nav-link font-weight-bold font-italic text-right"
-                            href="contact.php"><u>Contact</u></a>
+                            href="index.php?page=contact"><u>Contact</u></a>
                     </li>
 
                 </ul>

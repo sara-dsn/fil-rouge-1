@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="asset/css/style.css">
-    <title>Accueil</title>
+    <title>The District</title>
 </head>
 
 <body>
@@ -20,25 +20,119 @@
             <?php
             include('header.php');
             ?>
+<div class="w-100 d-flex row">
+              <div class="row justify-content-center " id="afficher"></div>
+            </div>
 
+            <div class="w-100 row d-flex  justify-content-center">
+             
+                <div class="row col-9 justify-content-center" >
+                    <div id="gg" class="row justify-content-center mt-4 "></div>
+                   
+                </div>
+            </div>
+            <div id="titre">
+                <div class="col-12 d-flex justify-content-center">
+                     <h1 class="font-weight-bold font-italic mr-4 pr-4">Votre Commande :</h1>
+                </div></div>
+            <div class="w-100 d-flex justify-content-center row">
+                    
+            <div class="row col-8 cardContainer  ml-3 d-flex justify-content-center " id="pp"></div>
+            </div>
+            <div id="ff">
+                <div  class="container-fluid  col-12 d-none d-md-block mb-4 mt-4">
+                    <div class="row ">
+                        <div class="col-2 ">
+                            <div class="card border-0 bg-transparent  ">
+                                <div class="card-body">
+                                 <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
+                                </div>
+                            </div>
+                        </div>
+                        <form class="col-8 " method="POST" action="form_commande.php">
+
+                            <div class="col mr-4 pr-4 ml-2 mb-4 mt-4 ">
+                                <label class="font-weight-bold font-italic text-right">Nom et
+                                Prénom</label>
+                                <input type="text" id="np" name="np" class="form-control">
+                                <div id="nompre"
+                                    class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
+                                    style="display:none;" role="alert">
+                                    <strong>Ce champ est obligatoire</strong>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col mr-4 ml-4 mb-4 mt-4">
+                                    <label class="font-weight-bold font-italic text-right">Email</label>
+                                    <input type="text" id="e" name="e" class="form-control">
+                                    <div id="email"
+                                        class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
+                                        style="display:none;" role="alert">
+                                        <strong>Ce champ est obligatoire </strong>
+                                    </div>
+                                </div>
+                                <div class="col mr-4 ml-4 mb-4 mt-4">
+                                    <label class="font-weight-bold font-italic text-right">Téléphone</label>
+                                    <input type="text" id="t" name="t" class="form-control">
+                                    <div id="tel"
+                                        class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
+                                        style="display:none;" role="alert">
+                                        <strong>Ce champ est obligatoire</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mr-4 ml-4 mb-4 mt-4">
+                                <label class="font-weight-bold font-italic text-right">Votre Adresse</label>
+                                <textarea class="form-control" id="a" name="a" rows="4"></textarea>
+                                <div id="adresse"
+                                    class="alert alert-danger alert-dismissible fade bg-transparent border-0 show"
+                                    style="display:none;" role="alert">
+                                    <strong>Ce champ est obligatoire</strong>
+                                </div>
+                            </div>
+                            <div class="container-fluid col-12 ">
+                                <div class="item-content text-center ml-4 pl-4 ">
+
+                                    <input type="submit" name="bouton" id="bouton"
+                                     class="btn btn-dark font-weight-bold font-italic text-right t" value="Envoyer">
+                                </div>
+                            </div>
+                            <div class="w-100 mt-3 d-flex justify-content-center"> <a type="submit" class="btn btn-dark t " href="index.php">Retourner sur la page d'acceuil</a></div>
+                        </form>
+
+                    
+                    </div>
+                </div>
+
+
+            </div>
+
+          
+        </div>
+                <div class="col-12 text-center">
+                    <a type="submit" id="bottom" href="index.php" class="btn btn-dark t text-center mt-4" >Précedent</a>
+                </div>
            
                 <main>
     <?php
+    // si l'une des conditions est bonne, il execute le "if":
     if(!isset($_GET['page'])|| empty($_GET['page'])||$_GET['page']=='acceuil'){
       include('acceuil.php');
-    };
+    }else if($_GET['page']=='categorie'){
+        include('categorie.php');
+    }
+    else if($_GET['page']=='plats'){
+        include('plats.php');
+    }
+    else if($_GET['page']=='contact'){
+        include('contact.php');
+    }
+    ;
     
     ?>
-   </main>
-   <main>
-    <?php
-    if(!isset($_GET['page'])|| empty($_GET['page'])||$_GET['page']=='categorie'){
-      include('categorie.php');
-    };
-    
-    ?>
-   </main>
 
+</main>
 
             <?php
             include('footer.php');
@@ -52,10 +146,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-   
+        <script src="asset/js/script.js"></script>
     <script>
         $(document).ready(function () {
            var btn=$("#bottom"); 
+           var aff=$("#plats");
             var visible=$("#visible");
             var a = $("#afficher");
            var form=$("#ff");
@@ -72,7 +167,34 @@
          
                 var ctg = json.categorie;
                 var plt = json.plat;
-               
+              
+// PLATS AFFICHAGE DE BASE :
+for (i=0;i<plt.length;i++){
+var item=plt[i];
+var iche=$( `
+
+            <div class="card col-12 col-md-3 mr-3 mb-3">
+    <img class="card-img-top img-fluid himg" src="asset/food/${item.image}" alt="${item.libelle}">
+    <div class="card-body font-italic">
+        <h5 class="card-title font-weight-bold">${item.libelle}</h5>
+        <p class="card-text">${item.description} <br> Menu: ${item.prix} €</p>
+        <span class="stock7 text-danger"></span>
+    </div>
+    <div class="mt-auto mb-2 text-center"> <a href="#" value="${item.id_plat}" class="btn btn-warning di t">Commander</a></div>
+</div>
+
+
+
+                
+            `);
+aff.append(iche);
+var stock = iche.find(".stock7");
+    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');                   
+    };
+   
+
+
+// CATEGORIE AFFICHAGE DE BASE:
                 for (i = 0; i < ctg.length; i++) {
                     var item = ctg[i];
                     var resultat = $( `<div class="t  cat card custom-card col-3 mr-4 mb-4 d-none d-md-block">
@@ -88,7 +210,7 @@
 var stock = resultat.find(".stock");
     stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
  };
- 
+ // PLATS AFFICHAGE DE BASE DE 1 À 3:
                 for (i = 0; i < 3; i++) {
                     var truc = plt[i];
                     var r = $( `
@@ -110,6 +232,8 @@ var stock = resultat.find(".stock");
                     var stock = resultat.find(".stock3");
     stock.text(truc.active === 'Yes' ? '' : 'Disponible prochainement');
                 };
+
+// PLATS AFFICHAGE DE BASE DE 3 À 5:
                 for (i = 3; i < 5; i++) {
                     var leplat = plt[i];
                     var card = $( `<div   class="card col-12 ml-1  mb-2 ">
@@ -130,6 +254,7 @@ var stock = resultat.find(".stock");
     stock.text(leplat.active === 'Yes' ? '' : 'Disponible prochainement');
                 };
 
+ // PLATS AFFICHAGE SELON CATEGORIE CLIQUÉE:                
 $(".cat").click(function () {
     var id=$(this).find(".id").attr("value");
               plat(id);
@@ -172,6 +297,7 @@ visible.hide();
                         });
           };
 
+ // COMMANDE AFFICHAGE:
           $(document).on("click", ".di", function (e) {
             e.preventDefault();
       var id=$(this).attr("value");
@@ -226,20 +352,21 @@ visible.hide();
 
             });
             
+ // BARRE DE RECHERCHE:            
             $("#btn").click(function () {
               
                 search();
 
             });
+
             $("#recherche").on("keypress", function (e) {
                
               if(e.which===13){
               e.preventDefault();
               search();
-            
             };
+            }); 
 
-          });
             function search() {
                 
                 a.empty();

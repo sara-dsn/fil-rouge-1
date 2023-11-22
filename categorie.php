@@ -1,15 +1,4 @@
 
-        <div class="row d-flex justify-content-center ml-3 mr-3" >
-               
-               <div id="gg" class="row justify-content-center mt-4"></div>
-               
-           
-            <div class="w-100 d-flex row">
-                 <div class="row justify-content-center " id="afficher"></div>
-              
-            </div>
-            <div class="col-12 text-center" > <a type="submit" id="bottom" href="categorie.php" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
-        </div>
         <div id="visible">
             <div class="col-12 d-flex justify-content-center">
               <h1 class="font-weight-bold font-italic">Nos Catégories </h1>
@@ -23,12 +12,12 @@
                   </div>
                 </div>
             
-                <div class="row col-12 col-md-9 mr-2" id="plats"></div>
+                <div class="row col-12 col-md-9 mr-2" id="categorie"></div>
             </div>
         
             <div class="d-flex justify-content-between mt-4">
                 <a type="submit" href="index.php" class="btn btn-dark t" >Précedent</a>
-                <a type="submit" href="plats.php" class="btn btn-dark t" >Suivant</a>
+                <a type="submit" href="index.php?page=plats" class="btn btn-dark t" >Suivant</a>
             </div>
         </div>
        
