@@ -60,7 +60,7 @@
               </div>
               <div class="container-fluid col-12 ">
                 <div class=" text-center ">
-                  <input name="envoyer" type="submit" id="monbouton" class="btn btn-dark font-weight-bold font-italic text-right t" value="Envoyer">
+                  <input name="envoyer" type="submit" id="monbouton" href="index.php?page=demande" class="btn btn-dark font-weight-bold font-italic text-right t" value="Envoyer">
                 </div>
               </div>
 

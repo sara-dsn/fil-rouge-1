@@ -94,7 +94,7 @@
                             <div class="container-fluid col-12 ">
                                 <div class="item-content text-center ml-4 pl-4 ">
 
-                                    <input type="submit" name="bouton" id="bouton"
+                                    <input type="submit" href="index.php?page=livreur" name="bouton" id="bouton"
                                      class="btn btn-dark font-weight-bold font-italic text-right t" value="Envoyer">
                                 </div>
                             </div>
@@ -128,6 +128,12 @@
     else if($_GET['page']=='contact'){
         include('contact.php');
     }
+    else if($_GET['page']=='demande'){
+        include('demande.php');
+    }
+    // else if($_GET['page']=='livreur'){
+    //     include('livreur.php');
+    // }                                
     ;
     
     ?>
