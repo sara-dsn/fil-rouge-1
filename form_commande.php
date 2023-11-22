@@ -1,8 +1,9 @@
 <?php
 session_start();
+
 if(isset($_POST["bouton"])){
 $nompre=$_POST["np"];
-
+var_DUMP("hih");
 $email=$_POST["e"];
 $telephone=$_POST["t"];
 $adresse=$_POST["a"];
@@ -54,7 +55,7 @@ $_SESSION["np"]=$nompre;
 $_SESSION["e"]=$email;
 $_SESSION["t"]=$telephone;
 $_SESSION["a"]=$adresse;
-$nomFichier=date("Y-m-d-H-i-s");
+$nomFichier="L".date("Y-m-d-H-i-s");
 $contenuFichier="Nom et Prénom: ".$_SESSION["np"]
 ."\r\n  Email : ".$_SESSION["e"]
 ."\r\n  Telephone : ".$_SESSION["t"]

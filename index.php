@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                         </div>
-                        <form class="col-8 ">
+                        <form class="col-8 " method="POST" action="form_commande.php">
 
                             <div class="col mr-4 pr-4 ml-2 mb-4 mt-4 ">
                                 <label class="font-weight-bold font-italic text-right">Nom et
