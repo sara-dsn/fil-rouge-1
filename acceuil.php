@@ -22,8 +22,8 @@
                         </div>
                     </div>
                    
-                    <div class="d-flex justify-content-between mt-4">
-                        <a type="submit" href="contact.php" class="btn btn-dark t" >Précedent</a>
+                    <div class="d-flex justify-content-end mt-4">
+                      
                          <a type="submit" href="index.php?page=categorie" class="btn btn-dark t" >Suivant</a>
                   </div>
                 </div>

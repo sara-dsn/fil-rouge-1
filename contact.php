@@ -72,9 +72,9 @@
       
 
     
-        <div class="d-flex justify-content-between mt-4">
-          <a type="submit" href="plats.php" class="btn btn-dark t" >Précedent</a>
-          <a type="submit" href="index.php" class="btn btn-dark t" >Suivant</a>
+        <div class="d-flex justify-content-start mt-4">
+          <a type="submit" href="index.php?page=plats" class="btn btn-dark t" >Précedent</a>
+         
         </div>
       </div>
     </div>

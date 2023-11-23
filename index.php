@@ -17,6 +17,27 @@
     <div class="parallax-body">
 
         <div class="container-fluid">
+        <?php
+    session_start();
+ // Si 'url' de la session n'est pas égal à celui de la page ouverte:
+if (($_SESSION['url'])!=($_SERVER['HTTP_REFERER'])) {
+
+ // alors 'url' de la session est égale à l'URL de la page ouverte:
+    $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
+}
+
+//  sinon si 'url' n'est pas défini :
+elseif (!isset($_SESSION['url']) ) {
+
+ // alors on met à jour l''url' de la session:
+    $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
+};
+    ?>
+
+<hr>
+<div><?= $_SESSION['url'] ?></div>
+<hr>
+
             <?php
             include('header.php');
             ?>
@@ -111,14 +132,17 @@
           
         </div>
                 <div class="col-12 text-center">
-                    <button type="submit" id="bottom" onclick="history.back(); location.reload(true);" class="btn btn-dark t text-center mt-4" >Précedent</button>
+                    <!-- <button type="submit" id="bottom" onclick="history.back(); location.reload(true);" class="btn btn-dark t text-center mt-4" >Précedent</button> -->
                     <!-- <button type="button" id="bottom" onclick="window.history.go(-1)" class="btn btn-dark t text-center mt-4">Précédent</button> -->
+                    <button type="button" id="bottom" onclick="window.location.href='<?php echo $_SESSION['url']; ?>'" class="btn btn-dark t text-center mt-4">Précédent</button>
+
                    
 
                 </div>
            
                 <main>
     <?php
+ 
     // si l'une des conditions est bonne, il execute le "if":
     if(!isset($_GET['page'])|| empty($_GET['page'])||$_GET['page']=='acceuil'){
       include('acceuil.php');
@@ -136,12 +160,15 @@
     }
     else if($_GET['page']=='livreur'){
         include('livreur.php');
-    }                                
-    ;
+    };                           
+    
+ 
+    
     
     ?>
 
 </main>
+
 
             <?php
             include('footer.php');
@@ -172,12 +199,16 @@
             btn.hide();
            titre.hide();
             form.hide();
+
+            var url = window.location.href;
+
 // BOUTTON RETOUR:
-$("#bottom").click(function(){
-    history.back();
-    location.reload(true);
-    console.log("retour");
-});
+// $("#bottom").click(function(){
+//     window.location.href=url;
+//     history.back();
+//     location.reload(true);
+//     console.log("retour");
+// });
 
        $.getJSON("plat.json", function (json) {
          
@@ -189,7 +220,7 @@ for (i=0;i<plt.length;i++){
 var item=plt[i];
 var iche=$( `
 
-            <div class="card col-12 col-md-3 mr-3 mb-3">
+            <div class="card col-12 col-md-3 hauteur mr-3 mb-3">
     <img class="card-img-top img-fluid himg" src="asset/food/${item.image}" alt="${item.libelle}">
     <div class="card-body font-italic">
         <h5 class="card-title font-weight-bold">${item.libelle}</h5>
@@ -213,7 +244,7 @@ var stock = iche.find(".stock7");
 // CATEGORIE AFFICHAGE DE BASE:
                 for (i = 0; i < ctg.length; i++) {
                     var item = ctg[i];
-                    var resultat = $( `<div class="t  cat card custom-card col-3 mr-4 mb-4 d-none d-md-block">
+                    var resultat = $( `<div class="t  cat card custom-card col-12 col-md-3 mr-4 mb-4 d-none d-md-block">
                 <img class=" card-img-top taille  img-fluid" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body pl-3">
                     <h3 value="${item.id_categorie}" class=" titre card-title font-weight-bold font-italic id">${item.libelle}</h3>
@@ -264,8 +295,7 @@ var stock = resultat.find(".stock");
             </div>`);
           
                     tel.append(card);
-                    console.log(card);
-
+                  
                     var stock = resultat.find(".stock4");
     stock.text(leplat.active === 'Yes' ? '' : 'Disponible prochainement');
                 };
@@ -286,7 +316,7 @@ $(".cat").click(function () {
                 var idcat=uno.id_categorie;
                 if (idcat == id){ 
                             var t = $( ` 
-                        <div class="card  col-12 col-md-3 mx-1 ">
+                        <div class="card  col-12 col-md-3  mx-1 ">
                             <img class="card-img-top himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body font-italic">
                                 <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>
@@ -408,7 +438,7 @@ btn.show();
                      
                         $.each(result, function (element, uno) {
                             var txt = $( ` 
-                        <div class="card  d-flex flex-column col-12 col-md-2 mx-1 ">
+                        <div class="card   col-12 col-md-3 mx-1 ">
                             <img class="card-img-top img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body font-italic ">
                                 <h5 class="card-title  font-weight-bold ">${uno.libelle}</h5>
