@@ -11,14 +11,19 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row w-75" id="categorie"></div>
+
                         <div class="w-100 d-flex justify-content-center">
                            <h1 class="font-weight-bold font-italic row">Nos Best-sellers </h1>
                         </div>
+
                         <div class="w-100 d-flex justify-content-center row">
                     
                             <div class="row col-10 col-md-8   ml-3 d-flex justify-content-center " id="txt"></div>
+
                             <div class=" row col-10 d-none d-md-none   ml-3 d-flex justify-content-center" id="smm"> </div>
+                            
                         </div>
                     </div>
                    

@@ -20,18 +20,36 @@
         <?php
     session_start();
  // Si 'url' de la session n'est pas égal à celui de la page ouverte:
-if (($_SESSION['url'])!=($_SERVER['HTTP_REFERER'])) {
+ if (!isset($_SESSION['url'])) {
+    if (isset($_SERVER['HTTP_REFERER'])) {
+        $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
+    }
+    else {
+        $_SESSION['url'] = '';
+    }
+ }
+ else {
+    if (isset($_SERVER['HTTP_REFERER'])) {
+        $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
+    }
+    else {
+        $_SESSION['url'] = '';
+    }
+ }
 
- // alors 'url' de la session est égale à l'URL de la page ouverte:
-    $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
-}
 
-//  sinon si 'url' n'est pas défini :
-elseif (!isset($_SESSION['url']) ) {
+// if (($_SESSION['url'])!=($_SERVER['HTTP_REFERER'])) {
 
- // alors on met à jour l''url' de la session:
-    $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
-};
+//  // alors 'url' de la session est égale à l'URL de la page ouverte:
+//     $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
+// }
+
+// //  sinon si 'url' n'est pas défini :
+// elseif (!isset($_SESSION['url']) ) {
+
+//  // alors on met à jour l''url' de la session:
+//     $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
+// };
     ?>
 
 <hr>
@@ -221,7 +239,7 @@ var item=plt[i];
 var iche=$( `
 
             <div class="card col-12 col-md-3 hauteur mr-3 mb-3">
-    <img class="card-img-top img-fluid himg" src="asset/food/${item.image}" alt="${item.libelle}">
+    <img class="card-img-top img-fluid rounded himg" src="asset/food/${item.image}" alt="${item.libelle}">
     <div class="card-body font-italic">
         <h5 class="card-title font-weight-bold">${item.libelle}</h5>
         <p class="card-text">${item.description} <br> Menu: ${item.prix} €</p>
@@ -245,7 +263,7 @@ var stock = iche.find(".stock7");
                 for (i = 0; i < ctg.length; i++) {
                     var item = ctg[i];
                     var resultat = $( `<div class="t  cat card custom-card col-12 col-md-3 mr-4 mb-4 d-none d-md-block">
-                <img class=" card-img-top taille  img-fluid" src="asset/category/${item.image}" alt="${item.libelle}">
+                <img class=" card-img-top taille rounded img-fluid" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body pl-3">
                     <h3 value="${item.id_categorie}" class=" titre card-title font-weight-bold font-italic id">${item.libelle}</h3>
                 <span class="stock text-danger"><span>
@@ -262,7 +280,7 @@ var stock = resultat.find(".stock");
                     var truc = plt[i];
                     var r = $( `
                     <div  class="card  col-12 col-md-3 ml-1 mb-1 ">
-                                    <img  class="card-img-top himg img-fluid "  src="asset/food/${truc.image}" alt="${truc.libelle}">
+                                    <img  class="card-img-top rounded himg img-fluid "  src="asset/food/${truc.image}" alt="${truc.libelle}">
                                     <div class="card-body font-italic">
                                         <h5 class="card-title font-weight-bold ">${truc.libelle}</h5>
                                         <p class="card-text ">${truc.description}<br> Menu: ${truc.prix} €  </p>
@@ -284,7 +302,7 @@ var stock = resultat.find(".stock");
                 for (i = 3; i < 5; i++) {
                     var leplat = plt[i];
                     var card = $( `<div   class="card col-12 ml-1  mb-2 ">
-                <img class="card-img-top img-fluid himg" src="asset/food/${leplat.image}" alt="${leplat.libelle}">
+                <img class="card-img-top rounded img-fluid himg" src="asset/food/${leplat.image}" alt="${leplat.libelle}">
                 <div class="card-body font-italic">
                     <h5  class="card-title  font-weight-bold ">${leplat.libelle}</h5>
                     <p class="card-text ">${leplat.description}<br> Menu: ${leplat.prix} €  </p>
@@ -317,7 +335,7 @@ $(".cat").click(function () {
                 if (idcat == id){ 
                             var t = $( ` 
                         <div class="card  col-12 col-md-3  mx-1 ">
-                            <img class="card-img-top himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
+                            <img class="card-img-top rounded himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body font-italic">
                                 <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>
                                 <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
@@ -365,7 +383,7 @@ visible.hide();
                 if (idpp == id){ 
                             var t = $( ` 
                         <div class="card  col-12 col-md-3 mx-1 ">
-                            <img class="card-img-top himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
+                            <img class="card-img-top rounded himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body font-italic">
                                 <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>
                                 <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
@@ -439,7 +457,7 @@ btn.show();
                         $.each(result, function (element, uno) {
                             var txt = $( ` 
                         <div class="card   col-12 col-md-3 mx-1 ">
-                            <img class="card-img-top img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
+                            <img class="card-img-top rounded img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body font-italic ">
                                 <h5 class="card-title  font-weight-bold ">${uno.libelle}</h5>
                                 <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
