@@ -53,7 +53,7 @@
     ?>
 
 <hr>
-<div><?= $_SESSION['url'] ?></div>
+<!-- <div><?= $_SESSION['url'] ?></div> -->
 <hr>
 
             <?php
@@ -161,7 +161,7 @@
                 <main>
     <?php
  
-    // si l'une des conditions est bonne, il execute le "if":
+    // on change le body en fonction de quelle page est cliquée:
     if(!isset($_GET['page'])|| empty($_GET['page'])||$_GET['page']=='acceuil'){
       include('acceuil.php');
     }else if($_GET['page']=='categorie'){
@@ -416,7 +416,8 @@ visible.hide();
 
             });
             
- // BARRE DE RECHERCHE:            
+ // BARRE DE RECHERCHE:  
+           
             $("#btn").click(function () {
               
                 search();

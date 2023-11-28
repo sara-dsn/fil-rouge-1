@@ -23,7 +23,7 @@
                             <div class="row col-10 col-md-8   ml-3 d-flex justify-content-center " id="txt"></div>
 
                             <div class=" row col-10 d-none d-md-none   ml-3 d-flex justify-content-center" id="smm"> </div>
-                            
+
                         </div>
                     </div>
                    
