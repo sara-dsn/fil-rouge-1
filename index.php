@@ -238,7 +238,7 @@ for (i=0;i<plt.length;i++){
 var item=plt[i];
 var iche=$( `
 
-            <div class="card col-12 col-md-3 hauteur mr-3 mb-3">
+            <div class="card col-12 T col-md-3  mr-1 mb-1">
     <img class="card-img-top img-fluid rounded himg" src="asset/food/${item.image}" alt="${item.libelle}">
     <div class="card-body font-italic">
         <h5 class="card-title font-weight-bold">${item.libelle}</h5>
@@ -247,11 +247,9 @@ var iche=$( `
     </div>
     <div class="mt-auto mb-2 text-center"> <a href="#" value="${item.id_plat}" class="btn btn-warning di t">Commander</a></div>
 </div>
+  `);
 
 
-
-                
-            `);
 aff.append(iche);
 var stock = iche.find(".stock7");
     stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');                   
