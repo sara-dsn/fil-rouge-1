@@ -19,7 +19,7 @@
             </div>
             <form action="fomulaire.php" method="POST" class="col-12 col-md-8">
               <div class="form-row w-100 ">
-                <div class="col-12 col-md-6  pl-3 mb-4 mt-4 ">
+                <div class="col-12 col-md-6   mb-4 mt-4 ">
                  <label class="font-weight-bold font-italic text-right">Nom</label>
                   <input name="nom" type="text" id="n" class="form-control">
                   <div id="nom"class="alert alert-danger border-0 alert-dismissible bg-transparent fade show" role="alert">
@@ -36,7 +36,7 @@
                 </div>
               </div>
               <div class="form-row w-100">
-                <div class="col-12 col-md-6  mb-4 pl-3 mt-4">
+                <div class="col-12 col-md-6  mb-4  mt-4">
                   <label class="font-weight-bold font-italic text-right">Email</label>
                   <input name="email" type="text" id="e" class="form-control">
                  <div id="email" class="alert alert-danger alert-dismissible bg-transparent border-0 fade show" role="alert">
@@ -51,9 +51,9 @@
                  </div>
                </div>
               </div>
-              <div class="col-12 form-group ">
+              <div class="col-12 form-group  mr-4 ">
                 <label class="font-weight-bold font-italic text-right">Votre Demande</label>
-                <textarea name="demande" class="form-control mr-4" id="d" rows="4"></textarea>
+                <textarea name="demande" class="form-control " id="d" rows="4"></textarea>
                 <div id="dem" class="alert alert-danger alert-dismissiblaction bg-transparent border-0 fade show" role="alert">
                  <strong>Ce champ est obligatoire</strong>
                 </div>

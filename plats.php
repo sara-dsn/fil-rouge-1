@@ -10,7 +10,7 @@
 
         </div>
                 
-        <div class=" w-75  row" id="plats"></div>
+        <div class=" row col-12 col-md-9 mb-3 " id="plats"></div>
     </div>
         
        

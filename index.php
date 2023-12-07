@@ -72,28 +72,28 @@
             </div>
             <div id="titre">
                 <div class="col-12 d-flex justify-content-center">
-                     <h1 class="font-weight-bold font-italic mr-4 pr-4">Votre Commande :</h1>
+                     <h1 class="font-weight-bold font-italic ml-2 pr-4">Votre Commande :</h1>
                 </div></div>
             <div class="w-100 d-flex justify-content-center row">
                     
-            <div class="row col-8 cardContainer  ml-3 d-flex justify-content-center " id="pp"></div>
+            <div class="row col-10 cardContainer  ml-3 d-flex justify-content-center " id="pp"></div>
             </div>
             <div id="ff">
-                <div  class="container-fluid  col-12 d-none d-md-block mb-4 mt-4">
+                <div  class="container-fluid  col-12  mb-4 mt-4">
                     <div class="row ">
-                        <div class="col-2 ">
+                        <div class="col-2 d-none d-md-block ">
                             <div class="card border-0 bg-transparent  ">
                                 <div class="card-body">
                                  <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
                                 </div>
                             </div>
                         </div>
-                        <form class="col-8 " method="POST" action="form_commande.php">
+                        <form class="col-12 col-md-8 " method="POST" action="form_commande.php">
 
-                            <div class="col mr-4 pr-4 ml-2 mb-4 mt-4 ">
+                            <div class="col-12    mb-4 mt-4 ">
                                 <label class="font-weight-bold font-italic text-right">Nom et
                                 Prénom</label>
-                                <input type="text" id="np" name="np" class="form-control">
+                                <input type="text" id="np" name="np" class="form-control ">
                                 <div id="nompre"
                                     class="alert alert-danger alert-dismissible bg-transparent border-0 fade show"
                                     style="display:none;" role="alert">
@@ -102,7 +102,7 @@
                             </div>
 
                             <div class="form-row">
-                                <div class="col mr-4 ml-4 mb-4 mt-4">
+                                <div class="col-12 col-md-6   mb-4 mt-4">
                                     <label class="font-weight-bold font-italic text-right">Email</label>
                                     <input type="text" id="e2" name="e" class="form-control">
                                     <div id="email2"
@@ -111,7 +111,7 @@
                                         <strong>Ce champ est obligatoire </strong>
                                     </div>
                                 </div>
-                                <div class="col mr-4 ml-4 mb-4 mt-4">
+                                <div class="col-12 col-md-6 mb-4 mt-4">
                                     <label class="font-weight-bold font-italic text-right">Téléphone</label>
                                     <input type="text" id="t2" name="t" class="form-control">
                                     <div id="tel2"
@@ -121,7 +121,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mr-4 ml-4 mb-4 mt-4">
+                            <div class="form-group col-12 mb-4 mt-4">
                                 <label class="font-weight-bold font-italic text-right">Votre Adresse</label>
                                 <textarea class="form-control" id="a" name="a" rows="4"></textarea>
                                 <div id="adresse"
@@ -131,14 +131,16 @@
                                 </div>
                             </div>
                             <div class="container-fluid col-12 ">
-                                <div class="item-content text-center ml-4 pl-4 ">
+                                <div class=" d-flex justify-content-center col-12 col-md-10  ml-4 pl-4 ">
 
                                     <input type="submit" href="index.php?page=livreur" name="bouton" id="bouton"
-                                     class="btn btn-dark font-weight-bold font-italic text-right t" value="Envoyer">
+                                     class="btn btn-dark font-weight-bold font-italic  t" value="Envoyer">
                                 </div>
                             </div>
-                            <div class="w-100 mt-3 d-flex justify-content-center"> <a type="submit" class="btn btn-dark t " href="index.php">Retourner sur la page d'acceuil</a></div>
-                        </form>
+                           
+                            <div class="col-12 col-md-10 mt-4 d-flex justify-content-center"> <a type="submit" class="btn btn-dark t " href="index.php">Retourner sur la page d'acceuil</a></div>
+                     
+                    </form>
 
                     
                     </div>
@@ -203,22 +205,24 @@
         <script src="asset/js/script.js"></script>
     <script>
         $(document).ready(function () {
+
            var btn=$("#bottom"); 
            var aff=$("#plats");
-            var visible=$("#visible");
-            var a = $("#afficher");
+           var visible=$("#visible");
+           var a = $("#afficher");
            var form=$("#ff");
            var test=$("#gg");
            var titre=$("#titre");
-              var affiche = $("#txt");
-            var pp=$("#pp");
-             var affichage = $("#categorie");
-                var tel=$("#smm");
-            btn.hide();
-           titre.hide();
-            form.hide();
+           var affiche = $("#txt");
+           var pp=$("#pp");
+           var affichage = $("#categorie");
+           var tel=$("#smm");
 
-            var url = window.location.href;
+           btn.hide();
+           titre.hide();
+           form.hide();
+
+ // var url = window.location.href;
 
 // BOUTTON RETOUR:
 // $("#bottom").click(function(){
@@ -238,14 +242,14 @@ for (i=0;i<plt.length;i++){
 var item=plt[i];
 var iche=$( `
 
-            <div class="card col-12 T col-md-3  mr-1 mb-1">
+            <div class="card col-12 T ml-1 mb-1 mr-1 col-md-3 ">
     <img class="card-img-top img-fluid rounded himg" src="asset/food/${item.image}" alt="${item.libelle}">
     <div class="card-body font-italic">
         <h5 class="card-title font-weight-bold">${item.libelle}</h5>
-        <p class="card-text">${item.description} <br> Menu: ${item.prix} €</p>
+        <p class="card-text mb-4">${item.description} <br> Menu: ${item.prix} €</p>
         <span class="stock7 text-danger"></span>
     </div>
-    <div class="mt-auto mb-2 text-center"> <a href="#" value="${item.id_plat}" class="btn btn-warning di t">Commander</a></div>
+    <div class="mt-auto mb-1 mt-2 text-center"> <a href="#" value="${item.id_plat}" class="btn btn-warning di t">Commander</a></div>
 </div>
   `);
 
@@ -260,7 +264,7 @@ var stock = iche.find(".stock7");
 // CATEGORIE AFFICHAGE DE BASE:
                 for (i = 0; i < ctg.length; i++) {
                     var item = ctg[i];
-                    var resultat = $( `<div class="t  cat card custom-card col-12 col-md-3 mr-4 mb-4 d-none d-md-block">
+                    var resultat = $( `<div class="t  cat card custom-card col-12 col-md-3 ml-2 mr-2 mb-4 ">
                 <img class=" card-img-top taille rounded img-fluid" src="asset/category/${item.image}" alt="${item.libelle}">
                 <div class="card-body pl-3">
                     <h3 value="${item.id_categorie}" class=" titre card-title font-weight-bold font-italic id">${item.libelle}</h3>
@@ -269,7 +273,7 @@ var stock = iche.find(".stock7");
                 </div>
             </div>`);
                     affichage.append(resultat);
-              
+                    console.log(resultat);
 var stock = resultat.find(".stock");
     stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
  };
@@ -298,6 +302,7 @@ var stock = resultat.find(".stock");
 
 // PLATS AFFICHAGE DE BASE DE 3 À 5:
                 for (i = 3; i < 5; i++) {
+                    
                     var leplat = plt[i];
                     var card = $( `<div   class="card col-12 ml-1  mb-2 ">
                 <img class="card-img-top rounded img-fluid himg" src="asset/food/${leplat.image}" alt="${leplat.libelle}">

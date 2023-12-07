@@ -11,10 +11,10 @@
                        </div>
                   </div>
                 </div>
+
+                <div class=" row col-10 col-md-8  " id="categorie"></div>
             
-                <div class="row col-12 col-md-9 mr-2" id="categorie"></div>
             </div>
-        
             <div class="d-flex justify-content-between mt-4">
                 <a type="submit" href="index.php" class="btn btn-dark t" >Précedent</a>
                 <a type="submit" href="index.php?page=plats" class="btn btn-dark t" >Suivant</a>

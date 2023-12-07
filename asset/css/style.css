@@ -92,4 +92,7 @@ padding-top:2%;
        .T{
         height: 10%;
        } 
+       .d{ 
+        display: none;
+       }
     }
