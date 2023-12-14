@@ -138,3 +138,6 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2023-12-13  9:24:24
+
+INSERT INTO `categorie`(`id`, `libelle`, `image`, `active`) VALUES(17 , 'Indien' , 'Indien_cat.jpeg' ,'Yes' );
+INSERT INTO`plat`(`id`, `libelle`, `description`, `prix`, `image`, `id_categorie`, `active`) VALUES(3, 'Chicken Korma','riz , poulet ,sauce korma', 10, 'chicken_korma.jpeg',17,'Yes');
