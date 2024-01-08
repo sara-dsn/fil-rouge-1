@@ -288,7 +288,7 @@ var stock = resultat.find(".stock");
                                         <p class="card-text ">${truc.description}<br> Menu: ${truc.prix} €  </p>
                                         <span class="stock3 text-danger"><span>
                                     </div> 
-                                    <div class="mt-auto mb-2 text-center"> <a href="#" value="${truc.id_plat}" class="btn btn-warning di t">Commander</a></div>
+                                    <div class="mt-auto mb-2 text-center"> <a href="#" value="${truc.id_plat}" class="btn btn-warning di t">passer commande</a></div>
                                 </div>
 
         `);
