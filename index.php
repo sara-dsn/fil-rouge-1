@@ -238,45 +238,45 @@
                 var plt = json.plat;
               
 // PLATS AFFICHAGE DE BASE :
-for (i=0;i<plt.length;i++){
-var item=plt[i];
-var iche=$( `
+// for (i=0;i<plt.length;i++){
+// var item=plt[i];
+// var iche=$( `
 
-            <div class="card col-12 T ml-1 mb-1 mr-1 col-md-3 ">
-    <img class="card-img-top img-fluid rounded himg" src="asset/food/${item.image}" alt="${item.libelle}">
-    <div class="card-body font-italic">
-        <h5 class="card-title font-weight-bold">${item.libelle}</h5>
-        <p class="card-text mb-4">${item.description} <br> Menu: ${item.prix} €</p>
-        <span class="stock7 text-danger"></span>
-    </div>
-    <div class="mt-auto mb-1 mt-2 text-center"> <a href="#" value="${item.id_plat}" class="btn btn-warning di t">Commander</a></div>
-</div>
-  `);
+//             <div class="card col-12 T ml-1 mb-1 mr-1 col-md-3 ">
+//     <img class="card-img-top img-fluid rounded himg" src="asset/food/${item.image}" alt="${item.libelle}">
+//     <div class="card-body font-italic">
+//         <h5 class="card-title font-weight-bold">${item.libelle}</h5>
+//         <p class="card-text mb-4">${item.description} <br> Menu: ${item.prix} €</p>
+//         <span class="stock7 text-danger"></span>
+//     </div>
+//     <div class="mt-auto mb-1 mt-2 text-center"> <a href="#" value="${item.id_plat}" class="btn btn-warning di t">Commander</a></div>
+// </div>
+//   `);
 
 
-aff.append(iche);
-var stock = iche.find(".stock7");
-    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');                   
-    };
+// aff.append(iche);
+// var stock = iche.find(".stock7");
+//     stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');                   
+//     };
    
 
 
 // CATEGORIE AFFICHAGE DE BASE:
-                for (i = 0; i < ctg.length; i++) {
-                    var item = ctg[i];
-                    var resultat = $( `<div class="t  cat card custom-card col-12 col-md-3 ml-2 mr-2 mb-4 ">
-                <img class=" card-img-top taille rounded img-fluid" src="asset/category/${item.image}" alt="${item.libelle}">
-                <div class="card-body pl-3">
-                    <h3 value="${item.id_categorie}" class=" titre card-title font-weight-bold font-italic id">${item.libelle}</h3>
-                <span class="stock text-danger"><span>
+//                 for (i = 0; i < ctg.length; i++) {
+//                     var item = ctg[i];
+//                     var resultat = $( `<div class="t  cat card custom-card col-12 col-md-3 ml-2 mr-2 mb-4 ">
+//                 <img class=" card-img-top taille rounded img-fluid" src="asset/category/${item.image}" alt="${item.libelle}">
+//                 <div class="card-body pl-3">
+//                     <h3 value="${item.id_categorie}" class=" titre card-title font-weight-bold font-italic id">${item.libelle}</h3>
+//                 <span class="stock text-danger"><span>
                   
-                </div>
-            </div>`);
-                    affichage.append(resultat);
-                    console.log(resultat);
-var stock = resultat.find(".stock");
-    stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
- };
+//                 </div>
+//             </div>`);
+//                     affichage.append(resultat);
+//                     console.log(resultat);
+// var stock = resultat.find(".stock");
+//     stock.text(item.active === 'Yes' ? '' : 'Disponible prochainement');
+//  };
  // PLATS AFFICHAGE DE BASE DE 1 À 3:
                 for (i = 0; i < 3; i++) {
                     var truc = plt[i];
