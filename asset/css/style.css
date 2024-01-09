@@ -18,7 +18,9 @@
 #f{
     height: 3%;
 }
-
+.ff{
+    height:95%;
+}
 
 .t {
     transition: transform 0.5s;

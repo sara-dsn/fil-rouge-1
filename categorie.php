@@ -1,17 +1,4 @@
 
-<?php 
- 
-// Connexion à la base de données
-$db=new PDO('mysql:host=localhost;charset=utf8;dbname=district','admin','dosana');
-// configurer le mode erreur PDO pour générer des exceptions :
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-$requete = $db->prepare("SELECT * FROM categorie ");
-$requete->execute();
-$tableau = $requete->fetchAll(PDO::FETCH_OBJ);
-$nbr=0;
-// var_dump($tableau)
-?>
 <div id="visible">
     <div class="col-12 d-flex justify-content-center">
         <h1 class="font-weight-bold font-italic">Nos Catégories </h1>
@@ -27,18 +14,19 @@ $nbr=0;
 
         <div class=" row col-10 col-md-8  " >
             <?php 
-             foreach($tableau as $categorie){
-                if($categorie->active == 'Yes' ) { 
+             foreach($ctg as $categorie){
+                if($categorie->active == 'Disponible' ) { 
                     $nbr++;?>
-                <div class="t  cat card custom-card col-12 col-md-3 ml-2 mr-2 mb-4 ">
+                <div class="t cat card custom-card col-12 col-md-3 ml-2 mr-2 mb-4 ">
                     <img class=" card-img-top taille rounded img-fluid" src="asset/category/<?=$categorie->image?>" alt="<?=$categorie->libelle?>">
                     <div class="card-body pl-3">
-                        <h3 value="<?=$categorie->id_categorie?>" class=" titre card-title font-weight-bold font-italic id"><?=$categorie->libelle?></h3>
-                        <span class="stock text-danger"><span>
+                        <h3 value="<?=$categorie->id?>" class=" titre card-title font-weight-bold font-italic id"><?=$categorie->libelle?></h3>
+                        <span class="stock text-success"><?=$categorie->active?><span>
                     
                     </div>
                 </div>
             <?php if ($nbr==6){
+                $nbr=0;
                 break;
             } }};?>         
         </div>

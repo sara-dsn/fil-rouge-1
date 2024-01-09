@@ -1,3 +1,61 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>The District</title>
+</head>
+
+<body>
+    <div class="parallax-body">
+
+        <div class="container-fluid">
+        <?php
+    session_start();
+    include 'DAO.php';
+ // Si 'url' de la session n'est pas égal à celui de la page ouverte:
+ if (!isset($_SESSION['url'])) {
+    if (isset($_SERVER['HTTP_REFERER'])) {
+        $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
+    }
+    else {
+        $_SESSION['url'] = '';
+    }
+ }
+ else {
+    if (isset($_SERVER['HTTP_REFERER'])) {
+        $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
+    }
+    else {
+        $_SESSION['url'] = '';
+    }
+ }
+
+
+// if (($_SESSION['url'])!=($_SERVER['HTTP_REFERER'])) {
+
+//  // alors 'url' de la session est égale à l'URL de la page ouverte:
+//     $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
+// }
+
+// //  sinon si 'url' n'est pas défini :
+// elseif (!isset($_SESSION['url']) ) {
+
+//  // alors on met à jour l''url' de la session:
+//     $_SESSION['url'] = $_SERVER['HTTP_REFERER'];
+// };
+    ?>
+
+<hr>
+<!-- <div><?= $_SESSION['url'] ?></div> -->
+<hr>
 <div class="container-fluid">
 <div class="row  pr-0 pl-0 mr-0 ml-0">
     <img class="image-fluid pl-0 col-5 col-md-2 " src="asset/the_district_brand/facebook_cover_photo_1.png"
