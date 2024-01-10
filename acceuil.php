@@ -48,7 +48,7 @@
                         <p class="card-text mb-4"><?=$plat->description?> <br> Menu: <?=$plat->prix?> €</p>
                         <span class="stock7 text-danger"></span>
                     </div>
-                    <div class="mt-auto mb-1 mt-2 text-center"> <a href="#" value="<?=$plat->id_plat?>" class="btn btn-warning di t">Commander</a></div>
+                    <div class="mt-auto mb-1 mt-2 text-center"> <a href="index.php?page=commande&id=<?=$plat->id_plat?>" value="<?=$plat->id_plat?>" class="btn btn-warning di t">Commander</a></div>
                 </div>
     
             <?php if($nbr2 == 3){
