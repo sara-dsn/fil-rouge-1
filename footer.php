@@ -41,7 +41,7 @@
            var pp=$("#pp");
            var affichage = $("#categorie");
            var tel=$("#smm");
-
+           var btn2=("#btnplt");
            btn.hide();
            titre.hide();
            form.hide();
@@ -63,7 +63,7 @@
                       function commande(id){
             btn.hide();
          test.empty();
-         pp.empty();
+         pp.show();
          a.empty();
     form.show();
    titre.show();
@@ -126,6 +126,9 @@ pp.append(t);
                 test.empty();
                 visible.hide();
                 btn.show();
+                titre.empty();
+                pp.empty();
+                form.empty();
                 var input = $("#recherche").val();
 
                 $.getJSON("plat.json", function (json) {
@@ -157,7 +160,7 @@ pp.append(t);
                     }
                 });
             };
-
+          
             //  PLATS AFFICHAGE SELON CATEGORIE CLIQUÉE:                
 $(".cat").click(function () {
     var id=$(this).find(".id").attr("value");
