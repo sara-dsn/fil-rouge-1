@@ -1,0 +1,17 @@
+{
+    "name": "sara/fil-rouge-1",
+    "autoload": {
+        "psr-4": {
+            "Sara\\FilRouge1\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "sara-dsn",
+            "email": "sabr.tdg@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
