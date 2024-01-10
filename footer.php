@@ -42,9 +42,10 @@
            var affichage = $("#categorie");
            var tel=$("#smm");
            var btn2=("#btnplt");
-           btn.hide();
-           titre.hide();
-           form.hide();
+     form.hide();
+     pp.hide();
+     titre.hide();
+     btn.hide();
 
 
 
@@ -60,45 +61,47 @@
       var id=$(this).attr("value");
       commande(id);
 });
-                      function commande(id){
-            btn.hide();
-         test.empty();
-         pp.show();
-         a.empty();
-    form.show();
-   titre.show();
+                function commande(id){
+                    
+   form.show(); 
+   btn.hide();
+    test.empty();
+    pp.show();
+    a.empty();
 
-            $.each(plt, function (element, uno) {
-                var idpp=uno.id_plat;
-                if (idpp == id){ 
-                            var t = $( ` 
-                        <div class="card  col-12 col-md-3 mx-1 ">
-                            <img class="card-img-top rounded himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
-                            <div class="card-body font-italic">
-                                <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>
-                                <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
-                                 <span class="stock6 text-danger"><span>
-                          </div><div class="mt-auto mb-2 text-center"><a href="#" class="btn btn-warning t">Quantité : 1 </a></div>
-                        </div> `);                   
+titre.show();
 visible.hide();
+    $.each(plt, function (element, uno) {
+        var idpp=uno.id_plat;
+        if (idpp == id){ 
+                    var t = $( ` 
+                <div class="card  col-12 col-md-3 mx-1 ">
+                    <img class="card-img-top rounded himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
+                    <div class="card-body font-italic">
+                        <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>
+                        <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
+                            <span class="stock6 text-danger"><span>
+                    </div><div class="mt-auto mb-2 text-center"><a href="#" class="btn btn-warning t">Quantité : 1 </a></div>
+                </div> `);                   
+
 pp.append(t);
-               };
-                });
-          };
+        };
+        });
+    };
 
 // PLATS AFFICHAGE DE BASE DE 3 À 5:
-                for (i = 3; i < 5; i++) {
-                    
-                    var leplat = plt[i];
-                    var card = $( `<div   class="card col-12 ml-1  mb-2 ">
-                <img class="card-img-top rounded img-fluid himg" src="asset/food/${leplat.image}" alt="${leplat.libelle}">
-                <div class="card-body font-italic">
-                    <h5  class="card-title  font-weight-bold ">${leplat.libelle}</h5>
-                    <p class="card-text ">${leplat.description}<br> Menu: ${leplat.prix} €  </p>
-                </div> <div class="mt-auto mb-2 text-center"><a href="#" value="${leplat.id_plat}" class="btn btn-warning di t">Commander</a></div>
-            </div>`);
-                    tel.append(card);
-                };
+    for (i = 3; i < 5; i++) {
+        
+        var leplat = plt[i];
+        var card = $( `<div   class="card col-12 ml-1  mb-2 ">
+    <img class="card-img-top rounded img-fluid himg" src="asset/food/${leplat.image}" alt="${leplat.libelle}">
+    <div class="card-body font-italic">
+        <h5  class="card-title  font-weight-bold ">${leplat.libelle}</h5>
+        <p class="card-text ">${leplat.description}<br> Menu: ${leplat.prix} €  </p>
+    </div> <div class="mt-auto mb-2 text-center"><a href="#" value="${leplat.id_plat}" class="btn btn-warning di t">Commander</a></div>
+</div>`);
+        tel.append(card);
+    };
 
 
 
@@ -106,60 +109,60 @@ pp.append(t);
             
  // BARRE DE RECHERCHE:  
            
-            $("#btn").click(function () {
-              
-                search();
+$("#btn").click(function () {
+    
+    search();
 
-            });
+});
 
-            $("#recherche").on("keypress", function (e) {
-               
-              if(e.which===13){
-              e.preventDefault();
-              search();
-            };
-            }); 
+$("#recherche").on("keypress", function (e) {
+    
+    if(e.which===13){
+    e.preventDefault();
+    search();
+};
+}); 
 
-            function search() {
-                
-                a.empty();
-                test.empty();
-                visible.hide();
-                btn.show();
-                titre.empty();
-                pp.empty();
-                form.empty();
-                var input = $("#recherche").val();
+function search() {
+    
+    a.empty();
+    test.empty();
+    visible.hide();
+    btn.show();
+    titre.hide();
+    pp.empty();
+    form.hide();
+    var input = $("#recherche").val();
 
-                $.getJSON("plat.json", function (json) {
-                    var plt = json.plat;
-                   
-
-               
-                        var pla = plt.filter(function (p) {
-                            return p.libelle.toLowerCase().includes(input.toLowerCase());
-                        });  
-                   
+    $.getJSON("plat.json", function (json) {
+        var plt = json.plat;
         
-                
-                    miseajour(pla);
 
-                    function miseajour(result) {
-                     
-                        $.each(result, function (element, uno) {
-                            var txt = $( ` 
-                        <div class="card   col-12 col-md-3 mx-1 ">
-                            <img class="card-img-top rounded img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
-                            <div class="card-body font-italic ">
-                                <h5 class="card-title  font-weight-bold ">${uno.libelle}</h5>
-                                <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
-                            </div> <div class="mt-auto mb-2 text-center"><a href="#" value="${uno.id_plat}" class="btn btn-warning di t">Commander</a></div>
-                        </div>`);
-                            a.append(txt);
-                        });
-                    }
-                });
-            };
+    
+            var pla = plt.filter(function (p) {
+                return p.libelle.toLowerCase().includes(input.toLowerCase());
+            });  
+        
+
+    
+        miseajour(pla);
+
+        function miseajour(result) {
+            
+            $.each(result, function (element, uno) {
+                var txt = $( ` 
+            <div class="card   col-12 col-md-3 mx-1 ">
+                <img class="card-img-top rounded img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
+                <div class="card-body font-italic ">
+                    <h5 class="card-title  font-weight-bold ">${uno.libelle}</h5>
+                    <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
+                </div> <div class="mt-auto mb-2 text-center"><button href="index.php?page=commande&id=${uno.id_plat}" value="${uno.id_plat}" class="btn btn-warning di t">Commander</button></div>
+            </div>`);
+                a.append(txt);
+            });
+        }
+    });
+};
           
             //  PLATS AFFICHAGE SELON CATEGORIE CLIQUÉE:                
 $(".cat").click(function () {

@@ -118,6 +118,9 @@
     else if($_GET['page']=='plats'){
         include('plats.php');
     }
+    else if($_GET['page']=='commande'){
+        include('commande.php');
+    }
     else if($_GET['page']=='contact'){
         include('contact.php');
     }
@@ -126,9 +129,6 @@
     }
     else if($_GET['page']=='livreur'){
         include('livreur.php');
-    }
-    else if($_GET['page']=='commande'){
-        include('commande.php');
     };                           
     
  
