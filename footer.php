@@ -55,39 +55,39 @@
                 var plt = json.plat;
               
 
-                        // COMMANDE AFFICHAGE:
-          $(document).on("click", ".di", function (e) {
-            e.preventDefault();
-      var id=$(this).attr("value");
-      commande(id);
-});
-                function commande(id){
+//                         // COMMANDE AFFICHAGE:
+//           $(document).on("click", ".di", function (e) {
+//             e.preventDefault();
+//       var id=$(this).attr("value");
+//       commande(id);
+// });
+//                 function commande(id){
                     
-   form.show(); 
-   btn.hide();
-    test.empty();
-    pp.show();
-    a.empty();
+//    form.show(); 
+//    btn.hide();
+//     test.empty();
+//     pp.show();
+//     a.empty();
 
-titre.show();
-visible.hide();
-    $.each(plt, function (element, uno) {
-        var idpp=uno.id_plat;
-        if (idpp == id){ 
-                    var t = $( ` 
-                <div class="card  col-12 col-md-3 mx-1 ">
-                    <img class="card-img-top rounded himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
-                    <div class="card-body font-italic">
-                        <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>
-                        <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
-                            <span class="stock6 text-danger"><span>
-                    </div><div class="mt-auto mb-2 text-center"><a href="#" class="btn btn-warning t">Quantité : 1 </a></div>
-                </div> `);                   
+// titre.show();
+// visible.hide();
+//     $.each(plt, function (element, uno) {
+//         var idpp=uno.id_plat;
+//         if (idpp == id){ 
+//                     var t = $( ` 
+//                 <div class="card  col-12 col-md-3 mx-1 ">
+//                     <img class="card-img-top rounded himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
+//                     <div class="card-body font-italic">
+//                         <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>
+//                         <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
+//                             <span class="stock6 text-danger"><span>
+//                     </div><div class="mt-auto mb-2 text-center"><a href="#" class="btn btn-warning t">Quantité : 1 </a></div>
+//                 </div> `);                   
 
-pp.append(t);
-        };
-        });
-    };
+// pp.append(t);
+//         };
+//         });
+//     };
 
 // PLATS AFFICHAGE DE BASE DE 3 À 5:
     for (i = 3; i < 5; i++) {
@@ -156,7 +156,7 @@ function search() {
                 <div class="card-body font-italic ">
                     <h5 class="card-title  font-weight-bold ">${uno.libelle}</h5>
                     <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
-                </div> <div class="mt-auto mb-2 text-center"><button href="index.php?page=commande&id=${uno.id_plat}" value="${uno.id_plat}" class="btn btn-warning di t">Commander</button></div>
+                </div> <div class="mt-auto mb-2 text-center"><a href="index.php?page=commande&id=${uno.id_plat}" value="${uno.id_plat}" class="btn btn-warning di t">Commander</a></div>
             </div>`);
                 a.append(txt);
             });
@@ -186,7 +186,7 @@ $(".cat").click(function () {
                                 <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>
                                 <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
                                 
-                            </div><div class="mt-auto mb-2 text-center"><a href="index.php?id=${uno.id_plat}" value="${uno.id_plat}" class="btn btn-warning di t">Commander</a></div>
+                            </div><div class="mt-auto mb-2 text-center"><a href="index.php?page=commande&id=${uno.id_plat}" value="${uno.id_plat}" class="btn btn-warning di t">Commander</a></div>
                         </div> 
                         
    `);

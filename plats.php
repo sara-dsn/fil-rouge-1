@@ -20,7 +20,7 @@
                         <h5 class="card-title font-weight-bold"><?=$plat->libelle?></h5>
                         <p class="card-text mb-4"><?=$plat->description?> <br> Menu: <?=$plat->prix?> €</p>
                     </div>
-                    <div class="mt-auto mb-1 mt-2 text-center"> <button href="index.php?page=commande&id=<?=$plat->id?>" id="btnplt" type="submit" value="<?=$plat->id?>" class="btn btn-warning di t">Commander</button></div>
+                    <div class="mt-auto mb-1 mt-2 text-center"> <a href="index.php?page=commande&id=<?=$plat->id?>" id="btnplt" type="submit" value="<?=$plat->id?>" class="btn btn-warning di t">Commander</a></div>
                 </div>
     
             <?php if($nbr == 6){

@@ -39,7 +39,7 @@
         <div class="w-100 d-flex justify-content-center row">
     
             <div class="row col-10 col-md-8   ml-3 d-flex justify-content-center " >
-            <?php foreach ($plt as $plat) { 
+            <?php foreach ($best as $plat) { 
                 $nbr2++  ?>
                 <div class="card col-12 g ml-1 mb-1 mr-1 col-md-3 ">
                     <img class="card-img-top img-fluid rounded himg" src="asset/food/<?=$plat->image?>" alt="<?=$plat->libelle?>">
@@ -48,7 +48,7 @@
                         <p class="card-text mb-4"><?=$plat->description?> <br> Menu: <?=$plat->prix?> €</p>
                         <span class="stock7 text-danger"></span>
                     </div>
-                    <div class="mt-auto mb-1 mt-2 text-center"> <a href="index.php?page=commande&id=<?=$plat->id_plat?>" value="<?=$plat->id_plat?>" class="btn btn-warning di t">Commander</a></div>
+                    <div class="mt-auto mb-1 mt-2 text-center"> <a href="index.php?page=commande&id=<?=$plat->id?>" value="<?=$plat->id?>" class="btn btn-warning di t">Commander</a></div>
                 </div>
     
             <?php if($nbr2 == 3){
