@@ -97,15 +97,15 @@ use PHPHMailer\PHPMailer\Exception;
                     </li>
                     <li class="nav-item h2  w-25">
                         <a class="nav-link font-weight-bold font-italic text-right "
-                            href="index.php?page=categorie"><u>Catégorie</u></a>
+                            href="index.php?page=cuisine-italienne-indienne-street-food"><u>Catégorie</u></a>
                     </li>
                     <li class="nav-item  h2 w-25 ">
                         <a class="nav-link font-weight-bold font-italic text-right"
-                            href="index.php?page=plats"><u>Plats</u></a>
+                            href="index.php?page=repas-amiens"><u>Plats</u></a>
                     </li>
                     <li class="nav-item  h2 w-25">
                         <a class="nav-link font-weight-bold font-italic text-right"
-                            href="index.php?page=contact"><u>Contact</u></a>
+                            href="index.php?page=contact-vendeur"><u>Contact</u></a>
                     </li>
 
                 </ul>
@@ -139,7 +139,7 @@ use PHPHMailer\PHPMailer\Exception;
 </div>
      <div class="w-100 d-flex row">
                  <div class="row justify-content-center " id="afficher"></div>
-                 <div class="col-12 text-center" > <a type="submit" id="go" href="demande.php" style="display:none" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
+                 <div class="col-12 text-center" > <a type="submit" id="go" href="index.php?page=réclamation-envoyer" style="display:none" class="btn btn-dark t text-center mt-4" >Précedent</a></div>
             </div>
         <div id="visible">
       <div class="container-fluid col-12 mb-4 mt-1 d-flex  ">

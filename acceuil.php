@@ -48,7 +48,7 @@
                         <p class="card-text mb-4"><?=$plat->description?> <br> Menu: <?=$plat->prix?> €</p>
                         <span class="stock7 text-danger"></span>
                     </div>
-                    <div class="mt-auto mb-1 mt-2 text-center"> <a href="index.php?page=commande&id=<?=$plat->id?>" value="<?=$plat->id?>" class="btn btn-warning di t">Commander</a></div>
+                    <div class="mt-auto mb-1 mt-2 text-center"> <a href="index.php?page=commande-livraison&id=<?=$plat->id?>" value="<?=$plat->id?>" class="btn btn-warning di t">Commander</a></div>
                 </div>
     
             <?php if($nbr2 == 3){
@@ -64,7 +64,7 @@
     
     <div class="d-flex justify-content-end mt-4">
         
-            <a type="submit" href="index.php?page=categorie" class="btn btn-dark t" >Suivant</a>
+            <a type="submit" href="index.php?page=cuisine-italienne-indienne-street-food" class="btn btn-dark t" >Suivant</a>
     </div>
 </div>
 

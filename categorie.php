@@ -34,6 +34,6 @@
     </div>
     <div class="d-flex justify-content-between mt-4">
         <a type="submit" href="index.php" class="btn btn-dark t" >Précedent</a>
-        <a type="submit" href="index.php?page=plats" class="btn btn-dark t" >Suivant</a>
+        <a type="submit" href="index.php?page=repas-amiens" class="btn btn-dark t" >Suivant</a>
     </div>
 </div>

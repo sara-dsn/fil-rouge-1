@@ -156,7 +156,7 @@ function search() {
                 <div class="card-body font-italic ">
                     <h5 class="card-title  font-weight-bold ">${uno.libelle}</h5>
                     <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
-                </div> <div class="mt-auto mb-2 text-center"><a href="index.php?page=commande&id=${uno.id_plat}" value="${uno.id_plat}" class="btn btn-warning di t">Commander</a></div>
+                </div> <div class="mt-auto mb-2 text-center"><a href="index.php?page=cuisine-italienne-indienne-street-food&id=${uno.id_plat}" value="${uno.id_plat}" class="btn btn-warning di t">Commander</a></div>
             </div>`);
                 a.append(txt);
             });
@@ -186,7 +186,7 @@ $(".cat").click(function () {
                                 <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>
                                 <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
                                 
-                            </div><div class="mt-auto mb-2 text-center"><a href="index.php?page=commande&id=${uno.id_plat}" value="${uno.id_plat}" class="btn btn-warning di t">Commander</a></div>
+                            </div><div class="mt-auto mb-2 text-center"><a href="index.php?page=commande-livraison&id=${uno.id_plat}" value="${uno.id_plat}" class="btn btn-warning di t">Commander</a></div>
                         </div> 
                         
    `);

@@ -90,7 +90,7 @@ if(isset($_GET["id"])){
             <input type="hidden" class="card-text" name="l" value="<?=$element->libelle?>">
             <input type="hidden" class="card-text" name="p" value="<?=$element->prix?>">
                             <input type="submit" name="bouton"
-                    class="btn btn-dark font-weight-bold font-italic text-right t" href="index.php?page=livreur&id=<?=$element->id?>" value="Envoyer">
+                    class="btn btn-dark font-weight-bold font-italic text-right t" href="index.php?page=livraison&id=<?=$element->id?>" value="Envoyer">
             </div>
         </div>
     </form>

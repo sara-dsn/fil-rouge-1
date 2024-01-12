@@ -60,7 +60,7 @@
               </div>
               <div class="container-fluid col-12 ">
                 <div class=" text-center ">
-                  <input name="envoyer" type="submit" id="monbouton" href="index.php?page=demande" class="btn btn-dark font-weight-bold font-italic text-right t" value="Envoyer">
+                  <input name="envoyer" type="submit" id="monbouton" href="index.php?page=réclamation-envoyer" class="btn btn-dark font-weight-bold font-italic text-right t" value="Envoyer">
                 </div>
               </div>
 
@@ -73,7 +73,7 @@
 
     
         <div class="d-flex justify-content-start mt-4">
-          <a type="submit" href="index.php?page=plats" class="btn btn-dark t" >Précedent</a>
+          <a type="submit" href="index.php?page=repas-amiens" class="btn btn-dark t" >Précedent</a>
          
         </div>
       </div>

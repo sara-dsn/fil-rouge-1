@@ -20,7 +20,7 @@
                         <h5 class="card-title font-weight-bold"><?=$plat->libelle?></h5>
                         <p class="card-text mb-4"><?=$plat->description?> <br> Menu: <?=$plat->prix?> €</p>
                     </div>
-                    <div class="mt-auto mb-1 mt-2 text-center"> <a href="index.php?page=commande&id=<?=$plat->id?>" id="btnplt" type="submit" value="<?=$plat->id?>" class="btn btn-warning di t">Commander</a></div>
+                    <div class="mt-auto mb-1 mt-2 text-center"> <a href="index.php?page=commande-livraison&id=<?=$plat->id?>" id="btnplt" type="submit" value="<?=$plat->id?>" class="btn btn-warning di t">Commander</a></div>
                 </div>
     
             <?php if($nbr == 6){
@@ -30,8 +30,8 @@
         </div>
        
     <div class="col-12 d-flex justify-content-between mt-4">
-        <a type="submit" href="index.php?page=categorie" class="btn btn-dark t" >Précedent</a>
-        <a type="submit" href="index.php?page=contact" class="btn btn-dark t" >Suivant</a>
+        <a type="submit" href="index.php?page=cuisine-italienne-indienne-street-food" class="btn btn-dark t" >Précedent</a>
+        <a type="submit" href="index.php?page=contact-vendeur" class="btn btn-dark t" >Suivant</a>
     </div>
 </div>
             

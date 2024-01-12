@@ -113,22 +113,22 @@
     // on change le body en fonction de quelle page est cliquée:
     if(!isset($_GET['page'])|| empty($_GET['page'])||$_GET['page']=='acceuil'){
       include('acceuil.php');
-    }else if($_GET['page']=='categorie'){
+    }else if($_GET['page']=='cuisine-italienne-indienne-street-food'){
         include('categorie.php');
     }
-    else if($_GET['page']=='plats'){
+    else if($_GET['page']=='repas-amiens'){
         include('plats.php');
     }
-    else if($_GET['page']=='commande'){
+    else if($_GET['page']=='commande-livraison'){
         include('commande.php');
     }
-    else if($_GET['page']=='contact'){
+    else if($_GET['page']=='contact-vendeur'){
         include('contact.php');
     }
-    else if($_GET['page']=='demande'){
+    else if($_GET['page']=='réclamation-envoyer'){
         include('demande.php');
     }
-    else if($_GET['page']=='livreur'){
+    else if($_GET['page']=='livraison'){
         include('livreur.php');
 
     };                           

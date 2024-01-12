@@ -2,7 +2,12 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The District est un restaurant de cuisine italienne à Amiens, où manger sur place , à emporter ou en livraison 
+    les meilleurs repas. La cuisine indienne fait son apparition dans nos resto , ainsi qu'un côté fast-food avec 
+    les incontournables sandwichs . Prochainement il y  aura des plats asiatiques séléctionné par les meilleurs 
+    cuisinier de the district, à ne pas manquer!">
+    <meta name="keyword" content="resto , amiens , fastfood, restaurant,italien, indien, asiatique, chinois, japonais, grec ,burger ,
+     hamburger, pizza, pasta , pâtes , salade, veggie, végétarien, sandwich, chicken korma ,    ">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="asset/css/style.css">
@@ -71,15 +76,15 @@
                     </li>
                     <li class="nav-item h2  w-25">
                         <a class="nav-link font-weight-bold font-italic text-right "
-                            href="index.php?page=categorie"><u>Catégorie</u></a>
+                            href="index.php?page=cuisine-italienne-indienne-street-food"><u>Catégorie</u></a>
                     </li>
                     <li class="nav-item  h2 w-25 ">
                         <a class="nav-link font-weight-bold font-italic text-right"
-                            href="index.php?page=plats"><u>Plats</u></a>
+                            href="index.php?page=repas-amiens"><u>Plats</u></a>
                     </li>
                     <li class="nav-item  h2 w-25">
                         <a class="nav-link font-weight-bold font-italic text-right"
-                            href="index.php?page=contact"><u>Contact</u></a>
+                            href="index.php?page=contact-vendeur"><u>Contact</u></a>
                     </li>
 
                 </ul>
