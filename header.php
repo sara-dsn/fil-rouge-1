@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
+<!-- <script src="asset/js/tarteaucitron.js"></script>   -->
 <meta charset="utf-8">
     <meta name="description" content="The District est un restaurant de cuisine italienne à Amiens, où manger sur place , à emporter ou en livraison 
     les meilleurs repas. La cuisine indienne fait son apparition dans nos resto , ainsi qu'un côté fast-food avec 
@@ -59,8 +60,8 @@
 <hr>
 <div class="container-fluid">
 <div class="row  pr-0 pl-0 mr-0 ml-0">
-    <img class="image-fluid pl-0 col-5 col-md-2 " src="asset/the_district_brand/facebook_cover_photo_1.png"
-        alt="logo-the-District">
+    <a  href="index.php"><img class="image-fluid pl-0 col-5 col-md-2 " src="asset/the_district_brand/facebook_cover_photo_1.png"
+        alt="logo-the-District"></a> 
     <div class="col">
         <nav class="navbar navbar-expand-sm  bg-transparent navbar-light d-flex justify-content-end ">
 

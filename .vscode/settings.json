@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "tinypng.apiKey": "C14FCKRv4FyR64rpRNPPTpfjBgJJrX25 ",
+    "tinypng.forceOverwrite": true
 }

@@ -131,6 +131,12 @@
     else if($_GET['page']=='livraison'){
         include('livreur.php');
 
+    } else if($_GET['page']=='mention_legale'){
+        include('mention_legale.php');
+    }
+    else if($_GET['page']=='politique_de_confidentialite'){
+        include('politique.php');
+
     };                           
     
  

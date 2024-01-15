@@ -1,5 +1,4 @@
-<?php
-       echo' <div class="container-fluid col-12 col-md-3">
+ <div class="container-fluid col-12 col-md-3">
         <div class="row d-flex justify-content-center">
             <div >
                 <div class="card border-0 bg-transparent">
@@ -15,8 +14,11 @@
 
 
     </div>
-</div>';
-?>
+</div>
+<div class="container-fluid d-flex justify-content-center col-12 col-md-3">
+    <a class="mr-2 mb-4 text-dark" href="index.php?page=politique_de_confidentialite">Politique de confidentialité </a>
+    <a class="ml-2 mb-4 text-dark" href="index.php?page=mention_legale"> Mentions légales</a>
+</div>
 </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
