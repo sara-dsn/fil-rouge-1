@@ -14,7 +14,7 @@
 
 
     </div>
-</div>
+
 <div class="container-fluid d-flex justify-content-center col-12 col-md-3">
     <a class="mr-2 mb-4 text-dark" href="index.php?page=politique_de_confidentialite">Politique de confidentialité </a>
     <a class="ml-2 mb-4 text-dark" href="index.php?page=mention_legale"> Mentions légales</a>

@@ -61,7 +61,7 @@
     height: 43%;
 }
 .g{
-    height: 85%;
+    height: 95%;
 }
 .titre{
     color:#970747;
@@ -95,9 +95,16 @@ padding-top:2%;
     }
     @media screen and (max-width:767px){
        .T{
-        height: 10%;
+        height: 1%;
        } 
        .d{ 
         display: none;
+       }
+       .card{
+        height:30%;
+       }
+       
+       .cat{
+        height:17%;
        }
     }

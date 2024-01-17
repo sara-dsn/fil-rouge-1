@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="asset/css/style.css">
     <title>The District</title>
 </head>
-
 <body>
     <div class="parallax-body">
 

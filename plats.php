@@ -11,7 +11,7 @@
             </div>
 
         </div>
-        <div class=" row col-10 col-md-8  " >
+        <div class=" row col-12 col-md-8  " >
             <?php foreach ($plt as $plat) { 
                 $nbr++  ?>
                 <div class="card col-12 T ml-1 mb-1 mr-1 col-md-3 ">
