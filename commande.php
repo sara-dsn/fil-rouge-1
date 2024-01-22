@@ -19,13 +19,13 @@
                 <div class="d-flex justify-content-center">
 <?php 
 if(isset($_GET["id"])){
-   foreach($plt as $element)
+   foreach($plt as $element){
     if ($_GET["id"]== $element->id){ 
  ?>
-    <div class="card  col-12 col-md-2 ml-4 ">
+    <div class="card  col-10 col-md-2 ml-4 ">
         <img class="card-img-top img-fluid mt-2" name="" value="" src="asset/food/<?=$element->image?>" alt="burger360">
             <div class="card-body">
-            <h5 class="card-title" ><?=$element->libelle?></h5>
+            <h5 class="card-title font-weight-bold" ><?=$element->libelle?></h5>
             <p class="card-text"  value="<?=$element->prix?>"><?=$element->description?><br> Total : <?=$element->prix?> €</p>
             <button class="btn btn-warning t">Quantité: 1</button>
         </div>
@@ -34,18 +34,18 @@ if(isset($_GET["id"])){
 
 
 
-<div class="container-fluid col-12 d-none d-md-block mb-4 mt-4">
+<div class="container-fluid col-12  mb-4 mt-4">
     <div class="row ">
-            <div class="col-2 ">
-            <div class="card border-0 bg-transparent  ">
-                <div class="card-body">
-                    <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid" alt="Cuisinier">
+            <div class="col-2 d-none d-md-block ">
+                <div class="card border-0 bg-transparent  ">
+                    <div class="card-body">
+                        <img src="asset/cat.fond/cuisinier.png" class="card-img-top img-fluid " alt="Cuisinier">
                     </div>
                 </div>
-        </div>
-         <form class="col-8 " method="POST" action="form_commande.php">
+           </div>
+        <form class="col-12 col-md-8 " method="POST" action="form_commande.php">
 
-        <div class="col mr-4 pr-4 ml-2 mb-4 mt-4 ">
+        <div class=" mr-4 pr-4 ml-4 mb-4 mt-4 ">
             <label class="font-weight-bold font-italic text-right">Nom et
                 Prénom</label>
             <input type="text" name="np" id="np" class="form-control">
@@ -57,7 +57,7 @@ if(isset($_GET["id"])){
         </div>
 
         <div class="form-row">
-            <div class="col mr-4 ml-4 mb-4 mt-4">
+            <div class="col-10 col-md-5 mr-4 ml-4 mb-4 mt-4">
                 <label class="font-weight-bold font-italic text-right">Email</label>
                 <input type="text" name="e" id="e" class="form-control">
                 <div id="email"
@@ -66,7 +66,7 @@ if(isset($_GET["id"])){
                     <strong>Ce champ est obligatoire </strong>
                 </div>
             </div>
-            <div class="col mr-4 ml-4 mb-4 mt-4">
+            <div class="col-10 col-md-5 mr-4 ml-4 mb-4 mt-4">
                 <label class="font-weight-bold font-italic text-right">Téléphone</label>
                 <input type="text" name="t" id="t" class="form-control">
                 <div id="tel"
@@ -99,11 +99,11 @@ if(isset($_GET["id"])){
             </div>
            
 
-            <?php };}; ?>
+            <?php };}; };?>
 
 
             <div class="w-100 mt-3 d-flex justify-content-center"> <a type="submit" class="btn btn-dark t " href="index.php">Retourner sur la page d'acceuil</a></div>
-        </div>
+        
 
         
         </div>

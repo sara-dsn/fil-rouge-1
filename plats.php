@@ -14,13 +14,13 @@
         <div class=" row col-12 col-md-8  " >
             <?php foreach ($plt as $plat) { 
                 $nbr++  ?>
-                <div class="card col-12 T ml-1 mb-1 mr-1 col-md-3 ">
+                <div class="card col-12 T pb-2 ml-1 mb-1 mr-1 col-md-3 ">
                     <img class="card-img-top img-fluid rounded himg" src="asset/food/<?=$plat->image?>" alt="<?=$plat->libelle?>">
                     <div class="card-body font-italic">
                         <h5 class="card-title font-weight-bold"><?=$plat->libelle?></h5>
-                        <p class="card-text mb-4"><?=$plat->description?> <br> Menu: <?=$plat->prix?> €</p>
+                        <p class="card-text "><?=$plat->description?> <br> Menu: <?=$plat->prix?> €</p><br>
                     </div>
-                    <div class="mt-auto mb-1 mt-2 text-center"> <a href="index.php?page=commande-livraison&id=<?=$plat->id?>" id="btnplt" type="submit" value="<?=$plat->id?>" class="btn btn-warning di t">Commander</a></div>
+                    <div class="mt-auto  text-center"> <a href="index.php?page=commande-livraison&id=<?=$plat->id?>" id="btnplt" type="submit" value="<?=$plat->id?>" class="btn btn-warning di t">Commander</a></div>
                 </div>
     
             <?php if($nbr == 6){

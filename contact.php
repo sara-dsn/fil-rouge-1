@@ -72,10 +72,9 @@
       
 
     
-        <div class="d-flex justify-content-start mt-4">
+        <div class="d-flex justify-content-start mt-4 ml-3">
           <a type="submit" href="index.php?page=repas-amiens" class="btn btn-dark t" >Précedent</a>
          
         </div>
       </div>
-    </div>
    

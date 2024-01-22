@@ -17,7 +17,7 @@
 <body>
     <div class="parallax-body">
 
-        <div class="container-fluid">
+        <div class="container-fluid pl-0 pr-0 pb-0">
         <?php
     session_start();
     include 'DAO.php';
@@ -54,15 +54,14 @@
 // };
     ?>
 
-<hr>
 <!-- <div><?= $_SESSION['url'] ?></div> -->
-<hr>
-<div class="container-fluid">
-<div class="row  pr-0 pl-0 mr-0 ml-0">
-    <a  href="index.php"><img class="image-fluid pl-0 col-5 col-md-2 " src="asset/the_district_brand/facebook_cover_photo_1.png"
-        alt="logo-the-District"></a> 
-    <div class="col">
-        <nav class="navbar navbar-expand-sm  bg-transparent navbar-light d-flex justify-content-end ">
+<div class="row w-100 pr-0 pl-0 mr-0 ml-0 d-flex justify-content-between">
+    <div class="col-md-3 col-5">
+        <a  href="index.php" class='lien'><img class="pl-0 pr-0  mt-2  image-fluid col-md-6  rounded" src="asset/the_district_brand/linkedin_banner_image_1.png"
+        alt="logo-the-District" ></a>
+     </div>
+    <div class="col-md-9 col-7">
+        <nav class="navbar navbar-expand-sm mt-4  bg-transparent navbar-light d-flex justify-content-end ">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#collapsibleNavbar">

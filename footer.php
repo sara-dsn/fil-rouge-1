@@ -92,18 +92,18 @@
 //     };
 
 // PLATS AFFICHAGE DE BASE DE 3 À 5:
-    for (i = 3; i < 5; i++) {
+//     for (i = 3; i < 5; i++) {
         
-        var leplat = plt[i];
-        var card = $( `<div   class="card col-12 ml-1  mb-2 ">
-    <img class="card-img-top rounded img-fluid himg" src="asset/food/${leplat.image}" alt="${leplat.libelle}">
-    <div class="card-body font-italic">
-        <h5  class="card-title  font-weight-bold ">${leplat.libelle}</h5>
-        <p class="card-text ">${leplat.description}<br> Menu: ${leplat.prix} €  </p>
-    </div> <div class="mt-auto mb-2 text-center"><a href="#" value="${leplat.id_plat}" class="btn btn-warning di t">Commander</a></div>
-</div>`);
-        tel.append(card);
-    };
+//         var leplat = plt[i];
+//         var card = $( `<div   class="card col-12 ml-1  mb-2 ">
+//     <img class="card-img-top rounded img-fluid himg" src="asset/food/${leplat.image}" alt="${leplat.libelle}">
+//     <div class="card-body font-italic">
+//         <h5  class="card-title  font-weight-bold ">${leplat.libelle}</h5>
+//         <p class="card-text ">${leplat.description}<br> Menu: ${leplat.prix} €  </p>
+//     </div> <div class="mt-auto mb-2 text-center"><a href="index.php?page=commande-livraison&id=${leplat.id_plat}" value="${leplat.id_plat}" class="btn btn-warning di t">Commander</a></div>
+// </div>`);
+//         tel.append(card);
+//     };
 
 
 
@@ -182,7 +182,7 @@ $(".cat").click(function () {
                 var idcat=uno.id_categorie;
                 if (idcat == id){ 
                             var t = $( ` 
-                        <div class="card  col-12 col-md-3  mx-1 ">
+                        <div class="card size col-12 col-md-3  mx-1 ">
                             <img class="card-img-top rounded himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body font-italic">
                                 <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>
