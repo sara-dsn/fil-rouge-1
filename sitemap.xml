@@ -8,29 +8,39 @@
 
 
 <url>
-  <loc>http://dosana.amorce.org/</loc>
+  <loc>https://dosana.amorce.org/</loc>
   <lastmod>2024-01-12T09:23:48+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://dosana.amorce.org/index.php</loc>
+  <loc>https://dosana.amorce.org/index.php</loc>
   <lastmod>2024-01-12T09:23:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://dosana.amorce.org/index.php?page=categorie</loc>
+  <loc>https://dosana.amorce.org/index.php?page=cuisine-italienne-indienne-street-food</loc>
   <lastmod>2024-01-12T09:23:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://dosana.amorce.org/index.php?page=plats</loc>
+  <loc>https://dosana.amorce.org/index.php?page=repas-amiens</loc>
   <lastmod>2024-01-12T09:23:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://dosana.amorce.org/index.php?page=contact</loc>
+  <loc>https://dosana.amorce.org/index.php?page=contact-vendeur</loc>
   <lastmod>2024-01-12T09:23:48+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dosana.amorce.org/index.php?page=mention_legale</loc>
+  <lastmod>2024-01-12T09:23:48+00:00</lastmod>
+  <priority>0.40</priority>
+</url>
+<url>
+  <loc>https://dosana.amorce.org/index.php?page=politique_de_confidentialite</loc>
+  <lastmod>2024-01-12T09:23:48+00:00</lastmod>
+  <priority>0.40</priority>
 </url>
 
 

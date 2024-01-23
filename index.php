@@ -11,7 +11,7 @@
     </div>
     <div id="titre">
         <div class="col-12 d-flex justify-content-center">
-                <h1 class="font-weight-bold font-italic ml-2 pr-4">Votre Commande :</h1>
+                <h2 class="font-weight-bold font-italic ml-2 pr-4">Votre Commande :</h2>
     </div></div>
     <div class="w-100 d-flex justify-content-center row">                   
     <div class="row col-10 cardContainer  ml-3 d-flex justify-content-center " id="pp"></div>

@@ -13,7 +13,7 @@
             </div>
             <div id="visible">
                 <div class="col-12 d-flex justify-content-center">
-                     <h1 class="font-weight-bold font-italic mr-4 pr-4">Votre Commande :</h1>
+                     <h2 class="font-weight-bold font-italic mr-4 pr-4">Votre Commande :</h2>
                 </div>
                
                 <div class="d-flex justify-content-center">

@@ -4,7 +4,7 @@
     <div class="d-none d-md-block ">
 
         <div class="col-12 d-flex justify-content-center">
-            <h1 class="font-weight-bold font-italic d-none d-md-block">Nos Catégories </h1>
+            <h2 class="font-weight-bold font-italic d-none d-md-block">Nos Catégories </h2>
         </div>
     
         <div class="w-100  row">
@@ -36,7 +36,7 @@
     
 
             <div class="w-100 d-flex justify-content-center">
-                <h1 class="font-weight-bold font-italic row">Nos Best-sellers </h1>
+                <h2 class="font-weight-bold font-italic row">Nos Best-sellers </h2>
             </div>
         
             <div class="w-100 d-flex justify-content-center row">
@@ -63,7 +63,7 @@
         </div >
     </div>
         <div class="w-100 d-flex justify-content-center d-none d-md-none">
-            <h1 class="font-weight-bold font-italic row">Nos Best-sellers </h1>
+            <h2 class="font-weight-bold font-italic row">Nos Best-sellers </h2>
         </div>
             <div class=" row col-10 d-none d-md-none   ml-3 d-flex justify-content-center" > 
             <?php foreach ($best as $plat) { 
