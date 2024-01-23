@@ -92,7 +92,7 @@
 //     };
 
 // PLATS AFFICHAGE DE BASE DE 3 À 5:
-//     for (i = 3; i < 5; i++) {
+//     for (i = 3; i <div 5; i++) {
         
 //         var leplat = plt[i];
 //         var card = $( `<div   class="card col-12 ml-1  mb-2 ">
@@ -153,7 +153,7 @@ function search() {
             
             $.each(result, function (element, uno) {
                 var txt = $( ` 
-            <div class="card   col-12 col-md-3 mx-1 ">
+            <div class="card   col-10 col-md-2 mx-1  ">
                 <img class="card-img-top rounded img-fluid himg" src="asset/food/${uno.image}" alt="${uno.libelle}">
                 <div class="card-body font-italic ">
                     <h5 class="card-title  font-weight-bold ">${uno.libelle}</h5>
@@ -163,6 +163,7 @@ function search() {
                 a.append(txt);
             });
         }
+    
     });
 };
           
@@ -182,7 +183,7 @@ $(".cat").click(function () {
                 var idcat=uno.id_categorie;
                 if (idcat == id){ 
                             var t = $( ` 
-                        <div class="card size col-12 col-md-3  mx-1 ">
+                        <div class="card size col-10 col-md-3  mx-1 ">
                             <img class="card-img-top rounded himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body font-italic">
                                 <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>

@@ -13,7 +13,7 @@
             </div>
             <div id="visible">
                 <div class="col-12 d-flex justify-content-center">
-                     <h2 class="font-weight-bold font-italic mr-4 pr-4">Votre Commande :</h2>
+                     <h2 class="font-weight-bold font-italic  mb-3 pr-4">Votre Commande :</h2>
                 </div>
                
                 <div class="d-flex justify-content-center">
@@ -22,7 +22,7 @@ if(isset($_GET["id"])){
    foreach($plt as $element){
     if ($_GET["id"]== $element->id){ 
  ?>
-    <div class="card  col-10 col-md-2 ml-4 ">
+    <div class="card  col-10 col-md-2 ">
         <img class="card-img-top img-fluid mt-2" name="" value="" src="asset/food/<?=$element->image?>" alt="burger360">
             <div class="card-body">
             <h5 class="card-title font-weight-bold" ><?=$element->libelle?></h5>

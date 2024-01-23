@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class=" row col-10 col-md-8  " >
+        <div class=" row col-10 col-md-8 mb-4 " >
             <?php 
              foreach($ctg as $categorie){
                 if($categorie->active == 'Disponible' ) { 

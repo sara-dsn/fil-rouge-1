@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<!-- <script src="asset/js/tarteaucitron.js"></script>   -->
+<script src="asset/js/tarteaucitron.js"></script>  
 <meta charset="utf-8">
     <meta name="description" content="The District est un restaurant de cuisine italienne à Amiens, où manger sur place , à emporter ou en livraison 
     les meilleurs repas. La cuisine indienne fait son apparition dans nos resto , ainsi qu'un côté fast-food avec 
