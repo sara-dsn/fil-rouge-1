@@ -74,10 +74,10 @@ $contenuFichier="Nom : ".$_SESSION["nom"]
 ."\r\n  Demande :".$_SESSION["demande"];
 file_put_contents($nomFichier,$contenuFichier);
 header("Location: index.php?page=demande");
-exit(e.preventDefault());
+exit();
 }
  else{
-unset($_SESSION["auth"]);
+unset($_SESSION);
 session_destroy();
 // echo "Veuillez remplir correctement le formulaire s.v.p <br>";
 // echo "nom: ".n($nom);
@@ -86,7 +86,7 @@ session_destroy();
 // echo "<br>telephone: ".t($telephone);
 // echo "<br>demande: ".d($demande);
 header("Location: index.php?page=contact");
-exit(e.preventDefault());
+exit();
 
  };
 
