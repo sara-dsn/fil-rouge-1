@@ -24,7 +24,7 @@ Mail : contact@the_district.com</p><br>
 <h2>Directrice de publication</h2>
 
 <p> Sara Dosana<br>
-Mail : lsf.tdg@gmail.com.fr</p>
+Mail : lsf.tdg@gmail.com</p>
 
 <h2>Hébergeur du site </h2>
 

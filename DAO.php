@@ -1,7 +1,7 @@
 <?php 
  
 // Connexion à la base de données
-$db=new PDO('mysql:host=localhost;dbname=district','admin','dosana');
+$db=new PDO('mysql:host=localhost;dbname=dosana','dosana','dosana');
 
 // $db=new PDO('mysql:host=localhost;dbname=dosana','dosana','dosana');
 // configurer le mode erreur PDO pour générer des exceptions :

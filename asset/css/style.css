@@ -55,6 +55,9 @@
     background-size: cover;
     position: relative;
 }
+#recherche{
+    background-color: #fef4e8;
+}
 .T{
     height: 43%;
 }
