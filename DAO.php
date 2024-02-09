@@ -1,9 +1,10 @@
 <?php 
  
-// Connexion à la base de données
-$db=new PDO('mysql:host=localhost;dbname=dosana','dosana','dosana');
-
+// Connexion à la base de données pour mettre en ligne:
 // $db=new PDO('mysql:host=localhost;dbname=dosana','dosana','dosana');
+// Connexion à la base de données php server:
+$db=new PDO('mysql:host=localhost;dbname=district','admin','dosana');
+
 // configurer le mode erreur PDO pour générer des exceptions :
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

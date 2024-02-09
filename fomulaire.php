@@ -73,7 +73,7 @@ $contenuFichier="Nom : ".$_SESSION["nom"]
 ."\r\n  Telephone : ".$_SESSION["telephone"]
 ."\r\n  Demande :".$_SESSION["demande"];
 file_put_contents($nomFichier,$contenuFichier);
-header("Location: index.php?page=demande");
+header("Location: index.php?page=réclamation-envoyer");
 exit();
 }
  else{

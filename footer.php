@@ -3,8 +3,20 @@
             <div >
                 <div class="card border-0 bg-transparent">
                     <div class="card-body">
-                        <img src="asset/the_district_brand/icone.png" class="card-img-top img-fluid"
+                        <img src="asset/the_district_brand/icone.png" usemap="#image-map" class="card-img-top img-fluid"
                             alt="reseaux sociaux">
+                            <map name="image-map">
+        <area shape="rect" coords="10,100,92,190"  href="#" alt="logo orange">
+        <area shape="rect" coords="92,100,133,190" href="https://www.instagram.com/sara.tdg/" alt="Instagram">
+        <area shape="rect" coords="133,100,189,190" href="#" alt="logo bleu">
+        <area shape="rect" coords="189,100,238,190" href="https://www.google.com" alt="google">
+        <area shape="rect" coords="238,100,295,190" href="https://www.tumblr.com/" alt="tumblr">
+        <area shape="rect" coords="400,100,500,190" href="https://www.pinterest.fr/" alt="pinterest">
+        <area shape="rect" coords="800,400,600,190" href="https://www.facebook.com/?locale=fr_FR" alt="facebook">
+        <area shape="rect" coords="600,400,400,190" href="https://twitter.com/?lang=fr" alt="twitter">
+        <area shape="rect" coords="500,500,500,190" href="https://www.youtube.com/" alt="youtube">
+    </map>
+
                     </div>
                 </div>
             </div>
@@ -158,7 +170,7 @@ function search() {
                 <div class="card-body font-italic ">
                     <h5 class="card-title  font-weight-bold ">${uno.libelle}</h5>
                     <p class="card-text ">${uno.description} <br> Menu: ${uno.prix} € </p>
-                </div> <div class="mt-auto mb-2 text-center"><a href="index.php?page=cuisine-italienne-indienne-street-food&id=${uno.id_plat}" value="${uno.id_plat}" class="btn btn-warning di t">Commander</a></div>
+                </div> <div class="mt-auto mb-2 text-center"><a href="index.php?page=commande-livraison&id=${uno.id_plat}" value="${uno.id_plat}" class="btn btn-warning di t">Commander</a></div>
             </div>`);
                 a.append(txt);
             });
@@ -183,7 +195,7 @@ $(".cat").click(function () {
                 var idcat=uno.id_categorie;
                 if (idcat == id){ 
                             var t = $( ` 
-                        <div class="card size col-10 col-md-3  mx-1 ">
+                        <div class="card size col-12 col-md-3 ml-3 mx-1 ">
                             <img class="card-img-top rounded himg img-fluid"  src="asset/food/${uno.image}" alt="${uno.libelle}">
                             <div class="card-body font-italic">
                                 <h5 class="  card-title font-weight-bold ">${uno.libelle}</h5>

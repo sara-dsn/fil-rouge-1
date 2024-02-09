@@ -5,7 +5,7 @@
     <div class="row justify-content-center " id="afficher"></div>
     </div>
     <div class="w-100 row d-flex  justify-content-center">            
-        <div class="row col-9 justify-content-center" >
+        <div class="row col-10 justify-content-center" >
             <div id="gg" class="row justify-content-center mt-4 "></div>                  
         </div>
     </div>

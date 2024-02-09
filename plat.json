@@ -142,6 +142,15 @@
       "image": "tagliatelle.webp",
       "id_categorie": 10,
       "active": "Yes"
+     },
+     {
+      "id_plat": 18,
+      "libelle": "Chicken Korma",
+      "description": "Un plat de curry doux composé de morceaux de poitrine de poulet braisés dans une sauce riche et crémeuse à base de yaourt, de noix et d'épices. ",
+      "prix": 10,
+      "image": "Korma.webp",
+      "id_categorie": 17,
+      "active": "Yes"
      }
     ]
     }

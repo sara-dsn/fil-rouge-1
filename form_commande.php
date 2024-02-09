@@ -72,7 +72,7 @@ file_put_contents($nomFichier,$contenuFichier);
 
 
          
-header("Location: livreur.php");
+header("Location: index.php?page=livraison");
 exit();
 }
  else{
