@@ -27,7 +27,18 @@ if(isset($_GET["id"])){
             <div class="card-body">
             <h5 class="card-title font-weight-bold" ><?=$element->libelle?></h5>
             <p class="card-text"  value="<?=$element->prix?>"><?=$element->description?><br> Total : <?=$element->prix?> €</p>
-            <button class="btn btn-warning t">Quantité: 1</button>
+            <div class="input-group  ">
+                <label type="quantity">Quantité : </label>
+                <input type="text" class="form-control rounded col-2" id="quantity" value="1">
+  <span class="input-group-btn">
+    <button type="button" class="btn btn-dark btn-sm" id="btn-minus ">-</button>
+  </span>
+  
+  <span class="input-group-btn">
+    <button type="button" class="btn btn-dark btn-sm " id="btn-plus">+</button>
+  </span>
+</div>
+
         </div>
     </div>
 </div>

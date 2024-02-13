@@ -8,7 +8,7 @@
                             <map name="image-map">
         <area shape="rect" coords="10,100,92,190"  href="#" alt="logo orange">
         <area shape="rect" coords="92,100,133,190" href="https://www.instagram.com/sara.tdg/" alt="Instagram">
-        <area shape="rect" coords="133,100,189,190" href="#" alt="logo bleu">
+        <area shape="rect" coords="133,100,192,190" href="#" alt="logo bleu">
         <area shape="rect" coords="189,100,238,190" href="https://www.google.com" alt="google">
         <area shape="rect" coords="238,100,295,190" href="https://www.tumblr.com/" alt="tumblr">
         <area shape="rect" coords="400,100,500,190" href="https://www.pinterest.fr/" alt="pinterest">
@@ -60,8 +60,21 @@
      pp.hide();
      titre.hide();
      btn.hide();
+var quantityInput = document.getElementById('quantity');
+var btnPlus = document.getElementById('btn-plus');
+var btnMinus = document.getElementById('btn-minus');
 
 
+// selecteur quantité :
+btnPlus.addEventListener('click', function() {
+  quantityInput.value = parseInt(quantityInput.value) + 1;
+});
+
+btnMinus.addEventListener('click', function() {
+  if (parseInt(quantityInput.value) > 1) {
+    quantityInput.value = parseInt(quantityInput.value) - 1;
+  }
+});
 
        $.getJSON("plat.json", function (json) {
          
