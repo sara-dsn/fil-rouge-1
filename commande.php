@@ -29,7 +29,7 @@ if(isset($_GET["id"])){
             <p class="card-text"  value="<?=$element->prix?>"><?=$element->description?><br> Total : <?=$element->prix?> €</p>
             <div class="input-group  ">
                 <label type="quantity">Quantité : </label>
-                <input type="text" class="form-control rounded col-2" id="quantity" value="1">
+                <input type="text" class="form-control rounded col-2" name="quantity" id="quantity" value="1">
   <span class="input-group-btn">
     <button type="button" class="btn btn-dark btn-sm" id="btn-minus ">-</button>
   </span>

@@ -42,6 +42,9 @@
     else if($_GET['page']=='panier'){
         include('panier.php');
     }
+    else if($_GET['page']=='connection'){
+        include('connection.php');
+    }
     else if($_GET['page']=='politique_de_confidentialite'){
         include('politique.php');
 

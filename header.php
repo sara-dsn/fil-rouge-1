@@ -85,6 +85,14 @@
                         <a class="nav-link font-weight-bold font-italic text-right"
                             href="index.php?page=contact-vendeur"><u>Contact</u></a>
                     </li>
+                    <li class="nav-item  h2 w-25">
+                        <a class="nav-link font-weight-bold font-italic text-right"
+                            href="index.php?page=connection"><u>Connection</u></a>
+                    </li>
+                    <li class="nav-item  h2 w-25">
+                        <a class="nav-link font-weight-bold font-italic text-right"
+                            href="index.php?page=panier"><u>Panier</u></a>
+                    </li>
 
                 </ul>
             </div>

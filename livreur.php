@@ -67,7 +67,7 @@ $mail-> isMail();
              </div>
            </div>
         </div>
-        <div calss="col-10 justify-content-center mt-4 ">
+        <div class="col-10 justify-content-center mt-4 ">
           <h2 class="mt-4 ml-4">Votre commande est envoyée,<br> Notre livreur va vous contacter dans moins de 5 minutes .</h2><br>
           </div>
           </div>
